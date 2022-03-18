@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="200dp"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="20dp"
+    android:background="@drawable/white_border_shape_button_rounded"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".Bank_ResultActivity"
+    >
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/bankname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account number:"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+        <TextView
+            android:id="@+id/bankaccnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bankname:"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+        <TextView
+            android:id="@+id/IFSCcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IFSC CODE:"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+        <TextView
+            android:id="@+id/branchname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="branchname:"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

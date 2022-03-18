@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/usernominees"
+    android:title="nominees"
+    android:icon="@drawable/topappbar_nominees"
+    app:showAsAction="always"
+    />
+    <item
+        android:id="@+id/usernomineeswill"
+        android:title="nominees"
+        android:icon="@drawable/usernominees_will"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/privacypolicy"
+        android:title="privacy policy"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/tandc"
+        android:title="terms and conditions"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/logout"
+        android:title="logout"
+        app:showAsAction="ifRoom"/>
+</menu>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/card_view"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Nominees_Activity">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text=" Nominee details"
+       android:textSize="20sp"
+       android:gravity="center"
+       android:layout_marginTop="10dp"
+       />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Nominee name"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_nomineerelation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Relationship with Nominee"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/nomineephon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Nominee's moible number"
+            android:inputType="text"
+            android:textSize="@dimen/et_text_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_emailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Nominee emailID"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/et_text_size"
+            android:layout_marginTop="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/nomineeaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Nominee address"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/et_text_size"
+            android:layout_marginTop="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/nomineesIdproof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Nominee address"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/et_text_size"
+            android:layout_marginTop="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn_banksave"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:paddingTop="@dimen/btn_paddingTopBottom"
+        android:paddingBottom="@dimen/btn_paddingTopBottom"
+        android:text="Save data"
+        android:background="@drawable/white_border_shape_button_rounded"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/btn_text_size" />
+</LinearLayout>
+</androidx.cardview.widget.CardView>

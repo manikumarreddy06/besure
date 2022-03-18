@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/white_border_shape_button_rounded"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".bankaccounts">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_bankname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Enter your bank name"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_bankAccountnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:hint="Enter your bank account number(Optional)"
+                android:inputType="text"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_ifsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Enter your bank IFSC code(Optional)"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_bankbranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:hint="Enter your bank branch name(Optional)"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_bankdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Enter descripton about bank(Optional) "
+                android:inputType="text"
+                android:textSize="@dimen/et_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+            <EditText
+                android:id="@+id/etbankdoc"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:hint="Add any bank proof(Optional)"
+                android:inputType="text"
+                android:gravity = "left|top"
+                android:textColor="@color/black"
+                android:textSize="@dimen/et_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btn_banksave"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:paddingTop="@dimen/btn_paddingTopBottom"
+            android:paddingBottom="@dimen/btn_paddingTopBottom"
+            android:text="Save data"
+            android:background="@drawable/white_border_shape_button_rounded"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/btn_text_size" />
+
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+

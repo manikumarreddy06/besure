@@ -1,94 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Stocks_Activity">
+    tools:context=".Signin_Activity">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
-        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sakkalmajalla"
+        android:gravity="center"
+        android:text="@string/stocks_details"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="45sp" />
 
-        <androidx.appcompat.widget.AppCompatEditText
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        android:hint="@string/enter_your_stock_broker_name">
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_Brokername"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-
-            android:hint="Enter yourSock broker name"
-            android:inputType="text"
-            android:textSize="16sp" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
-
-
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
-        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/et_Dematnum"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/enter_your_bo_id_demat_number_optional">
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_et_Dematnum"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:hint="Enter your BO ID/Demat Number(Optional)"
-            android:inputType="text"
-            android:textSize="16sp" />
-
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
-        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
-
-        <androidx.appcompat.widget.AppCompatEditText
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/enter_stock_description_optional">
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_stocksdes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Enter stock description(Optional) "
-            android:inputType="text"
-            android:textSize="@dimen/et_text_size" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/attach_file"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
-        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/add_stocks_proof_optional"
+        app:endIconCheckable="true"
+        app:endIconDrawable="@drawable/attach_file"
+        app:endIconMode="custom"
+        app:endIconTint="@color/dummy_color">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_stocksdproof"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="20dp"
-            android:hint="Add stocks proof(Optional)"
-            android:inputType="text"
-            android:gravity = "left|top"
-            android:textColor="@color/black"
-            android:textSize="@dimen/et_text_size" />
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btn_banksave"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_button_rounded"
+        android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
-        android:layout_margin="20dp"
+        android:onClick="signin"
         android:paddingTop="@dimen/btn_paddingTopBottom"
         android:paddingBottom="@dimen/btn_paddingTopBottom"
-        android:text="Save data"
-        android:background="@drawable/white_border_shape_button_rounded"
+        android:text="@string/save_data"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/btn_text_size" />
+        android:textSize="@dimen/btn_text_size"
+        app:backgroundTint="@color/colorPrimary" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:contentDescription="@string/logo"-->
+<!--            android:gravity="bottom"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:src="@drawable/footersignin"/>-->
 
 </LinearLayout>
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".Stocks_Activity">-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"-->
+<!--        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">-->
+
+<!--        <androidx.appcompat.widget.AppCompatEditText-->
+<!--            android:id="@+id/et_Brokername"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+
+<!--            android:hint="Enter yourSock broker name"-->
+<!--            android:inputType="text"-->
+<!--            android:textSize="16sp" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"-->
+<!--        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">-->
+
+<!--        <androidx.appcompat.widget.AppCompatEditText-->
+<!--            android:id="@+id/et_Dematnum"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:hint="Enter your BO ID/Demat Number(Optional)"-->
+<!--            android:inputType="text"-->
+<!--            android:textSize="16sp" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"-->
+<!--        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">-->
+
+<!--        <androidx.appcompat.widget.AppCompatEditText-->
+<!--            android:id="@+id/et_stocksdes"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:hint="Enter stock description(Optional) "-->
+<!--            android:inputType="text"-->
+<!--            android:textSize="@dimen/et_text_size" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"-->
+<!--        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/et_stocksdproof"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:hint="Add stocks proof(Optional)"-->
+<!--            android:inputType="text"-->
+<!--            android:gravity = "left|top"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/et_text_size" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--    <Button-->
+<!--        android:id="@+id/btn_banksave"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:paddingTop="@dimen/btn_paddingTopBottom"-->
+<!--        android:paddingBottom="@dimen/btn_paddingTopBottom"-->
+<!--        android:text="Save data"-->
+<!--        android:background="@drawable/white_border_shape_button_rounded"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="@dimen/btn_text_size" />-->
+
+<!--</LinearLayout>-->

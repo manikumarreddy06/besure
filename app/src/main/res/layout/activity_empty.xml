@@ -24,37 +24,41 @@
 
             <ImageView
                 android:id="@+id/imageview"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
-                android:src="@drawable/insuranceimage"
-                />
+                android:src="@drawable/find2"
+
+                android:contentDescription="@string/finding_account" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="It's empty here..click here to add "
+                android:text="@string/it_s_empty_here_click_here_to_add"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
                 />
             <Button
-                android:id="@+id/btnadd1"
+                android:id="@+id/btnadd2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Add details"
+                android:text="@string/add_details"
                 android:padding="15dp"
                 android:textSize="16sp"
+                android:layout_marginHorizontal="30dp"
+                app:backgroundTint="@color/colorPrimary"
                 android:layout_marginTop="15dp"
                 />
             <TextView
                 android:id="@+id/tvdontadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dont add "
+                android:text="@string/don_t_add"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/purple_700"
-                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="10dp"
                 />
 
         </LinearLayout>

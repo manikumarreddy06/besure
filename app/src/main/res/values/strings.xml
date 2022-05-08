@@ -88,6 +88,7 @@
     <string name="it_s_empty_here_click_here_to_add">It\'s empty here..click here to add</string>
     <string name="add_details">Add details</string>
     <string name="don_t_add">Don\'t add</string>
+    <string name="agree_to_terms_and_conditions">Agree to <font color='#2EA9C9'>Terms and conditions</font></string>
 
     <string-array name="statespinners">
         <item>Andhra pradesh</item>

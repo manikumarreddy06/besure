@@ -32,19 +32,20 @@
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/drawable/ic_bankdocfooter.xml" value="0.2015" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/drawable/ic_resource_try.xml" value="0.2" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_bank_result.xml" value="0.25052083333333336" />
-        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_bankaccounts.xml" value="0.2" />
+        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_bankaccounts.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_empt2.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_empty.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_empty3.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_empty4.xml" value="0.23854166666666668" />
-        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_main.xml" value="0.4" />
-        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_mutualfunds.xml" value="0.23854166666666668" />
-        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_nominees.xml" value="0.17051377513030527" />
+        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_mutualfunds.xml" value="0.264" />
+        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_nominees.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_register.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_signin.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_signin.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_splashscreen.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_stocks.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/activity_usernominees_will.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sambi/Desktop/GitHub/besure/app/src/main/res/layout/bankslayout_one_item.xml" value="0.264" />
       </map>
     </option>
   </component>

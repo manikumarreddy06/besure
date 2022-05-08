@@ -32,7 +32,7 @@ public class bankaccounts extends AppCompatActivity {
      et_IFSCCODE=findViewById(R.id.et_ifsc);
      et_Branch=findViewById(R.id.et_bankbranch);
      et_Textbox=findViewById(R.id.et_bankdes);
-     et_Atttachment=findViewById(R.id.etbankdoc);
+     et_Atttachment=findViewById(R.id.bankIDproof);
      savedata=findViewById(R.id.btn_banksave);
 
      savedata.setOnClickListener(new View.OnClickListener() {

@@ -43,6 +43,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        app:endIconCheckable="true"
+        app:endIconDrawable="@drawable/ic_exclaimation"
+        app:endIconMode="custom"
+        app:endIconTint="@color/dummy_color"
         android:hint="@string/enter_bank_account_number_optional">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -99,7 +103,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/attach_file"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -135,14 +139,6 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/btn_text_size"
         app:backgroundTint="@color/colorPrimary" />
-
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:contentDescription="@string/logo"-->
-<!--        android:gravity="bottom"-->
-<!--        android:scaleType="fitXY"-->
-<!--        android:src="@drawable/footergreen"/>-->
 
 </LinearLayout>
 

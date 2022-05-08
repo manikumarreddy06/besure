@@ -13,7 +13,7 @@ Button btnadd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empt2);
-     btnadd=findViewById(R.id.btnadd2);
+     btnadd=findViewById(R.id.btn_add);
      btnadd.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {

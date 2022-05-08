@@ -13,7 +13,7 @@ public class empty_activity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empty3);
-        buttonadd=findViewById(R.id.btnadd);
+        buttonadd=findViewById(R.id.btn_add);
         buttonadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

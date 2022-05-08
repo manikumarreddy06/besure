@@ -33,7 +33,7 @@ public class Signin_Activity extends AppCompatActivity  {
     }
     public void onregister(View view) {
 
-        Intent intent=new Intent(this, register_Activity.class);
+        Intent intent=new Intent(this, Register_Activity.class);
         startActivity(intent);
 
     }

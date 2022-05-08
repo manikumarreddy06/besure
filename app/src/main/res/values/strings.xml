@@ -88,6 +88,15 @@
     <string name="it_s_empty_here_click_here_to_add">It\'s empty here..click here to add</string>
     <string name="add_details">Add details</string>
     <string name="don_t_add">Don\'t add</string>
+    <string name="ifsc_code">IFSC Code:</string>
+    <string name="branch_name">Branch Name:</string>
+    <string name="bank_name">Bank Name:</string>
+    <string name="account_number">Account Number:</string>
+    <string name="agree_to_terms_and_conditions">Agree to <font color='#2EA9C9'>Terms and conditions</font></string>
+    <string name="add_any_attachment">Add any attachment</string>
+    <string name="write_your_will_here">write your will here</string>
+    <string name="edit">Edit</string>
+    <string name="confirm">confirm</string>
 
     <string-array name="statespinners">
         <item>Andhra pradesh</item>

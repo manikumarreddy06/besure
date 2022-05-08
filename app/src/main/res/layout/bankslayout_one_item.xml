@@ -10,7 +10,6 @@
     android:background="@drawable/white_border_shape_button_rounded"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -18,10 +17,10 @@
             android:id="@+id/bankname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Account number:"
-            android:layout_marginLeft="10dp"
+            android:text="@string/account_number"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#1C1A1A"
             />
@@ -29,10 +28,10 @@
             android:id="@+id/bankaccnum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="bankname:"
-            android:layout_marginLeft="10dp"
+            android:text="@string/bank_name"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#1C1A1A"
             />
@@ -40,10 +39,10 @@
             android:id="@+id/IFSCcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="IFSC CODE:"
-            android:layout_marginLeft="10dp"
+            android:text="@string/ifsc_code"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#1C1A1A"
             />
@@ -51,10 +50,10 @@
             android:id="@+id/branchname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="branchname:"
-            android:layout_marginLeft="10dp"
+            android:text="@string/branch_name"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#1C1A1A"
             />

@@ -107,7 +107,7 @@
         android:layout_marginEnd="16dp"
         android:hint="@string/add_bank_proof_optional"
         app:endIconCheckable="true"
-        app:endIconDrawable="@drawable/attach_file"
+        app:endIconDrawable="@drawable/attach_file_2"
         app:endIconMode="custom"
         app:endIconTint="@color/dummy_color">
 

@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
-
 
 public class Signin_Activity extends AppCompatActivity  {
     private Button signin;
@@ -23,6 +21,8 @@ public class Signin_Activity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+
+
         signin=findViewById(R.id.btn_sign_in);
         register=findViewById(R.id.joinnow);
         mobilenum=findViewById(R.id.etmobile);
@@ -33,7 +33,7 @@ public class Signin_Activity extends AppCompatActivity  {
     }
     public void onregister(View view) {
 
-        Intent intent=new Intent(this,Register_Activity.class);
+        Intent intent=new Intent(this, register_Activity.class);
         startActivity(intent);
 
     }

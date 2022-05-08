@@ -36,11 +36,7 @@
         <activity
             android:name=".Splashscreen_Activity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Nominees_Activity"
@@ -51,10 +47,6 @@
         <activity
             android:name=".Signin_Activity"
             android:exported="true" />
-        <activity
-            android:name=".Register_Activity"
-            android:exported="false"
-            android:parentActivityName=".Signin_Activity" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />

@@ -1,4 +1,4 @@
-package com.myproject.livwell;
+package com.myproject.livwell.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,10 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.myproject.livwell.R;
 
 public class MainActivity extends AppCompatActivity  {
     LinearLayout llbanks,llmutualfunds,llstocks;
@@ -30,21 +29,21 @@ public class MainActivity extends AppCompatActivity  {
        llbanks.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Intent i=new Intent(MainActivity.this,empty_Activity.class);
+               Intent i=new Intent(MainActivity.this, Bank_ResultActivity.empty_Activity.class);
                startActivity(i);
            }
        });
        llmutualfunds.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Intent i=new Intent(MainActivity.this,empt_Activity2.class);
+               Intent i=new Intent(MainActivity.this, Bank_ResultActivity.empt_Activity2.class);
                startActivity(i);
            }
        });
        llstocks.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Intent i=new Intent(MainActivity.this,empty_activity3.class);
+               Intent i=new Intent(MainActivity.this, empty_activity3.class);
                startActivity(i);
            }
        });
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity  {
                     case R.id.usernominees:
                     {
 
-                        Intent i=new Intent(MainActivity.this,Nominees_Activity.class);
+                        Intent i=new Intent(MainActivity.this, empty_activity3.Nominees_Activity.class);
                         startActivity(i);
 
                     }

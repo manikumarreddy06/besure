@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E5E5E5"
     android:orientation="vertical"
-    tools:context=".Signin_Activity">
+    tools:context=".activities.Bank_ResultActivity$Signin_Activity">
 
     <ImageView
         android:layout_marginTop="30dp"
@@ -90,7 +90,6 @@
             android:background="@drawable/shape_button_rounded"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:onClick="signin"
             android:paddingTop="@dimen/btn_paddingTopBottom"
             android:paddingBottom="@dimen/btn_paddingTopBottom"
             android:text="@string/sign_in"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".usernominees_will_Activity">
+    tools:context=".activities.Bank_ResultActivity$usernominees_will_Activity">
 
     <EditText
         android:layout_width="match_parent"

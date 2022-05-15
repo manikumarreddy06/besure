@@ -1,4 +1,4 @@
-package com.myproject.livwell.activities;
+package com.myproject.livwell;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,8 +8,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.myproject.livwell.R;
 
 public class Register_Activity extends AppCompatActivity {
 private EditText name,mobilenum,password,repassword;

@@ -1,12 +1,11 @@
-package com.myproject.livwell.activities;
+package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
-import com.myproject.livwell.R;
+import android.view.WindowManager;
 
 public class Splashscreen_Activity extends AppCompatActivity {
   Handler h=new Handler();
@@ -18,7 +17,7 @@ public class Splashscreen_Activity extends AppCompatActivity {
          h.postDelayed(new Runnable() {
              @Override
              public void run() {
-               Intent i=new Intent(Splashscreen_Activity.this, Bank_ResultActivity.Signin_Activity.class);
+               Intent i=new Intent(Splashscreen_Activity.this,Signin_Activity.class);
                startActivity(i);
                finish();
              }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.myproject.livwell">
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,34 +8,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Livwell">
         <activity
-            android:name=".activities.Bank_ResultActivity$usernominees_will_Activity"
+            android:name=".usernominees_will_Activity"
             android:exported="false" />
         <activity
-            android:name=".activities.Bank_ResultActivity"
+            android:name=".Bank_ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.Bank_ResultActivity$empty_Activity4"
+            android:name=".empty_Activity4"
             android:exported="false" />
         <activity
-            android:name=".activities.empty_activity3"
+            android:name=".empty_activity3"
             android:exported="false" />
         <activity
-            android:name=".activities.Bank_ResultActivity$empt_Activity2"
+            android:name=".empt_Activity2"
             android:exported="false" />
         <activity
-            android:name=".activities.Bank_ResultActivity$empty_Activity"
+            android:name=".empty_Activity"
             android:exported="false" />
         <activity
-            android:name=".activities.empty_activity3$Stocks_Activity"
+            android:name=".Stocks_Activity"
             android:exported="false" />
         <activity
-            android:name=".activities.Mutualfunds_Activity"
+            android:name=".Mutualfunds_Activity"
             android:exported="false" />
         <activity
-            android:name=".activities.Splashscreen_Activity"
+            android:name=".Splashscreen_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,16 +43,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.empty_activity3$Nominees_Activity"
+            android:name=".Nominees_Activity"
             android:exported="false" />
         <activity
-            android:name=".activities.Bank_ResultActivity$bankaccounts"
+            android:name=".bankaccounts"
             android:exported="false" />
         <activity
-            android:name=".activities.Bank_ResultActivity$Signin_Activity"
+            android:name=".Signin_Activity"
             android:exported="true" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".MainActivity"
             android:exported="true" />
     </application>
 

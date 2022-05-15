@@ -1,4 +1,4 @@
-package com.myproject.livwell.activities;
+package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
-import com.myproject.livwell.R;
 
 public class Mutualfunds_Activity extends AppCompatActivity {
 private EditText mutualfundname,folioname,schemename,fundtype,funddes,fundproof;

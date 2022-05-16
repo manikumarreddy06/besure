@@ -1,10 +1,7 @@
 package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,12 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.myproject.livwell.databinding.ActivitySigninBinding;
 import com.myproject.livwell.models.signup;
-import com.myproject.livwell.retrofitUtil.ApiClient;
+import com.myproject.livwell.retrofitUtil.RetrofitClient;
 import com.myproject.livwell.retrofitUtil.Apiinterface;
-
-import org.json.JSONObject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,38 +30,35 @@ public class Signin_Activity extends AppCompatActivity  {
         setContentView(R.layout.activity_signin);
 
 
-     mobilenum= findViewById(R.id.etmobile_signin);
-      signin=findViewById(R.id.btn_sign_in);
+        mobilenum = findViewById(R.id.etmobile_signin);
+        signin = findViewById(R.id.btn_sign_in);
 
-      signin.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-          signin();
-          }
-      });
 
-    }
-    public void onregister(View view) {
-
-        Intent intent=new Intent(this, Register_Activity.class);
-        startActivity(intent);
-
+       signin.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               signin();
+           }
+       });
     }
 
 
     public void signin() {
-        if (TextUtils.isEmpty(mobilenum.getText().toString()) ){
+
+        String mobilenumber=mobilenum.getText().toString();
+
+        if (TextUtils.isEmpty(mobilenumber)){
             mobilenum.setError("Mobile number cannot be empty");
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
 
         else {
-            Call<signup>call= ApiClient.getApiClient().create(Apiinterface.class).usersignin(mobilenum.getText().toString());
+            Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(mobilenumber.toString());
             call.enqueue(new Callback<signup>() {
                 @Override
                 public void onResponse(Call<signup> call, Response<signup> response) {
                     if (response.isSuccessful()){
-                        Toast.makeText(Signin_Activity.this,"success",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
                     }
                 }
 

@@ -38,7 +38,7 @@
             app:boxStrokeErrorColor="@color/error_color"
             app:startIconDrawable="@drawable/call_icon">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etmobile"
+                android:id="@+id/etmobile_signin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -90,7 +90,6 @@
             android:background="@drawable/shape_button_rounded"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:onClick="signin"
             android:paddingTop="@dimen/btn_paddingTopBottom"
             android:paddingBottom="@dimen/btn_paddingTopBottom"
             android:text="@string/sign_in"

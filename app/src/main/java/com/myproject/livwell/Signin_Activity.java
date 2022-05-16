@@ -34,6 +34,7 @@ public class Signin_Activity extends AppCompatActivity  {
         signin = findViewById(R.id.btn_sign_in);
 
 
+
        signin.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -45,15 +46,14 @@ public class Signin_Activity extends AppCompatActivity  {
 
     public void signin() {
 
-        String mobilenumber=mobilenum.getText().toString();
-
-        if (TextUtils.isEmpty(mobilenumber)){
+           String usernum=mobilenum.getText().toString();
+        if (TextUtils.isEmpty(usernum)){
             mobilenum.setError("Mobile number cannot be empty");
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
 
         else {
-            Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(mobilenumber.toString());
+            Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(usernum);
             call.enqueue(new Callback<signup>() {
                 @Override
                 public void onResponse(Call<signup> call, Response<signup> response) {

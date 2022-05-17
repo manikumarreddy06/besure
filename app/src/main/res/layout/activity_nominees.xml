@@ -32,7 +32,7 @@
         android:hint="@string/enter_nominee_s_name">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_name"
+            android:id="@+id/et_nomineename"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -119,7 +119,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
     <Button
-        android:id="@+id/btn_nomineesave"
+        android:id="@+id/btn_nomineesavedata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.JsonObject;
 import com.myproject.livwell.models.signup;
 import com.myproject.livwell.retrofitUtil.RetrofitClient;
 import com.myproject.livwell.retrofitUtil.Apiinterface;
@@ -47,12 +48,14 @@ public class Signin_Activity extends AppCompatActivity  {
     public void signin() {
 
            String usernum=mobilenum.getText().toString();
+
         if (TextUtils.isEmpty(usernum)){
             mobilenum.setError("Mobile number cannot be empty");
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
 
         else {
+
             Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(usernum);
             call.enqueue(new Callback<signup>() {
                 @Override
@@ -71,6 +74,6 @@ public class Signin_Activity extends AppCompatActivity  {
             startActivity(intent);
             finish();*/
         }
-    }
+   }
 
 }

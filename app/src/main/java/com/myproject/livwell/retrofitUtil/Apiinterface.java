@@ -1,5 +1,6 @@
 package com.myproject.livwell.retrofitUtil;
 
+import com.myproject.livwell.models.createnomineeresponse;
 import com.myproject.livwell.models.signup;
 
 import retrofit2.Call;
@@ -11,4 +12,9 @@ public interface Apiinterface {
     @FormUrlEncoded
      @POST("v1/signup")
       Call<signup>usersignin(@Field("mobileNumber")String mobileNumber);
+
+    @FormUrlEncoded
+    @POST("v1/create/nominee")
+    Call<createnomineeresponse>createnominee(@Field("userNomineeName")String userNomineeName,
+                                             @Field("userNomineeMobileNumber")String userNomineeMobileNumber);
 }

@@ -1,63 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView android:layout_height="200dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".usernominees_will_Activity">
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:hint="@string/write_your_will_here"
-
-        android:inputType="text" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="20dp"
+    android:background="@drawable/white_border_shape_button_rounded"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/bankname"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/shape_button_rounded"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="@dimen/btn_paddingTopBottom"
-            android:paddingBottom="@dimen/btn_paddingTopBottom"
-            android:text="@string/edit"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/btn_text_size"
-            app:backgroundTint="@color/colorPrimary"
-            style="?android:attr/buttonBarButtonStyle" />
-
-        <Button
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="10dp"
+            android:text="@string/account_number"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/shape_button_rounded"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="@dimen/btn_paddingTopBottom"
-            android:paddingBottom="@dimen/btn_paddingTopBottom"
-            android:text="@string/confirm"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/btn_text_size"
-            app:backgroundTint="@color/colorPrimary"
-            style="?android:attr/buttonBarButtonStyle" />
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+        <TextView
+            android:id="@+id/bankaccnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+        <TextView
+            android:id="@+id/IFSCcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ifsc_code"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+        <TextView
+            android:id="@+id/branchname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/branch_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1C1A1A"
+            />
+
     </LinearLayout>
-
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

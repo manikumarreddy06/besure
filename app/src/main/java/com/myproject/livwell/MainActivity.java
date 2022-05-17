@@ -24,30 +24,30 @@ public class MainActivity extends AppCompatActivity  {
         llbanks=findViewById(R.id.llbanks);
         llmutualfunds=findViewById(R.id.llmutualfunds);
         llstocks=findViewById(R.id.llstocks);
-          topappbar=findViewById(R.id.topappbar);
+        topappbar=findViewById(R.id.topappbar);
 
 
-       llbanks.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent i=new Intent(MainActivity.this,empty_Activity.class);
-               startActivity(i);
-           }
-       });
-       llmutualfunds.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent i=new Intent(MainActivity.this,empt_Activity2.class);
-               startActivity(i);
-           }
-       });
-       llstocks.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent i=new Intent(MainActivity.this,empty_activity3.class);
-               startActivity(i);
-           }
-       });
+        llbanks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,empty_Activity.class);
+                startActivity(i);
+            }
+        });
+        llmutualfunds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,empt_Activity2.class);
+                startActivity(i);
+            }
+        });
+        llstocks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this,empty_activity3.class);
+                startActivity(i);
+            }
+        });
 
 
         topappbar.setNavigationOnClickListener(new View.OnClickListener() {

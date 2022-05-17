@@ -8,18 +8,18 @@ import android.view.View;
 import android.widget.Button;
 
 public class empty_Activity extends AppCompatActivity {
-Button buttonadd;
+    Button buttonadd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empty);
         buttonadd=findViewById(R.id.btn_add);
-       buttonadd.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent i=new Intent(empty_Activity.this,bankaccounts.class);
-               startActivity(i);
-           }
-       });
+        buttonadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(empty_Activity.this,bankaccounts.class);
+                startActivity(i);
+            }
+        });
     }
 }

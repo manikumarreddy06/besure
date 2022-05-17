@@ -10,25 +10,23 @@
     app:cardCornerRadius="20dp"
     android:background="@drawable/white_border_shape_button_rounded"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context=".Bank_ResultActivity"
-    >
+    tools:context=".Bank_ResultActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/bankname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/account_number"
             android:layout_marginStart="10dp"
-            android:fontFamily="sans-serif"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:text="@string/account_number"
             android:textColor="#1C1A1A"
-            />
+            android:textSize="16sp"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/bankaccnum"
             android:layout_width="wrap_content"
@@ -39,8 +37,7 @@
             android:layout_marginTop="10dp"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#1C1A1A"
-            />
+            android:textColor="#1C1A1A" />
         <TextView
             android:id="@+id/IFSCcode"
             android:layout_width="wrap_content"
@@ -51,8 +48,7 @@
             android:textSize="16sp"
             android:fontFamily="sans-serif"
             android:textStyle="bold"
-            android:textColor="#1C1A1A"
-            />
+            android:textColor="#1C1A1A" />
         <TextView
             android:id="@+id/branchname"
             android:layout_width="wrap_content"
@@ -63,8 +59,6 @@
             android:textSize="16sp"
             android:fontFamily="sans-serif"
             android:textStyle="bold"
-            android:textColor="#1C1A1A"
-            />
-
+            android:textColor="#1C1A1A" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

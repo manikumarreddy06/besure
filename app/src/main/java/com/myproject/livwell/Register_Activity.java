@@ -10,14 +10,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Register_Activity extends AppCompatActivity {
-private EditText name,mobilenum,password,repassword;
-private Button signup;
+    private EditText name,mobilenum,password,repassword;
+    private Button signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         name=findViewById(R.id.et_name);
-       mobilenum=findViewById(R.id.et_mobilenum);
+        mobilenum=findViewById(R.id.et_mobilenum);
         password=findViewById(R.id.et_password);
         signup=findViewById(R.id.btn_sign_up);
         repassword=findViewById(R.id.et_repassword);
@@ -33,14 +33,14 @@ private Button signup;
         if (TextUtils.isEmpty(name.getText().toString())){
             name.setError("Please enter your name ");
         }
-       else if (TextUtils.isEmpty(mobilenum.getText().toString())){
+        else if (TextUtils.isEmpty(mobilenum.getText().toString())){
             mobilenum.setError("Enter a valid mobile number");
         }
         else if (TextUtils.isEmpty(password.getText().toString())){
             password.setError("enter your password");
         }
         else if (TextUtils.isEmpty(password.getText().toString())){
-           repassword.setError("passwords doesn't match");
+            repassword.setError("passwords doesn't match");
         }
         else {
             Toast.makeText(this, "regisration successful", Toast.LENGTH_SHORT).show();

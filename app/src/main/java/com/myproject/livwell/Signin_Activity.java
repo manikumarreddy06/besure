@@ -53,7 +53,14 @@ public class Signin_Activity extends AppCompatActivity  {
             mobilenum.setError("Mobile number cannot be empty");
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
+<<<<<<< Updated upstream
 
+=======
+        else if (TextUtils.isEmpty(etpassword.getText().toString())){
+            etpassword.setError("Password cannot be empty");
+            Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show();
+        }
+>>>>>>> Stashed changes
         else {
 
             Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(usernum);

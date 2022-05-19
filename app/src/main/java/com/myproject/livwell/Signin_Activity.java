@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -31,14 +32,18 @@ public class Signin_Activity extends AppCompatActivity  {
         setContentView(R.layout.activity_signin);
 
 
-        mobilenum = findViewById(R.id.etmobile_signin);
-        signin = findViewById(R.id.btn_sign_in);
+
 
 
 
        signin.setOnClickListener(new View.OnClickListener() {
+
            @Override
+
            public void onClick(View view) {
+               mobilenum = findViewById(R.id.etmobile_signin);
+               signin = findViewById(R.id.btn_sign_in);
+
                signin();
            }
        });
@@ -49,18 +54,17 @@ public class Signin_Activity extends AppCompatActivity  {
 
            String usernum=mobilenum.getText().toString();
 
+
         if (TextUtils.isEmpty(usernum)){
             mobilenum.setError("Mobile number cannot be empty");
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
-<<<<<<< Updated upstream
 
-=======
-        else if (TextUtils.isEmpty(etpassword.getText().toString())){
+       /* else if (TextUtils.isEmpty(etpassword.getText().toString())){
             etpassword.setError("Password cannot be empty");
             Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show();
-        }
->>>>>>> Stashed changes
+        }*/
+
         else {
 
             Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(usernum);

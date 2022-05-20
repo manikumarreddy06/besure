@@ -28,19 +28,17 @@ public class Signin_Activity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+        mobilenum = findViewById(R.id.etmobile_signin);
+        signin = findViewById(R.id.btn_sign_in);
 
-
-       signin.setOnClickListener(new View.OnClickListener() {
-
-           @Override
-
-           public void onClick(View view) {
-               mobilenum = findViewById(R.id.etmobile_signin);
-               signin = findViewById(R.id.btn_sign_in);
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
                signin();
-           }
-       });
+
+            }
+        });
     }
 
 
@@ -71,6 +69,8 @@ public class Signin_Activity extends AppCompatActivity  {
 
                     if (response.isSuccessful()){
                         Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
+                        signup signupresponse= response.body();
+
                     }
                 }
 

@@ -2,7 +2,6 @@ package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 import com.google.gson.JsonObject;
 import com.myproject.livwell.models.signup;
 import com.myproject.livwell.retrofitUtil.RetrofitClient;
-import com.myproject.livwell.retrofitUtil.Apiinterface;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -62,11 +60,15 @@ public class Signin_Activity extends AppCompatActivity  {
         }*/
 
         else {
-
-            Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(usernum);
+            signup obj=new signup();
+            obj.setMobileNumber(usernum);
+            Call<signup>call=RetrofitClient.getInstance().apiinterface().usersignin(obj);
             call.enqueue(new Callback<signup>() {
                 @Override
                 public void onResponse(Call<signup> call, Response<signup> response) {
+
+                    Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
+
                     if (response.isSuccessful()){
                         Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
                     }

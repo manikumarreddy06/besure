@@ -29,10 +29,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:boxStrokeColor="@color/colorPrimary"
+        app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_nominee_s_name">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_name"
+            android:id="@+id/et_nomineename"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -45,6 +46,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_relationship_with_nominee">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -61,6 +63,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_nominee_s_mobile_number">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -76,6 +79,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_nominee_s_mail_id">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -91,6 +95,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_nominee_s_address">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -102,6 +107,7 @@
         android:id="@+id/attach_file"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
+        app:hintTextColor="@color/colorPrimary"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
@@ -119,7 +125,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
     <Button
-        android:id="@+id/btn_nomineesave"
+        android:id="@+id/btn_nomineesavedata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

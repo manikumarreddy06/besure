@@ -14,9 +14,9 @@ import android.widget.Toast;
 import com.google.android.material.appbar.MaterialToolbar;
 
 public class Mutualfunds_Activity extends AppCompatActivity {
-private EditText mutualfundname,folioname,schemename,fundtype,funddes,fundproof;
+    private EditText mutualfundname,folioname,schemename,fundtype,funddes,fundproof;
 
-private Button savedata;
+    private Button savedata;
 
 
     @Override

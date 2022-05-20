@@ -27,32 +27,32 @@ public class bankaccounts extends AppCompatActivity {
 
 
 
-     et_bankname=findViewById(R.id.et_bankname);
-     etbankAccountno=findViewById(R.id.et_bankAccountnum);
-     et_IFSCCODE=findViewById(R.id.et_ifsc);
-     et_Branch=findViewById(R.id.et_bankbranch);
-     et_Textbox=findViewById(R.id.et_bankdes);
-     /*et_Atttachment=findViewById(R.id.etbankdoc);*/
-     savedata=findViewById(R.id.btn_banksave);
+        et_bankname=findViewById(R.id.et_bankname);
+        etbankAccountno=findViewById(R.id.et_bankAccountnum);
+        et_IFSCCODE=findViewById(R.id.et_ifsc);
+        et_Branch=findViewById(R.id.et_bankbranch);
+        et_Textbox=findViewById(R.id.et_bankdes);
+        /*et_Atttachment=findViewById(R.id.etbankdoc);*/
+        savedata=findViewById(R.id.btn_banksave);
 
-     savedata.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View view) {
+        savedata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        String textbankname=et_bankname.getText().toString();
-       int textaccno=Integer.parseInt(etbankAccountno.getText().toString());
+                String textbankname=et_bankname.getText().toString();
+                int textaccno=Integer.parseInt(etbankAccountno.getText().toString());
        /*String ifsccode=et_IFSCCODE.getText().toString();
        String branch=et_Branch.getText().toString();*/
 
 
 
-             Intent intent=new Intent(bankaccounts.this,Bank_ResultActivity.class);
-        intent.putExtra("Extratext",textbankname);
-        intent.putExtra("Extranum",textaccno);
-             startActivity(intent);
+                Intent intent=new Intent(bankaccounts.this,Bank_ResultActivity.class);
+                intent.putExtra("Extratext",textbankname);
+                intent.putExtra("Extranum",textaccno);
+                startActivity(intent);
 
-         }
-     });
+            }
+        });
 
     }
     public void setdata(){

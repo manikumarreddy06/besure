@@ -1,5 +1,6 @@
 package com.myproject.livwell.retrofitUtil;
 
+import com.myproject.livwell.models.createnomineeresponse;
 import com.google.gson.JsonObject;
 import com.myproject.livwell.models.signup;
 
@@ -13,4 +14,10 @@ public interface Apiinterface {
 
      @POST("v1/signup")
       Call<signup>usersignin(@Body signup data );
+      Call<signup>usersignin(@Field("mobileNumber")String mobileNumber);
+
+    @FormUrlEncoded
+    @POST("v1/create/nominee")
+    Call<createnomineeresponse>createnominee(@Field("userNomineeName")String userNomineeName,
+                                             @Field("userNomineeMobileNumber")String userNomineeMobileNumber);
 }

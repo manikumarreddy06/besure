@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Stocks_Activity extends AppCompatActivity {
-EditText brokername,Dematnum,stocksdes,stockproof;
-Button savedata;
+    EditText brokername,Dematnum,stocksdes,stockproof;
+    Button savedata;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

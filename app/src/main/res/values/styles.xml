@@ -4,4 +4,7 @@
         <item name="boxStrokeColor">@color/colorPrimary</item>
         <item name="hintTextColor">@color/black</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
 </resources>

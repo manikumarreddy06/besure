@@ -3,6 +3,7 @@ package com.myproject.livwell;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -29,14 +30,18 @@ public class Signin_Activity extends AppCompatActivity  {
         setContentView(R.layout.activity_signin);
 
 
-        mobilenum = findViewById(R.id.etmobile_signin);
-        signin = findViewById(R.id.btn_sign_in);
+
 
 
 
        signin.setOnClickListener(new View.OnClickListener() {
+
            @Override
+
            public void onClick(View view) {
+               mobilenum = findViewById(R.id.etmobile_signin);
+               signin = findViewById(R.id.btn_sign_in);
+
                signin();
            }
        });
@@ -46,10 +51,17 @@ public class Signin_Activity extends AppCompatActivity  {
     public void signin() {
 
            String usernum=mobilenum.getText().toString();
+
+
         if (TextUtils.isEmpty(usernum)){
             mobilenum.setError("Mobile number cannot be empty");
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
+
+       /* else if (TextUtils.isEmpty(etpassword.getText().toString())){
+            etpassword.setError("Password cannot be empty");
+            Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show();
+        }*/
 
         else {
             signup obj=new signup();
@@ -75,6 +87,6 @@ public class Signin_Activity extends AppCompatActivity  {
             startActivity(intent);
             finish();*/
         }
-    }
+   }
 
 }

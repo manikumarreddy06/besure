@@ -1,6 +1,6 @@
 package com.myproject.livwell.models;
 
-public class nomineeresponse {
+public class createnomineeresponse {
     private String userId;
     private String userNomineeName;
     private String userNomineeMobileNumber;

@@ -30,7 +30,7 @@
             android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd"
             android:hint="@string/enter_your_name"
             android:textSize="16sp"
-
+            app:hintTextColor="@color/colorPrimary"
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeErrorColor="@color/error_color"
             app:startIconDrawable="@drawable/person">
@@ -51,6 +51,7 @@
             android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd"
             android:hint="@string/enter_mobile_number"
             android:textSize="16sp"
+            app:hintTextColor="@color/colorPrimary"
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeErrorColor="@color/error_color"
             app:startIconDrawable="@drawable/call_icon">
@@ -73,6 +74,7 @@
             android:textSize="14sp"
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeErrorColor="@color/error_color"
+            app:hintTextColor="@color/colorPrimary"
             app:endIconMode="password_toggle"
             app:startIconDrawable="@drawable/lock_icon">
 
@@ -94,6 +96,7 @@
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeErrorColor="@color/error_color"
             app:endIconMode="password_toggle"
+            app:hintTextColor="@color/colorPrimary"
             app:startIconDrawable="@drawable/lock_icon">
 
             <com.google.android.material.textfield.TextInputEditText

@@ -26,6 +26,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/colorPrimary"
         app:boxStrokeColor="@color/colorPrimary"
         android:hint="@string/enter_your_stock_broker_name">
         <!--this is the actual edit text which takes the input-->
@@ -46,6 +47,7 @@
         app:endIconCheckable="true"
         app:endIconDrawable="@drawable/ic_exclaimation"
         app:endIconMode="custom"
+        app:hintTextColor="@color/colorPrimary"
         app:endIconTint="@color/dummy_color"
         android:hint="@string/enter_your_bo_id_demat_number_optional">
         <!--this is the actual edit text which takes the input-->
@@ -63,6 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_stock_description_optional">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -80,9 +83,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/add_any_attachment"
+        app:boxStrokeColor="@color/colorPrimary"
         app:endIconCheckable="true"
         app:endIconDrawable="@drawable/attach_file"
         app:endIconMode="custom"
+        app:hintTextColor="@color/colorPrimary"
         app:endIconTint="@color/dummy_color">
 
         <com.google.android.material.textfield.TextInputEditText

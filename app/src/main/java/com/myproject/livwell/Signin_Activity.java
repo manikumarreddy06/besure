@@ -32,10 +32,6 @@ public class Signin_Activity extends AppCompatActivity  {
         setContentView(R.layout.activity_signin);
 
 
-
-
-
-
        signin.setOnClickListener(new View.OnClickListener() {
 
            @Override

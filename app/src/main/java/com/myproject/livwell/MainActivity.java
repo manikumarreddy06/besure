@@ -2,6 +2,8 @@ package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,19 +15,26 @@ import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
+import retrofit2.Retrofit;
+
 public class MainActivity extends AppCompatActivity  {
     LinearLayout llbanks,llmutualfunds,llstocks;
-
+    private RecyclerView recyclerView;
     private MaterialToolbar topappbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        llbanks=findViewById(R.id.llbanks);
-        llmutualfunds=findViewById(R.id.llmutualfunds);
-        llstocks=findViewById(R.id.llstocks);
+//        llbanks=findViewById(R.id.llbanks);
+//        llmutualfunds=findViewById(R.id.llmutualfunds);
+//        llstocks=findViewById(R.id.llstocks);
         topappbar=findViewById(R.id.topappbar);
 
+
+        //Implementing category recyclerview
+        recyclerView.findViewById(R.id.category_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         llbanks.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +95,10 @@ public class MainActivity extends AppCompatActivity  {
                 return false;
             }
         });
+
+
+
+
 
     }
 

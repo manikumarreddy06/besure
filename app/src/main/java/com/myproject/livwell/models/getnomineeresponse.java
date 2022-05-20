@@ -6,7 +6,6 @@ public class getnomineeresponse implements Serializable {
 
 
     public class Relationresponse implements Serializable {
-
         private String userId;
         private String userNomineeName;
         private String userNomineeMobileNumber;

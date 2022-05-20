@@ -23,7 +23,8 @@ retrofitClient=new RetrofitClient();
         return retrofitClient;
     }
 
-   public  Apiinterface apiinterface(){
+    public  Apiinterface apiinterface(){
         return retrofit.create(Apiinterface.class);
     }
+
 }

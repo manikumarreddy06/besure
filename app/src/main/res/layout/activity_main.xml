@@ -24,9 +24,10 @@
                 app:menu="@menu/mutualfunds_appbar"
                 app:title="Besure" />
         </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="8dp"
             android:layout_marginVertical="10dp"
@@ -46,109 +47,175 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif"
                     android:gravity="center"
-                    android:text="Accounts"
+                    android:text="Features"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="15dp"
-                    android:layout_gravity="left"
+                    android:layout_marginBottom="5dp"
                     android:orientation="horizontal">
+
                     <LinearLayout
-                        android:id="@+id/llbanks"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
+                        android:id="@+id/ll1"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="match_parent">
 
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_marginHorizontal="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:elevation="15dp"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
                             android:src="@drawable/ic_bank_account" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:textAlignment="center"
+                            android:gravity="center"
                             android:fontFamily="sans-serif"
-                            android:text="Bank Account"
+                            android:text="Accounts"
                             android:textColor="@color/black"
                             android:textSize="15sp"
                             android:textStyle="italic|bold" />
-                    </LinearLayout>
 
+                    </LinearLayout>
                     <LinearLayout
-                        android:id="@+id/llmutualfunds"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
+                        android:id="@+id/ll2"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="match_parent">
 
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_marginHorizontal="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:elevation="15dp"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
+                            android:src="@drawable/ic_nominee" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"
+                            android:text="Nominees"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="italic|bold" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll3"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
                             android:src="@drawable/ic_mutual_fund" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:gravity="center"
                             android:fontFamily="sans-serif"
-                            android:text="Mutual funds"
-                            android:textAlignment="center"
+                            android:text="Nodging"
                             android:textColor="@color/black"
                             android:textSize="15sp"
                             android:textStyle="italic|bold" />
-                    </LinearLayout>
 
+                    </LinearLayout>
                     <LinearLayout
-                        android:id="@+id/llstocks"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
+                        android:id="@+id/ll4"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="match_parent">
 
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
                             android:layout_marginHorizontal="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:elevation="15dp"
-                            android:src="@drawable/ic_stock" />
+                            android:layout_gravity="center"
+                            android:elevation="5dp"
+                            android:src="@drawable/ic_stock"
+                            android:contentDescription="Asset Distribution" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="Home"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif"
+                            android:text="Asset Distribution"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textStyle="italic|bold" />
+
                     </LinearLayout>
                 </LinearLayout>
+
+
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginHorizontal="8dp"-->
+<!--            android:layout_marginVertical="10dp"-->
+<!--            android:background="#031F2B"-->
+<!--            app:cardCornerRadius="20dp"-->
+<!--            app:cardElevation="50dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:fontFamily="sans-serif"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Accounts"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/category_recycler_view"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                    tools:listitem="@layout/categories_item" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

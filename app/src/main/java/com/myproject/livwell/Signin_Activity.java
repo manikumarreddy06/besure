@@ -70,6 +70,7 @@ public class Signin_Activity extends AppCompatActivity  {
                     if (response.isSuccessful()){
                         Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
                         signup signupresponse= response.body();
+                        
 
                     }
                 }

@@ -141,7 +141,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif"
-                android:onClick="onregister"
                 android:padding="6dp"
                 android:text="@string/register_here"
                 android:textAlignment="textStart"

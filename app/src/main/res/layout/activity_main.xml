@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><!--<androidx.cardview.widget.CardView-->
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/bg"
+        android:background="@color/bg_white"
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topappbar"
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
@@ -22,7 +22,8 @@
                 android:backgroundTint="@color/colorPrimary"
                 android:theme="@style/AppTheme.AppBarOverlay"
                 app:menu="@menu/mutualfunds_appbar"
-                app:title="Besure" />
+                app:title="Bsure"
+                app:titleTextColor="@color/white" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.cardview.widget.CardView
@@ -41,360 +42,308 @@
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="start"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:text="Features"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/features" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:baselineAligned="false"
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:id="@+id/ll1"
-                        android:orientation="vertical"
+                        android:id="@+id/assets"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:layout_marginHorizontal="5dp"
-                        android:layout_height="match_parent">
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginHorizontal="5dp"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
                             android:layout_gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:contentDescription="@string/assets"
                             android:elevation="5dp"
-                            android:src="@drawable/ic_bank_account" />
+                            android:src="@drawable/asset_icon" />
 
                         <TextView
+                            style="@style/main_activity_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:fontFamily="sans-serif"
-                            android:text="Accounts"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="italic|bold" />
+                            android:text="@string/assets" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:id="@+id/ll2"
-                        android:orientation="vertical"
+                        android:id="@+id/nominee"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:layout_marginHorizontal="5dp"
-                        android:layout_height="match_parent">
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginHorizontal="5dp"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
                             android:layout_gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:contentDescription="@string/nominee"
                             android:elevation="5dp"
-                            android:src="@drawable/ic_nominee" />
+                            android:src="@drawable/nomination_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:fontFamily="@font/allerta"
                             android:gravity="center"
-                            android:fontFamily="sans-serif"
-                            android:text="Nominees"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="italic|bold" />
+                            android:text="@string/nominee"
+                            android:textColor="@color/primary_text_color"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:id="@+id/ll3"
-                        android:orientation="vertical"
+                        android:id="@+id/nudge"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:layout_marginHorizontal="5dp"
-                        android:layout_height="match_parent">
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginHorizontal="5dp"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
                             android:layout_gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:contentDescription="@string/nudge"
                             android:elevation="5dp"
-                            android:src="@drawable/ic_mutual_fund" />
+                            android:src="@drawable/nudge_icon" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:fontFamily="@font/allerta"
                             android:gravity="center"
-                            android:fontFamily="sans-serif"
-                            android:text="Nodging"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="italic|bold" />
+                            android:text="@string/nudge"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
+
                     <LinearLayout
-                        android:id="@+id/ll4"
-                        android:orientation="vertical"
+                        android:id="@+id/distribution"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:layout_marginHorizontal="5dp"
-                        android:layout_height="match_parent">
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginHorizontal="5dp"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
                             android:layout_gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:contentDescription="@string/distribution"
                             android:elevation="5dp"
-                            android:src="@drawable/ic_stock"
-                            android:contentDescription="Asset Distribution" />
+                            android:src="@drawable/asset_distribution" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:fontFamily="@font/allerta"
                             android:gravity="center"
-                            android:fontFamily="sans-serif"
-                            android:text="Asset Distribution"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="italic|bold" />
-
+                            android:text="@string/distribution"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
-
 
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginHorizontal="8dp"-->
-<!--            android:layout_marginVertical="10dp"-->
-<!--            android:background="#031F2B"-->
-<!--            app:cardCornerRadius="20dp"-->
-<!--            app:cardElevation="50dp">-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            android:background="#031F2B"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="50dp">
+
 
 <!--            <LinearLayout-->
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:orientation="vertical">-->
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:fontFamily="sans-serif"-->
-<!--                android:gravity="center"-->
-<!--                android:text="Accounts"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/category_recycler_view"-->
-<!--                    android:layout_width="match_parent"-->
+<!--                <TextView-->
+<!--                    style="@style/Title"-->
+<!--                    android:layout_width="wrap_content"-->
 <!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginStart="16dp"-->
 <!--                    android:layout_marginTop="8dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--                    tools:listitem="@layout/categories_item" />-->
+<!--                    android:text="@string/insurances" />-->
 
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginHorizontal="15dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:baselineAligned="false"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/llvehicle"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="10dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginHorizontal="5dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:contentDescription="@string/vehicle"-->
+<!--                            android:elevation="5dp"-->
+<!--                            android:src="@drawable/ic_car_insurance" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/allerta"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="@string/vehicle"-->
+<!--                            android:textColor="@color/primary_text_color"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/llhealth"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="10dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginHorizontal="5dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:contentDescription="@string/health"-->
+<!--                            android:elevation="5dp"-->
+<!--                            android:src="@drawable/ic_health_insurance" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/allerta"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="@string/health"-->
+<!--                            android:textColor="@color/primary_text_color"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/llhome"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="10dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginHorizontal="5dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:contentDescription="@string/home"-->
+<!--                            android:elevation="5dp"-->
+<!--                            android:src="@drawable/ic_home_insurance" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/allerta"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="@string/home"-->
+<!--                            android:textColor="@color/primary_text_color"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/lllife"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="10dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginHorizontal="5dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:contentDescription="@string/life"-->
+<!--                            android:elevation="5dp"-->
+<!--                            android:src="@drawable/ic_life_insurance" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:fontFamily="@font/allerta"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="@string/life"-->
+<!--                            android:textColor="@color/primary_text_color"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
 <!--            </LinearLayout>-->
-
-<!--        </androidx.cardview.widget.CardView>-->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="10dp"
-            android:background="#031F2B"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="50dp">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:text="Insurances"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginHorizontal="15dp"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:id="@+id/llvehicle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginHorizontal="5dp"
-                                android:layout_marginBottom="10dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/ic_car_insurance" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="sans-serif"
-                                android:text="Vehicle"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"
-                                android:textStyle="italic|bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/llhealth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginHorizontal="5dp"
-                                android:layout_marginBottom="10dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/ic_health_insurance" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="sans-serif"
-                                android:text="Health"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"
-                                android:textStyle="italic|bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/llhome"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginHorizontal="5dp"
-                                android:layout_marginBottom="10dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/ic_home_insurance" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="Home"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"
-                                android:textStyle="italic|bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/lllife"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginHorizontal="5dp"
-                                android:layout_marginBottom="10dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/ic_life_insurance" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="sans-serif"
-                                android:text="Life"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"
-                                android:textStyle="italic|bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/lltravel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginHorizontal="5dp"
-                                android:layout_marginBottom="10dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/ic_travel_insurance" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="Travel"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"
-                                android:textStyle="italic|bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </HorizontalScrollView>
-            </LinearLayout>
-
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>

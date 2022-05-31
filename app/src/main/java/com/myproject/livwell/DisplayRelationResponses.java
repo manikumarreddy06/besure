@@ -1,5 +1,6 @@
 package com.myproject.livwell;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -29,18 +30,18 @@ public class DisplayRelationResponses extends AppCompatActivity {
 
         call.enqueue(new Callback<relationresponse>() {
             @Override
-            public void onResponse(Call<relationresponse> call, Response<relationresponse> response) {
+            public void onResponse(@NonNull Call<relationresponse> call, @NonNull Response<relationresponse> response) {
 
 //                ArrayList<relationresponse.data> data = relationresponseList.get(position).getRelationName();
 //                holder.tvRelation.setText(data.getRelationName());
 
 //                ArrayList<relationresponse.data> p= new ArrayList(response.body().getData().getClass().getRelationName());
-            DisplayRelationResponses d= response.body().getData()
+//            DisplayRelationResponses d= response.body().getData();
 
             }
 
             @Override
-            public void onFailure(Call<relationresponse> call, Throwable t) {
+            public void onFailure(@NonNull Call<relationresponse> call, @NonNull Throwable t) {
                 Log.d("Error", t.getMessage());
             }
         });

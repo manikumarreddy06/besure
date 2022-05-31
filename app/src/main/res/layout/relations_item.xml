@@ -14,13 +14,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Son"
-            android:textSize="32sp"
-            android:textColor="#263238"
-            android:textAlignment="center"
+            style="@style/Description"
+            android:paddingHorizontal="15dp"
             android:layout_weight="1"/>
         <ImageButton
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.25"
             android:background="@color/white"
             android:layout_gravity="center"
@@ -28,7 +27,7 @@
             android:contentDescription="add" />
         <ImageButton
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.25"
             android:layout_gravity="center"
             android:background="@color/white"

@@ -1,99 +1,56 @@
 package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
-
 import com.google.android.material.appbar.MaterialToolbar;
 
-import retrofit2.Retrofit;
-
 public class MainActivity extends AppCompatActivity  {
-    LinearLayout llbanks,llmutualfunds,llstocks;
-    private RecyclerView recyclerView;
-    private MaterialToolbar topappbar;
+    LinearLayout llassets,llnominee,llnudge, lldistribution;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        llbanks=findViewById(R.id.llbanks);
-//        llmutualfunds=findViewById(R.id.llmutualfunds);
-//        llstocks=findViewById(R.id.llstocks);
-        topappbar=findViewById(R.id.topappbar);
 
+        MaterialToolbar topappbar = findViewById(R.id.topappbar);
+        llassets = findViewById(R.id.assets);
+        llnominee = findViewById(R.id.nominee);
+        llnominee = findViewById(R.id.nudge);
+        lldistribution = findViewById(R.id.distribution);
 
         //Implementing category recyclerview
-        recyclerView.findViewById(R.id.category_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.findViewById(R.id.category_recycler_view);
+//        recyclerView.setHasFixedSize(true);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        llbanks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this,empty_Activity.class);
+        llassets.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this,empty_Activity.class);
+            startActivity(i);
+        });
+        llnominee.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this,empt_Activity2.class);
+            startActivity(i);
+        });
+        llnudge.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this,empty_activity3.class);
+            startActivity(i);
+        });
+        lldistribution.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this,empty_activity3.class);
+            startActivity(i);
+        });
+
+
+        topappbar.setNavigationOnClickListener(view -> {
+
+        });
+        topappbar.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.profile) {
+                Intent i = new Intent(MainActivity.this, Profile.class);
                 startActivity(i);
             }
-        });
-        llmutualfunds.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this,empt_Activity2.class);
-                startActivity(i);
-            }
-        });
-        llstocks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this,empty_activity3.class);
-                startActivity(i);
-            }
-        });
-
-
-        topappbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        topappbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-
-                switch (item.getItemId()){
-                    case  R.id.usernomineeswill:
-                    {
-
-
-                    }
-                    case R.id.usernominees:
-                    {
-
-                        Intent i=new Intent(MainActivity.this,Nominees_Activity.class);
-                        startActivity(i);
-
-                    }
-                    case R.id.privacypolicy:{
-
-                    }
-                    case R.id.tandc:{
-
-                    }
-                    case R.id.logout:{
-
-                    }
-                }
-                return false;
-            }
+            return false;
         });
 
 

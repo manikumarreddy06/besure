@@ -97,7 +97,45 @@
     <string name="write_your_will_here">write your will here</string>
     <string name="edit">Edit</string>
     <string name="confirm">confirm</string>
-
+    <string name="what_does_bsure_live_do">What does Bsure.live do?</string>
+    <string name="description1">description</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="tnc1">Welcome to the BSure.live! At Bsure.live we are aiming to secure all your financial information and data and transfer it to your family members on time. Our aim is to ensure our users family members don\'t have to run from pillar to post to get the financial information of user when they desperately need them,</string>
+    <string name="tnc_txt2">By registering with Bsure.live and accessing the BSure.live Services, you are representing the following:<br />
+      You are 18 years of age or older.<br />
+      You are capable of entering into a legally binding agreement.<br />
+      You are not barred or otherwise legally prohibited from accessing or using the Bsure.live App and Bsure.live Services.<br />
+    If you allow anyone to use your account, including individuals under 18 years of age, you will still be responsible for ensuring that such individuals comply with these Terms of Use. You will be responsible for all actions these individuals take in and/or through your account. You also acknowledge that Bsure.live does not have the responsibility of ensuring that You meet the aforesaid eligibility requirements.<br />
+    Please read the terms and conditions carefully before registering, accessing or using the Bsure.live Services (defined below) offered through the Bsure.live website, Bsure.live App (defined below) or through applications or websites of Bsure.live Group Entities (defined below). These terms and conditions are a legal contract ("Terms of Use") between You and Bsure.live (“Bsure.live”). You agree and acknowledge that you have read the terms and conditions set forth below. If you do not agree to these Terms of Use or do not wish to be bound by these Terms of Use, you may not use the Bsure.live Services and/or immediately terminate the Services and/or uninstall the Bsure.live App.
+    </string>
+    <string name="tnc_txtPartial">By registering with Bsure.live and accessing the BSure.live Services, you are representing the following:<br />
+      You are 18 years of age or older.<br />
+      You are capable of entering into a legally binding agreement.
+    </string>
+    <string name="features">Features</string>
+    <string name="assets">Assets</string>
+    <string name="nominee">Nominee</string>
+    <string name="nudge">Nudge</string>
+    <string name="distribution">Distribution</string>
+    <string name="insurances">Insurances</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="health">Health</string>
+    <string name="home">Home</string>
+    <string name="life">Life</string>
+    <string name="user_name">User Name</string>
+    <string name="credential">Credential</string>
+    <string name="about_us">About Us</string>
+    <string name="faq">FAQ</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="logout">Logout</string>
+    <string name="read_full_terms_amp_conditions"><![CDATA[Read Full Terms & Conditions.]]></string>
+    <string name="start_using_bsure_nwith_premium_benifits">Start Using Bsure \nwith Premium Benefits</string>
+    <string name="bullted_benifit_nudge">   <li>Item one two aojff fdiikf </li>
+   <li>Item two</li>
+   <li>Item three</li>
+    </string>
+    <string name="about_us_txt">If you have any concerns, complaints or grievances about the terms or other users or their manner of use of the application infringe or violate your rights or any complaints about how we handle your personal information, please feel free to contact customer support within the Bsure.live App, on Bsure.live’s official social media channels, or the Grievance Officer any time at: Email: grievanceofficer@Bsure.live</string>
+    <string name="familyicon">familyIcon</string>
     <string-array name="statespinners">
         <item>Andhra pradesh</item>
         <item>Telangana</item>
@@ -105,6 +143,5 @@
         <item>karnataka</item>
         <item>Orissa</item>
         <item>Madhyapradesh</item>
-
     </string-array>
 </resources>

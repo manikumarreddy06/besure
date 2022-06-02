@@ -14,14 +14,32 @@
         android:theme="@style/Theme.Livwell"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Asset_Categories_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Billing"
+            android:exported="false" />
+        <activity
+            android:name=".Nudge_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ContactUs"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".TnC_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".About_Us"
+            android:exported="false" />
+        <activity
+            android:name=".FAQ.FAQ_Activity"
+            android:exported="false" />
+        <activity
             android:name=".DisplayRelationResponses"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".usernominees_will_Activity"
             android:exported="false" />
@@ -48,13 +66,15 @@
             android:exported="false" />
         <activity
             android:name=".Splashscreen_Activity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Nominees_Activity"
-            android:exported="true" >
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".bankaccounts"
@@ -65,6 +85,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

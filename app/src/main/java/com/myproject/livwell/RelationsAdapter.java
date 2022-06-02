@@ -1,5 +1,7 @@
 package com.myproject.livwell;
 
+import android.content.Context;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,35 +16,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RelationsAdapter extends RecyclerView.Adapter<RelationsAdapter.ViewHolder> {
-    private List<relationresponse>relationresponseList;
+private List<relationresponse.data>relationresponse;
 
-    public RelationsAdapter(List<relationresponse> relationresponseList) {
-        this.relationresponseList = relationresponseList;
+    public RelationsAdapter(List<com.myproject.livwell.models.relationresponse.data> relationresponse) {
+        this.relationresponse = relationresponse;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.relations_item,parent,false);
+        View view= LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.relations_item,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-//        relationresponse data = relationresponseList.get(position);
-//        holder.tvRelation.setText(data.getData().get());
+holder.tvrelation.setText(relationresponse.get(position).getRelationName());
     }
 
     @Override
     public int getItemCount() {
-        return relationresponseList.size();
+        return relationresponse.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvRelation;
+        TextView tvrelation;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvRelation = itemView.findViewById(R.id.tv_relation);
+            tvrelation=itemView.findViewById(R.id.tv_relation);
         }
     }
 }

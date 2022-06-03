@@ -1,9 +1,7 @@
 package com.myproject.livwell;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -30,17 +28,23 @@ public class Signin_Activity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-        mobilenum = findViewById(R.id.etmobile_signin);
-        signin = findViewById(R.id.btn_sign_in);
 
-        signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+
+
+
+        signin=findViewById(R.id.btn_sign_in);
+
+       signin.setOnClickListener(new View.OnClickListener() {
+
+           @Override
+
+           public void onClick(View view) {
+               mobilenum = findViewById(R.id.etmobile_signin);
+               signin = findViewById(R.id.btn_sign_in);
 
                signin();
-
-            }
-        });
+           }
+       });
     }
 
 
@@ -52,8 +56,6 @@ public class Signin_Activity extends AppCompatActivity  {
         if (TextUtils.isEmpty(usernum)){
             mobilenum.setError("Mobile number cannot be empty");
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
-            Intent i=new Intent(Signin_Activity.this,Asset_Categories_Activity.class);
-            startActivity(i);
         }
 
        /* else if (TextUtils.isEmpty(etpassword.getText().toString())){
@@ -73,16 +75,12 @@ public class Signin_Activity extends AppCompatActivity  {
 
                     if (response.isSuccessful()){
                         Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
-                        signup signupresponse= response.body();
-
-
                     }
                 }
 
                 @Override
                 public void onFailure(Call<signup> call, Throwable t) {
                     Toast.makeText(Signin_Activity.this,"failure",Toast.LENGTH_SHORT).show();
-
                 }
             });
            /* Intent intent=new Intent(this,MainActivity.class);

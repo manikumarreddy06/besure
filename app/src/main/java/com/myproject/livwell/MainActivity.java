@@ -32,26 +32,26 @@ public class MainActivity extends AppCompatActivity  {
             Intent i=new Intent(MainActivity.this,empt_Activity2.class);
             startActivity(i);
         });
-        llnudge.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this,empty_activity3.class);
-            startActivity(i);
-        });
-        lldistribution.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this,empty_activity3.class);
-            startActivity(i);
-        });
+//        llnudge.setOnClickListener(view -> {
+//            Intent i=new Intent(MainActivity.this,empty_activity3.class);
+//            startActivity(i);
+//        });
+//        lldistribution.setOnClickListener(view -> {
+//            Intent i=new Intent(MainActivity.this,empty_activity3.class);
+//            startActivity(i);
+//        });
 
 
-        topappbar.setNavigationOnClickListener(view -> {
-
-        });
-        topappbar.setOnMenuItemClickListener(item -> {
-            if (item.getItemId() == R.id.profile) {
-                Intent i = new Intent(MainActivity.this, Profile.class);
-                startActivity(i);
-            }
-            return false;
-        });
+//        topappbar.setNavigationOnClickListener(view -> {
+//
+//        });
+//        topappbar.setOnMenuItemClickListener(item -> {
+//            if (item.getItemId() == R.id.profile) {
+//                Intent i = new Intent(MainActivity.this, Profile.class);
+//                startActivity(i);
+//            }
+//            return false;
+//        });
 
 
 

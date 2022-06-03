@@ -2,6 +2,7 @@ package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -70,11 +71,14 @@ public class Signin_Activity extends AppCompatActivity  {
             call.enqueue(new Callback<signup>() {
                 @Override
                 public void onResponse(Call<signup> call, Response<signup> response) {
-
-                    Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
-
                     if (response.isSuccessful()){
-                        Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
+                          Intent intent=new Intent(Signin_Activity.this,MainActivity.class);
+                           startActivity(intent);
+                           finish();
+                    }
+                    else{
+
                     }
                 }
 
@@ -83,9 +87,7 @@ public class Signin_Activity extends AppCompatActivity  {
                     Toast.makeText(Signin_Activity.this,"failure",Toast.LENGTH_SHORT).show();
                 }
             });
-           /* Intent intent=new Intent(this,MainActivity.class);
-            startActivity(intent);
-            finish();*/
+
         }
    }
 

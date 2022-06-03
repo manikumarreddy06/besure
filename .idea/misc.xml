@@ -30,6 +30,7 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/Livwell/app/src/main/res/menu/mutualfunds_appbar.xml" value="0.22760416666666666" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_signin.xml" value="0.25" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/ic_add_icon_ColPrimary.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/ic_exclaimation.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.187" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/topappbar_nominees.xml" value="0.1" />
@@ -68,8 +69,9 @@
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/rounded_borders_main.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/shape_button_rounded.xml" value="0.187" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/topappbar_nominees.xml" value="0.1" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/font/allerta.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_about_us.xml" value="0.20863616930312098" />
-        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_asset_categories.xml" value="0.2116289012398461" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_asset_categories.xml" value="0.27828054298642535" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_bank_result.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_bankaccounts.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_billing.xml" value="0.2" />
@@ -84,12 +86,13 @@
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_mutualfunds.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_nominees.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_nudge.xml" value="0.264" />
-        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_signin.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_splashscreen.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_stocks.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_tn_cactivity.xml" value="0.1" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_tnc.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_tnc_activity.xml" value="0.4" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_usernominees_will.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/bankslayout_one_item.xml" value="0.25416666666666665" />

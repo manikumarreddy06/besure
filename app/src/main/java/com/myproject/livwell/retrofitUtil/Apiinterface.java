@@ -1,6 +1,6 @@
 package com.myproject.livwell.retrofitUtil;
 
-import com.myproject.livwell.models.categories;
+import com.myproject.livwell.models.Asset_categories;
 import com.myproject.livwell.models.createnomineeresponse;
 import com.myproject.livwell.models.relationresponse;
 import com.myproject.livwell.models.signup;
@@ -21,7 +21,7 @@ public interface Apiinterface {
       Call<signup>usersignin(@Field("mobileNumber")String mobileNumber);
 
     @GET("v1/categories")
-    Call<List<categories>>getCategories();
+    Call<List<Asset_categories>>getAssetCategories();
 
 
     @GET("v1/relations")

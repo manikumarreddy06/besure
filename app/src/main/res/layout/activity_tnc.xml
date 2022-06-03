@@ -6,22 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".TnC_Activity"
     android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginHorizontal="30dp"
-        android:src="@drawable/logo"
-        />
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/terms_amp_conditions"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:gravity="center"/>
+        android:elevation="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_amp_conditions"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,12 +33,13 @@
 
             <TextView
                 android:id="@+id/tv_tnc1"
-                android:layout_marginVertical="5dp"
+                style="@style/TnC_Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
                 android:text="@string/tnc1"
-                style="@style/TnC_Description"
                 android:textSize="14sp" />
+
             <TextView
                 android:id="@+id/tv_tnc_head1"
                 android:layout_width="match_parent"

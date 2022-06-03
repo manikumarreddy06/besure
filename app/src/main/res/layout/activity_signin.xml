@@ -41,6 +41,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etmobile_signin"
                 android:layout_width="match_parent"
+                android:inputType="number"
+                android:maxLength="10"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,6 +58,7 @@
             android:fontFamily="sans-serif"
             app:hintTextColor="@color/colorPrimary"
             android:textSize="16sp"
+            android:visibility="gone"
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeErrorColor="@color/error_color"
             app:endIconMode="password_toggle"
@@ -115,6 +118,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="center"
+            android:visibility="gone"
             android:text="@string/forgot_password"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp" />
@@ -130,6 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif"
+                android:visibility="gone"
                 android:text="@string/don_t_have_an_account"
                 android:textAlignment="textEnd"
                 android:textColor="@color/dummy_color"
@@ -144,6 +149,7 @@
                 android:padding="6dp"
                 android:text="@string/register_here"
                 android:textAlignment="textStart"
+                android:visibility="gone"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
 
@@ -153,7 +159,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:contentDescription="@string/logo"
         android:gravity="bottom"
         android:scaleType="fitXY"

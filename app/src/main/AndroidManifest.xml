@@ -39,7 +39,9 @@
             android:exported="false" />
         <activity
             android:name=".DisplayRelationResponses"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
         <activity
             android:name=".usernominees_will_Activity"
             android:exported="false" />
@@ -66,15 +68,17 @@
             android:exported="false" />
         <activity
             android:name=".Splashscreen_Activity"
-            android:exported="true" />
-        <activity
-            android:name=".Nominees_Activity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Nominees_Activity"
+            android:exported="false">
+
         </activity>
         <activity
             android:name=".bankaccounts"

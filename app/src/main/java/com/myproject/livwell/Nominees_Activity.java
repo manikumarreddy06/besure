@@ -60,6 +60,7 @@ public class Nominees_Activity extends AppCompatActivity {
                         toast.show(); // display the Toast
                         createnomineeresponse nomineeresponse=response.body();
 
+
                     }
 
                     @Override

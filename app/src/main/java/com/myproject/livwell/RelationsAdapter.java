@@ -16,11 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RelationsAdapter extends RecyclerView.Adapter<RelationsAdapter.ViewHolder> {
-private List<relationresponse.data>relationresponse;
 
-    public RelationsAdapter(List<com.myproject.livwell.models.relationresponse.data> relationresponse) {
+    private ArrayList<relationresponse.data>relationresponse;
+
+    public RelationsAdapter(ArrayList<com.myproject.livwell.models.relationresponse.data> relationresponse) {
         this.relationresponse = relationresponse;
     }
+
+
 
     @NonNull
     @Override

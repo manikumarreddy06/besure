@@ -12,13 +12,13 @@ public class Bank_ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bank_result);
-        bankname=findViewById(R.id.bankname);
+        /*bankname=findViewById(R.id.bankname);
         bankaccountnum=findViewById(R.id.bankaccnum);
 
         String data1=getIntent().getStringExtra("Extratext");
         int data2=getIntent().getIntExtra("Extranum",0);
         bankname.setText(data1);
         bankaccountnum.setText(data2);
-
+*/
     }
 }

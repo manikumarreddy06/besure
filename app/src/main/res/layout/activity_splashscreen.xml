@@ -11,7 +11,7 @@
         android:id="@+id/SplashScreenImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="TrWill"
+        android:text="besure"
         android:textSize="75sp"
         android:textColor="@color/white"
         android:gravity="center"/>

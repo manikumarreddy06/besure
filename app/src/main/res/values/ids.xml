@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="assets" type="id">assets</item>
-    <item name="nominee" type="id">nominee</item>
-    <item name="nudge" type="id">nudge</item>
-    <item name="distribution" type="id">distribution</item>
-</resources>

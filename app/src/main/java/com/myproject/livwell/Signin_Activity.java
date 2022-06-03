@@ -32,7 +32,7 @@ public class Signin_Activity extends AppCompatActivity  {
 
 
 
-
+        signin=findViewById(R.id.btn_sign_in);
 
        signin.setOnClickListener(new View.OnClickListener() {
 

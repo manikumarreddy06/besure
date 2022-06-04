@@ -1,5 +1,6 @@
 package com.myproject.livwell.retrofitUtil;
 
+import com.myproject.livwell.models.AssetsConfigResponse;
 import com.myproject.livwell.models.CategoryResponseBean;
 import com.myproject.livwell.models.createnomineeresponse;
 import com.myproject.livwell.models.relationresponse;
@@ -13,6 +14,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface Apiinterface {
 
@@ -31,4 +33,11 @@ public interface Apiinterface {
     @POST("v1/create/nominee")
     Call<createnomineeresponse>createnominee(@Field("userNomineeName")String userNomineeName,
                                              @Field("userNomineeMobileNumber")String userNomineeMobileNumber);
+
+
+    @GET("v1/getAssetConfig/{id}")
+    Call<AssetsConfigResponse>getAssestsConfigurations(@Path("id") String id);
+
+
+
 }

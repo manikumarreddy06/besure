@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentExtraCost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="40dp"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/margin_8dp"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/margin_8dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="Comments" />
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/etInput"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:layout_marginRight="34dp"-->
+<!--        android:background="@drawable/shape_outline_rect_gray"-->
+<!--        android:focusedByDefault="false"-->
+<!--        android:hint="Enter text here"-->
+<!--        android:imeOptions="actionGo"-->
+<!--        android:inputType="text"-->
+<!--        android:maxLines="1"-->
+<!--        android:minHeight="40dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/black"-->
+<!--        android:textSize="14sp" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etTextAreaInput"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginRight="34dp"-->
+<!--        android:background="@drawable/shape_outline_rect_gray"-->
+<!--        android:focusedByDefault="false"-->
+<!--        android:hint="Enter text here"-->
+<!--        android:inputType="textMultiLine"-->
+<!--        android:maxLines="6"-->
+<!--        android:minHeight="100dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/black"-->
+<!--        android:textSize="14sp"-->
+<!--        android:visibility="gone"/>-->
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:hintTextColor="@color/colorPrimary"
+        android:hint="@string/enter_bank_name">
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

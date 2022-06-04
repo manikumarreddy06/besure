@@ -1,5 +1,7 @@
 package com.myproject.livwell.retrofitUtil;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -11,14 +13,20 @@ public class RetrofitClient {
 
 
     private RetrofitClient(){
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BASIC);
+        OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(logging)
+                .build();
         retrofit=new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
                 .build();
     }
     public static synchronized RetrofitClient getInstance(){
         if (retrofitClient ==null){
-retrofitClient=new RetrofitClient();
+            retrofitClient=new RetrofitClient();
         }
         return retrofitClient;
     }

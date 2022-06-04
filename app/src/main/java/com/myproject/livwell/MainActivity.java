@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity  {
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         llassets.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this,empty_Activity.class);
+            Intent i=new Intent(MainActivity.this,Asset_Categories_Activity.class);
             startActivity(i);
         });
         llnominee.setOnClickListener(view -> {

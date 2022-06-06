@@ -23,8 +23,10 @@ import retrofit2.http.Path;
 public interface Apiinterface {
 
      @POST("v1/signup")
-      Call<signup>usersignin(@Body signup data );
-      Call<signup>usersignin(@Field("mobileNumber")String mobileNumber);
+     Call<signup>usersignin(@Body signup data );
+
+    @POST("v1/user/verifyOtp")
+    Call<signup>verifyOtp(@Body signup data );
 
     @POST("v1/categories")
     Call<CategoryResponseBean>getAssetCategories();

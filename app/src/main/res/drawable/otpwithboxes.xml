@@ -13,6 +13,6 @@
 
     <stroke
         android:width="3dp"
-        android:color="#DA6464" />
+        android:color="@color/bg_primary" />
 
 </shape>

@@ -144,4 +144,7 @@
         <item>Orissa</item>
         <item>Madhyapradesh</item>
     </string-array>
+
+
+    <string name="change_number"><u>Modify Number</u>.</string>
 </resources>

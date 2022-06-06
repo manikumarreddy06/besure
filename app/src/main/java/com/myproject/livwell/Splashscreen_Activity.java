@@ -17,11 +17,23 @@ public class Splashscreen_Activity extends AppCompatActivity {
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i=new Intent(Splashscreen_Activity.this,Signin_Activity.class);
-                startActivity(i);
-                finish();
+                launchScreen();
             }
         },1000);
+
+    }
+
+    private void launchScreen() {
+        if(PreferenceManager.instance(this).get(PreferenceManager.LOGIN_STATUS,false)){
+            Intent i=new Intent(Splashscreen_Activity.this,MainActivity.class);
+            startActivity(i);
+            finish();
+        }
+        else{
+            Intent i=new Intent(Splashscreen_Activity.this,Signin_Activity.class);
+            startActivity(i);
+            finish();
+        }
 
     }
 }

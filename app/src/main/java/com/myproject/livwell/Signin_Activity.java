@@ -2,6 +2,7 @@ package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -58,6 +59,7 @@ public class Signin_Activity extends AppCompatActivity  {
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
 
+
        /* else if (TextUtils.isEmpty(etpassword.getText().toString())){
             etpassword.setError("Password cannot be empty");
             Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show();
@@ -70,10 +72,13 @@ public class Signin_Activity extends AppCompatActivity  {
             call.enqueue(new Callback<signup>() {
                 @Override
                 public void onResponse(Call<signup> call, Response<signup> response) {
-
                     if (response.isSuccessful()){
-                        Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
+                          Intent intent=new Intent(Signin_Activity.this,MainActivity.class);
+                           startActivity(intent);
+                           finish();
                     }
+
                 }
 
                 @Override
@@ -81,9 +86,7 @@ public class Signin_Activity extends AppCompatActivity  {
                     Toast.makeText(Signin_Activity.this,"failure",Toast.LENGTH_SHORT).show();
                 }
             });
-           /* Intent intent=new Intent(this,MainActivity.class);
-            startActivity(intent);
-            finish();*/
+
         }
    }
 

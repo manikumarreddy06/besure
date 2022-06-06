@@ -25,33 +25,33 @@ public class MainActivity extends AppCompatActivity  {
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         llassets.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this,empty_Activity.class);
+            Intent i=new Intent(MainActivity.this,Asset_Categories_Activity.class);
             startActivity(i);
         });
         llnominee.setOnClickListener(view -> {
             Intent i=new Intent(MainActivity.this,empt_Activity2.class);
             startActivity(i);
         });
-        llnudge.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this,empty_activity3.class);
-            startActivity(i);
-        });
-        lldistribution.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this,empty_activity3.class);
-            startActivity(i);
-        });
+//        llnudge.setOnClickListener(view -> {
+//            Intent i=new Intent(MainActivity.this,empty_activity3.class);
+//            startActivity(i);
+//        });
+//        lldistribution.setOnClickListener(view -> {
+//            Intent i=new Intent(MainActivity.this,empty_activity3.class);
+//            startActivity(i);
+//        });
 
 
-        topappbar.setNavigationOnClickListener(view -> {
-
-        });
-        topappbar.setOnMenuItemClickListener(item -> {
-            if (item.getItemId() == R.id.profile) {
-                Intent i = new Intent(MainActivity.this, Profile.class);
-                startActivity(i);
-            }
-            return false;
-        });
+//        topappbar.setNavigationOnClickListener(view -> {
+//
+//        });
+//        topappbar.setOnMenuItemClickListener(item -> {
+//            if (item.getItemId() == R.id.profile) {
+//                Intent i = new Intent(MainActivity.this, Profile.class);
+//                startActivity(i);
+//            }
+//            return false;
+//        });
 
 
 

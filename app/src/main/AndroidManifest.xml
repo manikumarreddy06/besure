@@ -47,7 +47,7 @@
             android:name=".Bank_ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".empty_Activity4"
+            android:name=".AssetListActivity"
             android:exported="false" />
         <activity
             android:name=".empty_activity3"
@@ -67,10 +67,10 @@
         <activity
             android:name=".Splashscreen_Activity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN" />-->
+<!--            <category android:name="android.intent.category.LAUNCHER" />-->
+<!--        </intent-filter>-->
         </activity>
         <activity
             android:name=".Nominees_Activity"
@@ -85,7 +85,18 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".DynamicFormActivity"
             android:exported="true" />
+
 
         <meta-data
             android:name="preloaded_fonts"

@@ -27,15 +27,13 @@
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
                 android:text="@string/bank_name"
-                android:layout_marginTop="10dp"
-                style="@style/card_textElements" />
+                android:layout_marginTop="10dp" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.55"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
-                android:text="State bank of India"
-                style="@style/Description"/>
+                android:text="State bank of India"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,15 +45,13 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                style="@style/card_textElements" />
+                android:layout_marginTop="10dp" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.55"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
-                android:text="12xxxxxxxx"
-                style="@style/Description"/>
+                android:text="12xxxxxxxx"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,15 +63,13 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                style="@style/card_textElements" />
+                android:layout_marginTop="10dp" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.55"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
-                android:text="ABCN0xxxx"
-                style="@style/Description"/>
+                android:text="ABCN0xxxx"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,15 +81,13 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                style="@style/card_textElements" />
+                android:layout_marginTop="10dp" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.55"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
-                android:text="XYZ"
-                style="@style/Description"/>
+                android:text="XYZ"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,8 +99,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                style="@style/card_textElements" />
+                android:layout_marginTop="10dp" />
 
 <!--            <LinearLayout-->
 <!--                android:layout_width="match_parent"-->
@@ -123,8 +114,7 @@
                 android:layout_height="wrap_content"
                 android:text="+Add Details"
                 android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
-                style="@style/Description"/>
+                android:textSize="14sp"/>
         </LinearLayout>
         <Button
             android:id="@+id/btn_copyToAll"

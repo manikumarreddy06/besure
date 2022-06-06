@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    app:cardElevation="20dp"
+    app:cardCornerRadius="20dp"
+    android:background="@drawable/white_border_shape_button_rounded"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".Bank_ResultActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_copyToAll"
+            android:text="Copy To all"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_gravity="end"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_copyTl"
+                android:text="Edit"
+                android:paddingHorizontal="20dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.45"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+            <Button
+                android:id="@+id/btn_copyl"
+                android:text="Save"
+                android:paddingHorizontal="20dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.45"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

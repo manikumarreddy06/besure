@@ -130,6 +130,16 @@ public class DynamicFormActivity : AppCompatActivity(){
         call.enqueue(object : Callback<BaseResponse> {
             override fun onResponse(call: Call<BaseResponse>, response: Response<BaseResponse>) {
                 Utils.hideDialog()
+                var data: BaseResponse? =response.body()
+                if(data!!.isvalid){
+                    Toast.makeText(this@DynamicFormActivity, "data saved", Toast.LENGTH_SHORT).show()
+                    finish()
+                }
+                else{
+                    Toast.makeText(this@DynamicFormActivity, "failure", Toast.LENGTH_SHORT).show()
+
+                }
+
             }
 
             override fun onFailure(call: Call<BaseResponse>, t: Throwable) {

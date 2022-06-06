@@ -20,6 +20,10 @@ import retrofit2.Response
 class AssetListActivity : AppCompatActivity() {
     var assetId:String?=null
     var assetName:String?=null
+    override fun onResume() {
+        super.onResume()
+        getAssestsData()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,21 +38,20 @@ class AssetListActivity : AppCompatActivity() {
             i.putExtra("asset_id", assetId)
             i.putExtra("asset_name", assetName)
             startActivity(i)
-            finish()
         }
         btn_add.setOnClickListener(View.OnClickListener {
             val i = Intent(this@AssetListActivity, DynamicFormActivity::class.java)
             i.putExtra("asset_id", assetId)
             i.putExtra("asset_name", assetName)
             startActivity(i)
-            finish()
         })
 
         tvdontadd.setOnClickListener(){
             finish();
         }
-        getAssestsData()
     }
+
+
 
 
     private fun getAssestsData() {

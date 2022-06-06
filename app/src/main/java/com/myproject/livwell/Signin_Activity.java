@@ -71,8 +71,6 @@ public class Signin_Activity extends AppCompatActivity  {
                 @Override
                 public void onResponse(Call<signup> call, Response<signup> response) {
 
-                    Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
-
                     if (response.isSuccessful()){
                         Toast.makeText(Signin_Activity.this,response+"is success",Toast.LENGTH_SHORT).show();
                     }

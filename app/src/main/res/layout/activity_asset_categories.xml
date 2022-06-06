@@ -10,6 +10,7 @@
 
     <TextView
         android:id="@+id/title"
+        style="@style/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -46,8 +47,8 @@
             android:drawablePadding="8dp"
             android:gravity="center_vertical"
             android:text="Add Accounts"
-            android:textColor="@color/colorPrimary"
             android:textSize="24sp"
+            style="@style/Title"
             app:drawableLeftCompat="@drawable/ic_add_icon" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

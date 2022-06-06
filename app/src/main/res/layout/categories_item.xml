@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="10dp"
+            style="@style/Title"
             android:text="Category 1" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

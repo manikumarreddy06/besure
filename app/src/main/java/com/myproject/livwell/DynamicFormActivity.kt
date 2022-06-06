@@ -122,7 +122,7 @@ public class DynamicFormActivity : AppCompatActivity(){
         Utils.showDialog(this@DynamicFormActivity,"loading")
         var data=SaveAssetRequest()
         data.assetId=assetId
-        data.userId="1"
+        data.userId=PreferenceManager.instance(this@DynamicFormActivity).get(PreferenceManager.USER_ID,null)
         data.assetsList=finalList
 
 

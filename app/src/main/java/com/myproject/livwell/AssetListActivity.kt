@@ -57,7 +57,8 @@ class AssetListActivity : AppCompatActivity() {
     private fun getAssestsData() {
         var userAsset:UserAsset= UserAsset()
         userAsset.assetId=assetId
-        userAsset.setUserId("1")
+        userAsset.setUserId(PreferenceManager.instance(this).get(PreferenceManager.USER_ID,null)
+        )
         val call = RetrofitClient.getInstance().apiinterface().getUserLevelAssetsByCategory(userAsset)
         call.enqueue(object : Callback<UserAssetResponseBean> {
             override fun onResponse(

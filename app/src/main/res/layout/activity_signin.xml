@@ -46,30 +46,103 @@
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <com.google.android.material.textfield.TextInputLayout
-
+        <LinearLayout
+            android:id="@+id/root_otp_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd"
-            android:hint="@string/password"
-            android:fontFamily="sans-serif"
-            app:hintTextColor="@color/colorPrimary"
-            android:textSize="16sp"
-            android:visibility="gone"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:boxStrokeErrorColor="@color/error_color"
-            app:endIconMode="password_toggle"
-            app:startIconDrawable="@drawable/lock_icon">
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputPw"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/otp_edit_box1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textSize="30sp"
+                android:background="@drawable/otpwithboxes"/>
+
+            <EditText
+                android:id="@+id/otp_edit_box2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/otpwithboxes"/>
+
+            <EditText
+                android:id="@+id/otp_edit_box3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/otpwithboxes"/>
+
+            <EditText
+                android:id="@+id/otp_edit_box4"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:layout_marginRight="20dp"
+                android:maxLength="1"
+                android:background="@drawable/otpwithboxes" />
+
+            <EditText
+                android:id="@+id/otp_edit_box5"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:inputType="number"
+
+                android:maxLength="1"
+                android:background="@drawable/otpwithboxes" />
+
+
+        </LinearLayout>
+
+
+
+        <!--  <com.google.android.material.textfield.TextInputLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+              android:layout_marginTop="15dp"
+              android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd"
+              android:hint="@string/password"
+              android:fontFamily="sans-serif"
+              app:hintTextColor="@color/colorPrimary"
+              android:textSize="16sp"
+              android:visibility="gone"
+              app:boxStrokeColor="@color/colorPrimary"
+              app:boxStrokeErrorColor="@color/error_color"
+              app:endIconMode="password_toggle"
+              app:startIconDrawable="@drawable/lock_icon">
+
+              <com.google.android.material.textfield.TextInputEditText
+                  android:id="@+id/inputPw"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPassword" />
+          </com.google.android.material.textfield.TextInputLayout>-->
 
 
         <CheckBox

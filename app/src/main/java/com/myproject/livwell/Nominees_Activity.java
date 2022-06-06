@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,8 +55,11 @@ public class Nominees_Activity extends AppCompatActivity {
                 call.enqueue(new Callback<createnomineeresponse>() {
                     @Override
                     public void onResponse(Call<createnomineeresponse> call, Response<createnomineeresponse> response) {
-                        Toast.makeText(Nominees_Activity.this, response+"is success", Toast.LENGTH_SHORT).show();
+                        Toast toast = Toast.makeText(getApplicationContext(), "nominee added successfully", Toast.LENGTH_LONG); // initiate the Toast with context, message and duration for the Toast
+                        toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);     // set gravity for the Toast.
+                        toast.show(); // display the Toast
                         createnomineeresponse nomineeresponse=response.body();
+
 
                     }
 

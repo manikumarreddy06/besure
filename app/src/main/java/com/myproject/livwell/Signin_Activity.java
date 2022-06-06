@@ -59,6 +59,7 @@ public class Signin_Activity extends AppCompatActivity  {
             Toast.makeText(this, "Mobile number cannot be empty", Toast.LENGTH_SHORT).show();
         }
 
+
        /* else if (TextUtils.isEmpty(etpassword.getText().toString())){
             etpassword.setError("Password cannot be empty");
             Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show();
@@ -77,9 +78,7 @@ public class Signin_Activity extends AppCompatActivity  {
                            startActivity(intent);
                            finish();
                     }
-                    else{
 
-                    }
                 }
 
                 @Override

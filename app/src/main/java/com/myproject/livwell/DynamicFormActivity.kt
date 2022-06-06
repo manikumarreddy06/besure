@@ -12,9 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.myproject.livwell.models.AssetsConfigResponse
-import com.myproject.livwell.models.CategoryDetailsBean
-import com.myproject.livwell.models.CategoryResponseBean
+import com.myproject.livwell.models.*
 import com.myproject.livwell.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_dynamic.*
 import retrofit2.Call
@@ -30,6 +28,10 @@ public class DynamicFormActivity : AppCompatActivity(){
         setContentView(R.layout.activity_dynamic)
         assetId=intent.getStringExtra("asset_id")
         getAssestsConfiguration()
+
+        btnSave.setOnClickListener(){
+            validateForm()
+        }
     }
 
 
@@ -95,6 +97,46 @@ public class DynamicFormActivity : AppCompatActivity(){
 
             dataContainer.addView(view)
         }
+
+
+    }
+
+    private fun validateForm() {
+        var finalList = ArrayList<AssetData>()
+        var textBoxError = false
+        if (textBoxAdapterList.size == 0) textBoxError = true
+        for (adapter in textBoxAdapterList) {
+                textBoxError = adapter.validate()
+                if (textBoxError)
+                    finalList.addAll(adapter.getData())
+                else break
+        }
+        if (textBoxError)  {
+            updatedAssetData(finalList)
+        }
+
+    }
+
+    private fun updatedAssetData(finalList: ArrayList<AssetData>) {
+
+        Utils.showDialog(this@DynamicFormActivity,"loading")
+        var data=SaveAssetRequest()
+        data.assetId=assetId
+        data.userId="1"
+        data.assetsList=finalList
+
+
+        val call = RetrofitClient.getInstance().apiinterface().saveAssetData(data)
+        call.enqueue(object : Callback<BaseResponse> {
+            override fun onResponse(call: Call<BaseResponse>, response: Response<BaseResponse>) {
+                Utils.hideDialog()
+            }
+
+            override fun onFailure(call: Call<BaseResponse>, t: Throwable) {
+                Toast.makeText(this@DynamicFormActivity, "failure", Toast.LENGTH_SHORT).show()
+                Utils.hideDialog()
+            }
+        })
 
 
     }

@@ -47,7 +47,7 @@
             android:name=".Bank_ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".empty_Activity4"
+            android:name=".AssetListActivity"
             android:exported="false" />
         <activity
             android:name=".empty_activity3"

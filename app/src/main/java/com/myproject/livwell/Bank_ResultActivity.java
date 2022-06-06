@@ -2,7 +2,6 @@ package com.myproject.livwell;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -11,7 +10,7 @@ public class Bank_ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bank_result);
+        setContentView(R.layout.line_item_assets);
         bankname=findViewById(R.id.bankname);
         bankaccountnum=findViewById(R.id.bankaccnum);
 

@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textfield.TextInputLayout
+import com.myproject.livwell.models.AssetData
 import com.myproject.livwell.models.CategoryDetailsBean
 import java.util.*
 
@@ -50,11 +51,11 @@ class   TextBoxAdapter(val context: Context, val mData: ArrayList<CategoryDetail
                 }
 
                 override fun afterTextChanged(s: Editable?) {
-//                    if (s != null && s.length > 0) {
-//                        mData[position].parameterValue = s.toString()
-//                    } else {
-//                        mData[position].parameterValue = ""
-//                    }
+                    if (s != null && s.length > 0) {
+                        mData[position].parameterValue = s.toString()
+                    } else {
+                        mData[position].parameterValue = ""
+                    }
                 }
         })
 
@@ -62,30 +63,30 @@ class   TextBoxAdapter(val context: Context, val mData: ArrayList<CategoryDetail
 
     }
 
-//    fun getData(): List<SaveRequest> {
-//        val finalList = ArrayList<SaveRequest>()
-//
-//        for (item in mData) {
-//            val single = SaveRequest()
-//            single.key = item.key
-//            single.value=item.parameterValue
-//            finalList.add(single)
-//
-//        }
-//        return finalList
-//
-//    }
-//
-//    fun validate():Boolean{
-//        for (item in mData) {
-//            if (item.isMandatory && item.parameterValue.isNullOrEmpty()){
-//                Utils.toast("Please enter value for "+item.label,context)
-//                return false
-//            }
-//        }
-//
-//        return true
-//    }
+    fun getData(): List<AssetData> {
+        val finalList = ArrayList<AssetData>()
+
+        for (item in mData) {
+            val single = AssetData()
+            single.id = item.subCategoryId
+            single.value=item.parameterValue
+            finalList.add(single)
+
+        }
+        return finalList
+
+    }
+
+    fun validate():Boolean{
+        for (item in mData) {
+            if (item.madantory!=null  && item.madantory.equals("true",true) && item.parameterValue.isNullOrEmpty()){
+                Utils.toast("Please enter value for "+item.subCategoryName,context)
+                return false
+            }
+        }
+
+        return true
+    }
 
     override fun getItemCount(): Int {
         return mData.size

@@ -1,7 +1,11 @@
 package com.myproject.livwell.retrofitUtil;
 
 import com.myproject.livwell.models.AssetsConfigResponse;
+import com.myproject.livwell.models.BaseResponse;
 import com.myproject.livwell.models.CategoryResponseBean;
+import com.myproject.livwell.models.SaveAssetRequest;
+import com.myproject.livwell.models.UserAsset;
+import com.myproject.livwell.models.UserAssetResponseBean;
 import com.myproject.livwell.models.createnomineeresponse;
 import com.myproject.livwell.models.relationresponse;
 import com.myproject.livwell.models.signup;
@@ -37,6 +41,16 @@ public interface Apiinterface {
 
     @GET("v1/getAssetConfig/{id}")
     Call<AssetsConfigResponse>getAssestsConfigurations(@Path("id") String id);
+
+
+    @POST("v1/user/saveAssetInfo")
+    Call<BaseResponse>saveAssetData(@Body SaveAssetRequest request);
+
+
+    @POST("v1/getAssets")
+    Call<UserAssetResponseBean>getUserLevelAssetsByCategory(@Body UserAsset request);
+
+
 
 
 

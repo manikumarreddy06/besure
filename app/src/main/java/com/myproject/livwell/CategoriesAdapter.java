@@ -38,8 +38,9 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         holder.ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(mContext, DynamicFormActivity.class);
+                Intent i=new Intent(mContext, AssetListActivity.class);
                 i.putExtra("asset_id",Asset_categories.getCategoryId());
+                i.putExtra("asset_name",Asset_categories.getCategoryName());
                 mContext.startActivity(i);
             }
         });

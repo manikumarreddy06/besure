@@ -4,16 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
      android:layout_height="wrap_content"
+    tools:context=".Nudge_activity"
+    android:background="@color/bg_white"
     android:layout_width="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".Nudge_activity"
-        android:background="@color/bg_white"
+        android:paddingHorizontal="15dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="140dp"
+            android:layout_marginHorizontal="5dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
@@ -22,36 +24,42 @@
                 android:text="Nudge"
                 android:elevation="30dp"
                 style="@style/TnC_TitleText"
-                android:textSize="40sp"
+                android:textSize="33sp"
                 android:textColor="@color/colorPrimary"
                 android:paddingTop="80dp"
-                android:gravity="center"
-                />
+                android:gravity="center" />
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.35"
                 android:src="@drawable/ic_nudge_bg"/>
         </LinearLayout>
-
         <TextView
-            style="@style/TnC_Description"
-            android:textSize="20sp"
+            style="@style/TnC_TitleText"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tnc1"
-            android:layout_marginHorizontal="20dp"
+            android:text="What is Nudge?"
+            android:paddingHorizontal="5dp"
+            android:textColor="@color/primary_text_color" />
+        <TextView
+            style="@style/TnC_Description"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nudge_desc"
+            android:paddingHorizontal="10dp"
             android:textColor="@color/primary_text_color" />
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
-            android:layout_marginHorizontal="50dp"
+            android:layout_marginHorizontal="5dp"
             android:src="@drawable/tap_icon"/>
-
         <TextView
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
+            android:layout_marginHorizontal="5dp"
             android:layout_height="wrap_content"
             android:text="@string/start_using_bsure_nwith_premium_benifits"
             style="@style/TnC_TitleText"
@@ -59,102 +67,33 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            android:textSize="27sp"/>
+            android:textSize="23sp"/>
         <TextView
-            android:layout_marginVertical="10dp"
+            android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bullted_benifit_nudge"
             android:fontFamily="@font/allerta"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"/>
-
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_margin="20dp"
+            android:layout_height="140dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
             android:orientation="horizontal">
-<!--            <com.google.android.material.card.MaterialCardView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="0.5"-->
-<!--                android:elevation="40dp"-->
-<!--                app:cardElevation="20dp"-->
-<!--                android:background="@drawable/margin_round"-->
-<!--                android:outlineAmbientShadowColor="@color/bg_primary"-->
-<!--                app:cardBackgroundColor="@color/white"-->
-<!--                app:cardCornerRadius="20dp"-->
-<!--                android:checkable="true"-->
-<!--                android:clickable="true"-->
-<!--                android:focusable="true"-->
-<!--                android:layout_marginEnd="10dp">-->
-<!--                <FrameLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:background="@drawable/card_edge"-->
-<!--                    android:layout_height="match_parent"/>-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:orientation="vertical"-->
-<!--                    android:gravity="center">-->
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:gravity="center"-->
-<!--                        android:fontFamily="@font/allerta"-->
-<!--                        android:textSize="18sp"-->
-<!--                        android:textColor="@color/colorPrimaryDark"-->
-<!--                        android:text="Annual Plan"/>-->
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginVertical="10dp"-->
-<!--                        android:orientation="horizontal">-->
-<!--                        <TextView-->
-<!--                            android:text="300"-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_weight="0.4"-->
-<!--                            android:gravity="end"-->
-<!--                            android:textSize="24sp"-->
-<!--                            android:layout_marginEnd="3dp"-->
-<!--                            android:fontFamily="@font/allerta"-->
-<!--                            android:textColor="@color/colorPrimaryDark"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:layout_height="wrap_content"/>-->
-<!--                        <TextView-->
-<!--                            android:text="/- INR"-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_weight="0.4"-->
-<!--                            android:gravity="start"-->
-<!--                            android:fontFamily="@font/allerta"-->
-<!--                            android:textSize="20sp"-->
-<!--                            android:textColor="@color/colorPrimaryDark"-->
-<!--                            android:layout_height="wrap_content"/>-->
-<!--                    </LinearLayout>-->
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="Per year"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:gravity="center"-->
-<!--                        android:fontFamily="@font/allerta"-->
-<!--                        android:textSize="18sp"-->
-<!--                        android:textColor="@color/colorPrimaryDark"/>-->
-<!--                </LinearLayout>-->
-<!--            </com.google.android.material.card.MaterialCardView>-->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:elevation="40dp"
-                app:cardCornerRadius="20dp"
+                android:elevation="10dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="15dp"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_marginStart="10dp"
-                app:cardElevation="30dp">
+                app:cardElevation="10dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -166,8 +105,8 @@
                         android:src="@drawable/ic_peach_card_bg" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="172dp"
+                        android:layout_height="144dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -226,13 +165,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
-                android:elevation="40dp"
-                app:cardCornerRadius="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="15dp"
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
-                app:cardElevation="30dp"
-                android:layout_marginStart="10dp">
+                app:cardElevation="10dp"
+                android:layout_marginStart="8dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -301,8 +240,8 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-            <Button
-                android:id="@+id/btn_sign_in"
+        <Button
+                android:id="@+id/btn_proceed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -313,7 +252,8 @@
                 android:paddingTop="@dimen/btn_paddingTopBottom"
                 android:paddingBottom="@dimen/btn_paddingTopBottom"
                 android:text="Proceed"
-                android:elevation="30dp"
+                style="@style/button"
+                android:elevation="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/btn_text_size"
                 app:backgroundTint="@color/colorPrimary" />

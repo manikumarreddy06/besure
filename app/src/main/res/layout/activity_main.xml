@@ -21,7 +21,9 @@
                 android:backgroundTint="@color/colorPrimary"
                 app:menu="@menu/mutualfunds_appbar"
                 app:title="Bsure"
-                app:titleTextColor="@color/white" />
+                app:titleTextColor="@color/white"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                app:titleTextAppearance="@style/Toolbar.TitleText" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.cardview.widget.CardView
@@ -45,6 +47,9 @@
                     android:layout_gravity="start"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:textColor="@color/primary_text_color"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
                     android:text="@string/features" />
 
                 <LinearLayout

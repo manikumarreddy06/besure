@@ -1,335 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F9F9F9"
     android:orientation="vertical"
-    tools:context=".FAQ.FAQ_Activity"
-    android:background="#F9F9F9">
+    tools:context=".FAQ.FAQ_Activity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topappbar"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:theme="@style/AppTheme.AppBarOverlay"
-            app:menu="@menu/mutualfunds_appbar"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-            app:titleTextColor="@color/white"
-            app:title="Bsure" />
+            app:menu="@menu/mutualfunds_appbar"
+            app:title="Bsure"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
+        android:id="@+id/faq_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="FAQ"
-        android:textColor="@color/black"
-        android:textSize="25sp"
+        android:layout_below="@id/top"
+        android:layout_marginVertical="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Frequently Asked Questions:"
+        android:textColor="@color/primary_text_color"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@+id/faq_title"
+        android:background="@color/bg_white"
+        android:scrollbarSize="5dp"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/faq_items_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="Still stuck? Help is a mail away"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tv_title1"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
+        <Button
+            android:id="@+id/btn_send_a_Msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/button"
+            android:text="Send a message"
+            app:backgroundTint = "@color/colorPrimary"
+             />
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tv_desc1"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title2"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc2"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title3"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc3"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title4"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc4"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title5"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc5"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title6"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc6"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title7"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc7"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title8"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc8"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="8dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_title9"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.9"
-                    android:text="@string/what_does_bsure_live_do"
-                    app:drawableRightCompat="@drawable/ic_add_icon" />
-
-                <TextView
-                    android:id="@+id/tv_desc9"
-                    style="@style/Description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/description1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/dummy_color">
-                </LinearLayout>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Title"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="Still stuck? Help is a mail away"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-
-            <Button
-                android:id="@+id/btn_sign_in"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/shape_button_rounded"
-                android:foreground="?attr/selectableItemBackground"
-                android:gravity="center"
-                android:paddingTop="@dimen/btn_paddingTopBottom"
-                android:paddingBottom="@dimen/btn_paddingTopBottom"
-                android:text="Send a message"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/btn_text_size"
-                app:backgroundTint="@color/colorPrimary" />
-        </LinearLayout>
-    </ScrollView>
-
-
-</LinearLayout>
+</RelativeLayout>

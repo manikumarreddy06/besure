@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TrWill</string>
+    <string name="app_name">Bsure</string>
     <!-- TODO (Step 6: Add all the string values here.) -->
     <!-- START -->
     <string name="image_contentDescription">image</string>
@@ -20,9 +20,9 @@
     <dimen name="intro_text_size">16sp</dimen>
     <dimen name="btn_marginStartEnd">20dp</dimen>
     <dimen name="intro_screen_sign_in_btn_marginTop">50dp</dimen>
-    <dimen name="btn_paddingTopBottom">8dp</dimen>
+    <dimen name="btn_paddingTopBottom">3dp</dimen>
     <dimen name="intro_screen_sign_up_btn_marginTop">15dp</dimen>
-    <dimen name="btn_text_size">18sp</dimen>
+    <dimen name="btn_text_size">16sp</dimen>
     <!-- TODO (Step 5: Add all the dimen values here.) -->
     <!-- START -->
     <dimen name="sign_up_screen_btn_marginTop">30dp</dimen>
@@ -100,18 +100,7 @@
     <string name="what_does_bsure_live_do">What does Bsure.live do?</string>
     <string name="description1">description</string>
     <string name="terms_amp_conditions">Terms of Use</string>
-    <string name="tnc1">Welcome to the BSure.live! At Bsure.live we are aiming to secure all your financial information and data and transfer it to your family members on time. Our aim is to ensure our users family members don\'t have to run from pillar to post to get the financial information of user when they desperately need them,</string>
-    <string name="tnc_txt2">By registering with Bsure.live and accessing the BSure.live Services, you are representing the following:<br />
-      You are 18 years of age or older.<br />
-      You are capable of entering into a legally binding agreement.<br />
-      You are not barred or otherwise legally prohibited from accessing or using the Bsure.live App and Bsure.live Services.<br />
-    If you allow anyone to use your account, including individuals under 18 years of age, you will still be responsible for ensuring that such individuals comply with these Terms of Use. You will be responsible for all actions these individuals take in and/or through your account. You also acknowledge that Bsure.live does not have the responsibility of ensuring that You meet the aforesaid eligibility requirements.<br />
-    Please read the terms and conditions carefully before registering, accessing or using the Bsure.live Services (defined below) offered through the Bsure.live website, Bsure.live App (defined below) or through applications or websites of Bsure.live Group Entities (defined below). These terms and conditions are a legal contract ("Terms of Use") between You and Bsure.live (“Bsure.live”). You agree and acknowledge that you have read the terms and conditions set forth below. If you do not agree to these Terms of Use or do not wish to be bound by these Terms of Use, you may not use the Bsure.live Services and/or immediately terminate the Services and/or uninstall the Bsure.live App.
-    </string>
-    <string name="tnc_txtPartial">By registering with Bsure.live and accessing the BSure.live Services, you are representing the following:<br />
-      You are 18 years of age or older.<br />
-      You are capable of entering into a legally binding agreement.
-    </string>
+
     <string name="features">Features</string>
     <string name="assets">Assets</string>
     <string name="nominee">Nominee</string>
@@ -130,12 +119,105 @@
     <string name="logout">Logout</string>
     <string name="read_full_terms_amp_conditions"><![CDATA[Read Full Terms & Conditions.]]></string>
     <string name="start_using_bsure_nwith_premium_benifits">Start Using Bsure \nwith Premium Benefits</string>
-    <string name="bullted_benifit_nudge">   <li>Item one two aojff fdiikf </li>
-   <li>Item two</li>
-   <li>Item three</li>
-    </string>
+
     <string name="about_us_txt">If you have any concerns, complaints or grievances about the terms or other users or their manner of use of the application infringe or violate your rights or any complaints about how we handle your personal information, please feel free to contact customer support within the Bsure.live App, on Bsure.live’s official social media channels, or the Grievance Officer any time at: Email: grievanceofficer@Bsure.live</string>
+
     <string name="familyicon">familyIcon</string>
+
+    <!--    Nudge Starts Here-->
+    <string name="nudge_desc"> 1. Bsure tracks the status of user on time to time.\n2. Notifies the family members when no input received from user. \n3. In case of any untoward incident, shares the asset information with nominees.</string>
+
+    <string name="bullted_benifit_nudge">
+1. one.\n2. Two.\n3. Three.</string>
+
+<!--    <string name="bullted_benifit_nudge">   <li>Item one two aojff fdiikf </li>-->
+<!--   <li>Item two</li>-->
+<!--   <li>Item three</li> </string>-->
+    <!--    Nudge Ends here-->
+
+<!--    Tnc strings Starts-->
+    <string name="tnc_desc">Welcome to the BSure.live! At Bsure.live we are aiming to secure all your financial information and data and transfer it to your family members on time. Our aim is to ensure our users family members don\'t have to run from pillar to post to get the financial information of user when they desperately need them.</string>
+
+    <string name="tnc_eligibility">By registering with Bsure.live and accessing the BSure.live Services, you are representing the following:
+    <br> 1. You are 18 years of age or older. \n</br>
+    <br> 2. You are capable of entering into a legally binding agreement. \n</br>
+    <br> 3. You are not barred or otherwise legally prohibited from accessing or using the Bsure.live App and Bsure.live Services. \n</br>
+        If you allow anyone to use your account, including individuals under 18 years of age, you will still be responsible for ensuring that such individuals comply with these Terms of Use. You will be responsible for all actions these individuals take in and/or through your account. You also acknowledge that Bsure.live does not have the responsibility of ensuring that You meet the aforesaid eligibility requirements.\n
+        Please read the terms and conditions carefully before registering, accessing or using the Bsure.live Services (defined below) offered through the Bsure.live website, Bsure.live App (defined below) or through applications or websites of Bsure.live Group Entities (defined below). These terms and conditions are a legal contract ("<b>Terms of Use</b>") between You and Bsure.live (“<b>Bsure.live</b>”). You agree and acknowledge that you have read the terms and conditions set forth below. If you do not agree to these Terms of Use or do not wish to be bound by these Terms of Use, you may not use the Bsure.live Services and/or immediately terminate the Services and/or uninstall the Bsure.live App.
+    </string>
+
+    <string name="tnc_desc1"><b>“Bsure.live”, “Bsure.live” “We”, “Us”, “Our”</b> means Bsure.live and Bsure.live Group Entities.\n
+<br><b>“You”, “Yours”, “Yourself”, “User”</b> means any prospective user, or registered user of Bsure.live and Bsure.live Group Entities, including but not limited to customers and Commercial Partners. \n</br>
+<br>"<b>Bsure.live App</b>" means mobile application(s), hosted by Bsure.live and Bsure.live Group Entities for providing services to the Users, and Commercial Partners. \n</br>
+<br>"<b>Bsure.live Group Entities</b>" means subsidiaries and affiliates of Bsure.live. \n</br>
+<br>"<b>Bsure.live Platform</b>" means any platform owned/subscribed/used by Bsure.live or Bsure.live Group Entities including but not limited to the Bsure.live Website, the Bsure.live App, other mobile applications, devices, URLs/links, notifications, chatbots, Bsure.live’s social media channels or any other communication medium or mechanism used by Bsure.live or Bsure.live Group Entities to provide services to the Users.\n</br>
+<br>"<b>Bsure.live Website</b>" means  https://Bsure.live or any other website hosted or registered by Bsure.live or Bsure.live Group Entities. \n</br>
+<br>"<b>Bsure.live Services</b>" means and include all services offered / to be offered by Bsure.live, and Bsure.live Group Entities either directly or through its Commercial Partners. \n</br>
+<br>"<b>Commercial Partner</b>" means any individual or entity with whom Bsure.live or Bsure.live Group Entities have a contractual relationship and includes but is not limited to entities offering rewards on Bsure.live App, lawyers and other service providers who work on behalf of Bsure.live. \n</br>
+<br>"<b>Terms of use” / “Terms and Conditions</b>" are interchangeably used and mean these Terms of Service including the Supplemental Terms. \n</br>
+    </string>
+
+    <string name="tnc_desc2">You agree that:
+    <br> 1. Unless otherwise permitted by Bsure.live in writing, You may only possess one account. </br>
+    <br> 2. Your use of the App shall not violate any applicable law or regulation. </br>
+    <br> 3. Your use of the Bsure.live App, and Bsure.live Platforms shall be only for personal purposes. </br>
+    <br> 4. All registration information you submit is truthful, complete and accurate and you agree to maintain accurate, complete and up-to-date account information in your account. </br>
+    <br> 5. You are responsible for all activity that occurs under your account. </br>
+    <br> 6. You are responsible for maintaining the confidentiality of the access Bsure.live credentials of your account and are fully responsible for all activities that occur under your account. You agree to immediately notify Bsure.live of any unauthorized use of your passcode or account or any other breach of security. </br>
+    <br> 7. You agree that You are aware and responsible for all transactions taking place through your Account. You shall continue to be responsible for the transactions in your account, if you knowingly or negligently (i) grant any other person access to your Bsure.live App, (ii) permit them to transact on Your account, or (iii) transact on any other person’s behalf or directions; whether by sharing one-time passwords or in any other manner. </br>
+    <br> 8. You shall not indulge in decompiling, reverse engineering, disassembling content, removing any intellectual property right associated with the Bsure.live App, including our copyright, trademarks, trade secrets, designs, and patents, or other proprietary notices. </br>
+    <br> 9. You shall not access or use the Bsure.live App in any manner that (i) may be harmful to the operation of the Bsure.live App or its content; (ii) may be unlawful; (iii) maybe harmful to Bsure.live or to any other User; (iv) may hinder the other User’s enjoyment of the Bsure.live App; or (v) to defraud other Users, Bsure.live or any Commercial Partner. </br>
+    <br> 10. You shall not post, distribute, or otherwise transmit or make available any software or other computer files that contain a virus, other harmful component or malicious content, or otherwise impair or damage the Bsure.live App or any connected network, or otherwise interfere with any person or entity\'s use or enjoyment of the Bsure.live App.</br>
+    <br> 11. Your use of the Bsure.live App shall indicate that you have provided consent to automatically receive updates such as bug fixes, patches, enhanced functions, missing plug-ins and new versions (collectively, "<b>Updates</b>"), for the purpose of effective delivery of the Bsure.live Services. Please note that your continued use of the Bsure.live App following such Updates would mean deemed acceptance by you of the same. </br>
+    <br> 12. You understand and accept that not all products, services and rewards offered on the Bsure.live App are available in all geographic areas and you may not be eligible for all the products, services and rewards offered by Bsure.live on the Bsure.live App or other Bsure.live Platforms. Bsure.live reserves the right to determine the availability and eligibility for any product, services and rewards offered on the Bsure.live App or any Bsure.live Platform. </br>
+    <br> 13. You shall request Bsure.live, to block the Account and change the passcode immediately for the account, if your device has been lost or stolen. </br>
+    </string>
+
+    <string name="tnc_desc3">You agree and acknowledge that several features are subject to certain supplemental Terms of Use set out below. Your usage of any features that have a set of Supplemental Terms of Use is deemed to be acceptance of the said Supplemental Terms of Use.  You further agree that any Bsure.live Services may be provided to You either directly by Bsure. live or by any Bsure.live Group Entity and in particular or any payment to you or made by you may be routed through Bsure. live PayTech Services Private Limited ("Payment Aggregator").</string>
+
+    <string name="tnc_desc4">If We believe that you have violated any of the conditions as mentioned under these Terms of Use, our Privacy Policy, Supplemental Terms applicable to certain services or any agreements consented to via the Bsure.live App, we reserve the right to suspend your access to the Bsure.live App and/or delete your account without prior notice to You. If We have reason to believe that there is suspicious or unusual activity being carried out through your account, we may temporarily or permanently suspend your access to the Bsure.live Services. If we suspect that any feature, offer or reward promotion is being availed by You in a manner (i) that is disingenuous; (ii) that it is not intended to be availed; (iii) that is designed to deliberately side step fair use restrictions; (iv) that may result in you gaining an undue, unfair or unethical advantage over other Users or Commercial Partners; (v) that is intended to cause losses or other harm to Commercial Partners, Bsure.live reserves the right to reverse the relevant transaction, suspend the account or restrict you from using the App in its entirety or any specific feature(s) thereof. You may reach out to the Bsure.live support team to assist you with any query or question arising as a result of the aforementioned suspension/ deletion.</string>
+
+    <string name="tnc_desc5">You may end your legal agreement with Bsure.live at any time by deactivating your account and discontinuing the use of the Bsure.live Services. \n  Following a request for deletion, or termination of account by Bsure.live, We consider the agreement to be terminated and take appropriate steps. Provided however, Bsure.live may continue to maintain some records for record keeping purposes and/or regulatory reasons. Deletion of the account or Termination also does not terminate Your obligations undertaken prior to deletion or termination of the account including but not limited to the obligation to repay any loan or Bsure.liveit line availed by You. Bsure.live may continue to retain a list of documents you have stored on the Bsure.live App for regulatory and archival purposes.</string>
+
+    <string name="tnc_desc6">You are responsible for any fees that may be applicable to certain transactions or use of the Bsure.live App; where you will be notified of such applicable fees, prior to the completion of any transaction. By clicking ‘Proceed’ / ‘Submit’ / ‘Continue’ or any other similar button on the Bsure.live App, You shall be deemed to have consented to the fees displayed on the said page. </string>
+
+    <string name="tnc_desc7">We collect, hold, use and transfer your personal data in accordance with our Privacy Policy. By agreeing to the Terms of Use, you hereby agree to our Privacy Policy, which may be updated and/or modified by us from time to time. You understand and agree that, to the extent permitted by applicable law, any data provided by you in connection with the Bsure.live Services may be shared with our subsidiaries, afﬁliates or partners, and/ or used by us for enhancing the Bsure.live Services, including but not limited to creating new products. Please refer to the Privacy Policy for further clarity on the subject.</string>
+
+    <string name="tnc_desc8">The amount paid is non-refundable. Only if the customer has made a double payment inadvertently and seeks refund for one of the payments, Bsure will refund this amount to the customer within 7 working days. </string>
+
+    <string name="tnc_desc9">The Bsure.live Services, including all content, software, functions, material, and information made available or accessible through the Bsure.live Platform are provided “as is”. Bsure.live, Bsure.live Group Entities and their respective agents, co-branders or partners, make no representation and warranty of any kind for the content, software, functions, material, and information available/accessible through the Services. \n Bsure.live does not warrant that the functions contained in content, information and materials on the Bsure.live App, including, without limitation any third-party sites or services linked to the Bsure.live App or any Bsure.live Platform will be uninterrupted, timely or error-free, that the defects will be rectified, or that the Bsure.live App or the servers that make such content, information, and materials available are free of viruses or other harmful components. \n Bsure.live cannot assure that Commercial Partners or other Users are or will be complying with the foregoing Terms of Use or any other provisions mentioned here. You assume all risk of harm or injury resulting from any such lack of compliance by any other User or Commercial Partner. You should ensure that you have undertaken adequate due diligence prior to transferring payments using the Bsure.live App.</string>
+
+    <string name="tnc_desc10">In no event shall Bsure.live, Bsure.live Group Entities, their officers, shareholders, subsidiaries, associate companies, directors, employees and agents, partners, co-branders, licensors, licensees, consultants, or contractors be liable to you or any third party for any special, incidental, indirect, consequential or punitive damages or losses whatsoever, or damages for loss of data or profits, goodwill, and/ or other intangible loss, whether or not foreseeable and regardless of whether Bsure.live has been advised of the possibility of such damages, or based on any theory of liability, including breach of contract or warranty, negligence or other tortious action, or any other claim arising out of or in connection with your use of, or access to, the Bsure.live Platforms, Bsure.live App or Bsure.live Services. \nIn no event shall Bsure.live and Bsure.live Group Entities’ total cumulative liability to You in connection with the Bsure.live Services for all damages, losses and causes of action (whether arising under contract or otherwise), arising from or relating to Your use of the Bsure.live App and Bsure.live Platforms or arising from these Terms of Use exceed INR 10,000 (Indian Rupees ten thousand only).</string>
+
+    <string name="tnc_desc11">You agree to defend, indemnify and hold harmless Bsure.live, Bsure.live Group Entities, its officers, owners, directors, employees and agents, partners, co-branders, licensors, licensees, consultants, contractors and other applicable third parties (collectively ‘Indemnified Parties’) from and against any and all claims, demands, damages, obligations, losses, liabilities, cause of action, costs or debt, and expenses (including any legal fees) arising from:</string>
+
+    <string name="tnc_desc12">In consideration for Bsure.live granting you access to and use of the Bsure.live App, Bsure.live Platforms and Bsure.live Services, you agree that in case of any <b>dispute</b> between You and any Commercial Partner, Bsure.live shall not be a party to the same. While Bsure.live is not obligated to mediate or resolve disputes, Bsure.live will assist Users in communicating with each other regarding a dispute. Bsure.live may at its own discretion however, without having any obligation to do so, assist in resolving the disputes between the Users and the Commercial Partners. \n Except as otherwise set forth in these Terms of Use, these Terms of Use shall be exclusively governed by and construed in accordance with the laws of India. Any dispute, conflict, claim or controversy arising out of or broadly in connection with or relating to the Bsure.live Services or these Terms, including those relating to its validity, its construction or its enforceability, but excluding those provisions where it has been specified that Bsure.live’s decision shall be final,  (any “Dispute”) shall be, if initiated by the User, first raised by the user to grievanceofficer@Bsure.live. If such Dispute has not been settled within sixty (60) days after the User reaches out to the aforementioned email IDs, such Dispute can be referred to and shall be exclusively and finally resolved by arbitration under the Arbitration and Conciliation Act, 1996 (“Act”). Provided however when Bsure.live raises any dispute, Bsure.live may directly initiate arbitration in accordance with this clause. The Dispute shall be resolved by one (1) arbitrator to be appointed by Bsure.live. The place the arbitration shall be Bangalore, India. The language of the arbitration shall be English. The existence and content of the arbitration proceedings, including documents and briefs submitted by the parties, and correspondence, orders and awards issued by the sole arbitrator, shall remain strictly confidential and shall not be disclosed to any third party without the express written consent from the other party unless: (i) the disclosure to the third party is reasonably required in the context of conducting arbitration proceedings; and (ii) the third party agrees unconditionally in writing to be bound by the confidentiality obligation stipulated here in.</string>
+
+    <string name="tnc_desc13">Bsure.live App, Bsure.live Website, Bsure.live logos and the Bsure.live Services are protected by copyright, trademarks, patents, trade secret and/or other intellectual property laws. No information, content or material from the Bsure.live App including, without limitation, all of the page headers, images, illustrations, graphics, audio clips, video clips or text, reports generated, trademarks, tradenames may be copied, reproduced, republished, uploaded, posted, transmitted or distributed in any way without Our express written permission. You are hereby given a limited licence to use the Bsure.live App and the Bsure.live Platforms, subject to your agreement of these Terms of Use. \n Bsure.live, Bsure.live Group Entities, and its licensors, if any, are the sole owners of the underlying software and source code associated with the Bsure.live App and Bsure.live Platforms as well as any other intellectual property rights of any other nature associated with the Bsure.live App, Bsure.live Platforms and their content. \n When you upload, submit, store, send or receive content that may include feedback to or through the Bsure.live App, you give Bsure.live and Bsure.live Group Entities a worldwide, perpetual licence to use, host, store, reproduce, modify, create derivative works, communicate, publish, publicly perform, publicly display and distribute such content. This licence shall not expire even if it is not used by Bsure.live or Bsure.live Group Entities. The rights you grant in this licence are for the limited purpose of operating, promoting, and improving the Bsure.live Services, and to develop new ones. This licence continues even if you stop using the Bsure.live Services.</string>
+
+    <string name="tnc_desc14">You hereby agree to comply with any and all applicable tax laws in connection with your use of the Bsure.live Services, including without limitation, the reporting and payment of any taxes arising in connection with payments made through the Bsure.live App, or funds/income received through the Bsure.live Services.  You hereby agree and acknowledge that if and when required by applicable law, Bsure.live, may deduct tax deducted at source from your winnings/ cashback and/or may require You to submit PAN details before providing you cashback or other winnings. </string>
+
+    <string name="tnc_desc15">The Bsure.live App, the Bsure.live Services, all your transactions with the Bsure.live App, and our relationship shall be governed by the laws of India, without regard to conflict of law principles. You agree that subject to the Disputes \&amp; Arbitration Clause above, all claims, differences and disputes which we may have shall be subject to the exclusive jurisdiction of the competent courts located in Bengaluru, Karnataka, India.</string>
+
+    <string name="tnc_desc16">You shall not transfer or assign any of Your rights and obligations arising from these Terms of Use. \n
+You agree and acknowledge that Bsure.live may assign or transfer its rights and obligations under these Terms of Use in whole or in part, to \n
+        <br> (i). any other Bsure.live Group Entity. \n</br>
+    <br> (ii). an acquirer of Bsure.live or any Bsure.live Group Entity or their respective equity interest, business or assets. \n</br>
+    <br> (iii). a successor entity resulting from any corporate action including mergers or demergers.. </br>
+    </string>
+
+    <string name="tnc_desc17">No joint venture, partnership, employment or agency relationship exists between you, Bsure.live, Bsure.live Group Entities or any Third Party as a result of the contract contained in these Terms of Use. If any provision of these Terms of Use is held to be illegal, invalid or unenforceable, in whole or in part, under any law, such provision or part thereof shall to that extent be deemed not to form part of these Terms of Use but the legality, validity and enforceability of the other provisions in these Terms of Use shall not be affected. In that event, Bsure.live shall replace the illegal, invalid or unenforceable provision or part thereof with a provision or part thereof that is legal, valid and enforceable and that has, to the greatest extent possible, a similar effect as the illegal, invalid or unenforceable provision or part thereof, given the contents and purpose of these Terms of Use. These Terms of Use (together with any additional terms displayed in specific sections of the Bsure.live App or Bsure.live Website) constitute the entire agreement and understanding of the parties with respect to its subject matter and replaces and supersedes all prior or contemporaneous agreements or undertakings regarding such subject matter. </string>
+
+    <string name="tnc_desc18">We may amend these Terms of Use at any time by posting an updated version on the Bsure.live Website. The updated version of these Terms of Use shall supersede the previous version of the Terms of Use and take effect immediately upon posting. You have the right to opt-out of agreeing to these Terms of Use or any future updated version of the Terms of Use, by ceasing to use the Bsure.live App. However, please be aware that your continued use of the Bsure.live Services from the launch of any updated Terms of Use would mean deemed acceptance of such updated Terms of Use including any modification thereof. We recommend you to keep checking the Terms of Use often to be familiar with any updates and changes.  </string>
+
+    <string name="tnc_desc19">BSure helps the users to store the asset,liability and nominee information in its platform. By using and storing the data in its platform the user is accepting the following
+    <br> 1. The validity of the information is solely at the discretion of the user and Bsure doesn’t hold any responsibility or liability for the trueness of the information at any given time.</br>
+    <br> 2. The nominee details given by the user are solely at the discretion of the user. Bsure only helps in sharing the data with the nominee as given by the user at nominee’s email,phone number and address. BSure doesn’t hold any responsibility if the phone, email or address is used by someone else. </br>
+    <br> 3. Any legal complication arising out of the property/asset or liability has to be solved by the user and its nominees and BSure isn’t a party to any of this at any cost. </br>
+    </string>
+    <!--    Tnc strings Ends-->
+
+
     <string-array name="statespinners">
         <item>Andhra pradesh</item>
         <item>Telangana</item>

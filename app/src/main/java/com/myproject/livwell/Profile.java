@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.myproject.livwell.FAQ.FAQ_Activity;
+import com.myproject.livwell.TnC.TnC_Activity;
 
 public class Profile extends AppCompatActivity {
     TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout;
@@ -26,7 +27,7 @@ public class Profile extends AppCompatActivity {
             startActivity(i);
         });
         tv_tnc.setOnClickListener(view -> {
-            Intent i=new Intent(Profile.this,TnC_Activity.class);
+            Intent i=new Intent(Profile.this, TnC_Activity.class);
             startActivity(i);
         });
         tv_faq.setOnClickListener(view -> {

@@ -4,20 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-import com.google.android.material.appbar.MaterialToolbar;
 
 public class MainActivity extends AppCompatActivity  {
-    LinearLayout llassets,llnominee,llnudge, lldistribution;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MaterialToolbar topappbar = findViewById(R.id.topappbar);
-        llassets = findViewById(R.id.assets);
-        llnominee = findViewById(R.id.nominee);
-        llnominee = findViewById(R.id.nudge);
-        lldistribution = findViewById(R.id.distribution);
+//        MaterialToolbar topappbar = findViewById(R.id.topappbar);
+        LinearLayout llassets = findViewById(R.id.assets);
+        LinearLayout llnominee = findViewById(R.id.nominee);
+        LinearLayout llnudge = findViewById(R.id.nudge);
+        LinearLayout lldistribution = findViewById(R.id.distribution);
 
         //Implementing category recyclerview
 //        recyclerView.findViewById(R.id.category_recycler_view);
@@ -32,10 +31,10 @@ public class MainActivity extends AppCompatActivity  {
             Intent i=new Intent(MainActivity.this,empt_Activity2.class);
             startActivity(i);
         });
-//        llnudge.setOnClickListener(view -> {
-//            Intent i=new Intent(MainActivity.this,empty_activity3.class);
-//            startActivity(i);
-//        });
+        llnudge.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this,Nudge_activity.class);
+            startActivity(i);
+        });
 //        lldistribution.setOnClickListener(view -> {
 //            Intent i=new Intent(MainActivity.this,empty_activity3.class);
 //            startActivity(i);

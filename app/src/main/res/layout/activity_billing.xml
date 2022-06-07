@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/bg_white"
     android:orientation="vertical"
+    android:padding="5dp"
     tools:context=".Billing">
 
     <TextView
@@ -13,9 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginVertical="15dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Plan Selected" />
+        android:text="Plan Selected:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,17 +55,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginVertical="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Apply Coupon" />
+        android:text="Apply Coupon:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="5dp"
         android:background="@color/white"
-        android:orientation="vertical"
-        tools:context=".Nudge_activity">
+        android:orientation="vertical">
 
         <EditText
             android:layout_width="match_parent"
@@ -81,9 +85,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginVertical="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Price Details" />
+        android:text="Price Details:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,7 +113,8 @@
                 android:layout_weight="0.7"
                 android:gravity="start"
                 android:text="Cost of the Plan  :"
-                android:textColor="@color/primary_text_color" />
+                android:textColor="@color/primary_text_color"
+                android:textSize="17sp" />
 
             <TextView
                 style="@style/Description"
@@ -133,7 +140,8 @@
                 android:layout_weight="0.7"
                 android:gravity="start"
                 android:text="Coupon Discount :"
-                android:textColor="@color/primary_text_color" />
+                android:textColor="@color/primary_text_color"
+                android:textSize="17sp" />
 
             <TextView
                 style="@style/Description"
@@ -159,7 +167,8 @@
                 android:layout_weight="0.7"
                 android:gravity="start"
                 android:text="Applying GST (18%) :"
-                android:textColor="@color/primary_text_color" />
+                android:textColor="@color/primary_text_color"
+                android:textSize="17sp" />
 
             <TextView
                 style="@style/Description"
@@ -193,6 +202,7 @@
                 android:gravity="start"
                 android:text="Total Amount"
                 android:textColor="@color/primary_text_color"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -215,7 +225,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
         android:background="@drawable/shape_button_rounded"
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center"

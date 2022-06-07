@@ -1,70 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TnC_Activity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".TnC.TnC_Activity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="30dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
             android:text="@string/terms_amp_conditions"
             android:textColor="@color/colorPrimaryDark"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="20dp"
             android:textSize="34sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp">
+        android:background="@color/bg_white"
+        android:scrollbarSize="6dp"
+        android:scrollbars="vertical">
+
         <LinearLayout
+            android:id="@+id/ll_tnc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="25dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_tnc1"
                 style="@style/TnC_Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
-                android:text="@string/tnc1"
-                android:textSize="14sp" />
+                android:text="@string/tnc_desc" />
+
 
             <TextView
-                android:id="@+id/tv_tnc_head1"
+                style="@style/TnC_TitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Eligibility"
-                style="@style/TnC_Description"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:text="Eligibility" />
+
             <TextView
-                android:id="@+id/tv_tnc_txt2"
-                android:layout_marginVertical="5dp"
+                style="@style/TnC_Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tnc_txtPartial"
-                style="@style/TnC_Description"
-                android:textSize="14sp" />
+                android:text="@string/tnc_eligibility" />
+
             <TextView
-                android:id="@+id/tv_readFull_TnC"
+                style="@style/TnC_TitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/read_full_terms_amp_conditions"
+                android:text="1. Definations" />
+
+            <TextView
                 style="@style/TnC_Description"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc1" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Your Use of Bsure.live" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc2" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Supplemental Terms and delivery of services through Bsure.live Group Entities" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc3" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Violation of Terms of Use / Suspicious Activity" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc4" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Termination / Deletion of Your Account" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc5" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Fees" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc6" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. Privacy" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc7" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8.Refund Policy" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc8" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. Disclaimer" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc9" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. Limitation of Liability" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc10" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11. Indemnity" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc11" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12. Disputes &amp; Arbitration" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc12" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="13. Use and Protection of Intellectual Property Rights" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc13" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="14. Tax Liability" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc14" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15. Governing Law and Jurisdiction" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc15" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16. Assignment" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc16" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="17. General" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc17" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18. Updation" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc18" />
 
         </LinearLayout>
     </ScrollView>

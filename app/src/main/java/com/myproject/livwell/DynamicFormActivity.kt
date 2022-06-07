@@ -1,20 +1,15 @@
 package com.myproject.livwell
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.myproject.livwell.models.AssetsConfigResponse
 import com.myproject.livwell.models.CategoryDetailsBean
-import com.myproject.livwell.models.CategoryResponseBean
 import com.myproject.livwell.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_dynamic.*
 import retrofit2.Call
@@ -24,7 +19,7 @@ import java.util.ArrayList
 
 public class DynamicFormActivity : AppCompatActivity(){
 
-    var assetId:String?=null
+    private var assetId:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dynamic)

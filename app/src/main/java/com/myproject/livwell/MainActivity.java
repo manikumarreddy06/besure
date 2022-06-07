@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        // TODO toolbar actions need to be handled
+
 //        MaterialToolbar topappbar = findViewById(R.id.topappbar);
         LinearLayout llassets = findViewById(R.id.assets);
         LinearLayout llnominee = findViewById(R.id.nominee);

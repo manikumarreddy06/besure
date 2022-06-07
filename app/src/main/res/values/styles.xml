@@ -7,13 +7,13 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
         <item name="android:fontFamily">@font/allerta</item>
-
+        <item name="android:backgroundTint">@color/white</item>
     </style>
     <style name="Title" parent="ThemeOverlay.AppCompat.Dark" >
         <item name="android:fontFamily">@font/allerta</item>
         <item name="android:textColor">@color/primary_text_color</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">21sp</item>
+        <item name="android:textSize">19sp</item>
         <item name="android:gravity">start</item>
         <item name="android:layout_gravity">center</item>
     </style>

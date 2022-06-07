@@ -1,7 +1,11 @@
 package com.myproject.livwell.retrofitUtil;
 
 import com.myproject.livwell.models.AssetsConfigResponse;
+import com.myproject.livwell.models.BaseResponse;
 import com.myproject.livwell.models.CategoryResponseBean;
+import com.myproject.livwell.models.SaveAssetRequest;
+import com.myproject.livwell.models.UserAsset;
+import com.myproject.livwell.models.UserAssetResponseBean;
 import com.myproject.livwell.models.createnomineeresponse;
 import com.myproject.livwell.models.relationresponse;
 import com.myproject.livwell.models.signup;
@@ -19,8 +23,10 @@ import retrofit2.http.Path;
 public interface Apiinterface {
 
      @POST("v1/signup")
-      Call<signup>usersignin(@Body signup data );
-      Call<signup>usersignin(@Field("mobileNumber")String mobileNumber);
+     Call<signup>usersignin(@Body signup data );
+
+    @POST("v1/user/verifyOtp")
+    Call<signup>verifyOtp(@Body signup data );
 
     @POST("v1/categories")
     Call<CategoryResponseBean>getAssetCategories();
@@ -37,6 +43,16 @@ public interface Apiinterface {
 
     @GET("v1/getAssetConfig/{id}")
     Call<AssetsConfigResponse>getAssestsConfigurations(@Path("id") String id);
+
+
+    @POST("v1/user/saveAssetInfo")
+    Call<BaseResponse>saveAssetData(@Body SaveAssetRequest request);
+
+
+    @POST("v1/getAssets")
+    Call<UserAssetResponseBean>getUserLevelAssetsByCategory(@Body UserAsset request);
+
+
 
 
 

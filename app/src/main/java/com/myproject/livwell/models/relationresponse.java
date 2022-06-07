@@ -2,6 +2,7 @@ package com.myproject.livwell.models;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class relationresponse implements Serializable {
     private String isvalid;

@@ -6,6 +6,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class CategoryDetailsBean {
 
+
+
+    private String parameterValue;
+
     @SerializedName("subCategoryId")
     @Expose
     private String subCategoryId;
@@ -62,4 +66,12 @@ public class CategoryDetailsBean {
         this.categoryId = categoryId;
     }
 
+
+    public String getParameterValue() {
+        return parameterValue;
+    }
+
+    public void setParameterValue(String parameterValue) {
+        this.parameterValue = parameterValue;
+    }
 }

@@ -27,7 +27,6 @@
             android:id="@+id/categoryName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Description"
             android:paddingHorizontal="10dp"
             style="@style/Title"
             android:text="Category 1" />

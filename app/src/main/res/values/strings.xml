@@ -130,12 +130,12 @@
     <string name="bullted_benifit_nudge">
 1. one.\n2. Two.\n3. Three.</string>
 
-<!--    <string name="bullted_benifit_nudge">   <li>Item one two aojff fdiikf </li>-->
-<!--   <li>Item two</li>-->
-<!--   <li>Item three</li> </string>-->
+    <!--    <string name="bullted_benifit_nudge">   <li>Item one two aojff fdiikf </li>-->
+    <!--   <li>Item two</li>-->
+    <!--   <li>Item three</li> </string>-->
     <!--    Nudge Ends here-->
 
-<!--    Tnc strings Starts-->
+    <!--    Tnc strings Starts-->
     <string name="tnc_desc">Welcome to the BSure.live! At Bsure.live we are aiming to secure all your financial information and data and transfer it to your family members on time. Our aim is to ensure our users family members don\'t have to run from pillar to post to get the financial information of user when they desperately need them.</string>
 
     <string name="tnc_eligibility">By registering with Bsure.live and accessing the BSure.live Services, you are representing the following:

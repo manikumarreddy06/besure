@@ -117,7 +117,7 @@
                             android:fontFamily="@font/allerta"
                             android:gravity="center"
                             android:text="Annual Plan"
-                            android:textColor="@color/white"
+                            android:textColor="@color/primary_text_color"
                             android:textSize="18sp" />
 
                         <LinearLayout
@@ -134,7 +134,7 @@
                                 android:fontFamily="@font/allerta"
                                 android:gravity="end"
                                 android:text="300"
-                                android:textColor="@color/white"
+                                android:textColor="@color/primary_text_color"
                                 android:textSize="24sp"
                                 android:textStyle="bold" />
 
@@ -145,7 +145,7 @@
                                 android:fontFamily="@font/allerta"
                                 android:gravity="start"
                                 android:text="/- INR"
-                                android:textColor="@color/white"
+                                android:textColor="@color/primary_text_color"
                                 android:textSize="20sp" />
                         </LinearLayout>
 
@@ -156,7 +156,7 @@
                             android:fontFamily="@font/allerta"
                             android:gravity="center"
                             android:text="Per year"
-                            android:textColor="@color/white"
+                            android:textColor="@color/primary_text_color"
                             android:textSize="18sp" />
                     </LinearLayout>
                 </RelativeLayout>

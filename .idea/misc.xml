@@ -42,6 +42,7 @@
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_add_icon.xml" value="0.2" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_bank_account.xml" value="0.1705" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.2" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_car_icon.xml" value="0.2115" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_car_insurance.xml" value="0.184" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_circular_logo.xml" value="0.215" />
@@ -77,12 +78,13 @@
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/topappbar_nominees.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/font/allerta.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/font/yooo_allerta.xml" value="0.1" />
-        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_about_us.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_about_us.xml" value="0.2" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_asset_categories.xml" value="0.27828054298642535" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_asset_distribution.xml" value="0.536" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_bank_result.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_bankaccounts.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_billing.xml" value="0.2" />
-        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_contact_us.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_billing.xml" value="0.264" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_contact_us.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_display_relation_responses.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_dynamic.xml" value="0.18426678067550234" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_empt2.xml" value="0.13518518518518519" />
@@ -108,18 +110,23 @@
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/category_list_item.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/display_nominees.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/faq_item.xml" value="0.25384615384615383" />
-        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/faq_items_list.xml" value="0.10075136612021858" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/faq_items_list.xml" value="0.264" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/item_asset_details.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/itemview_textbox.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/itemview_textlist_container.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/layout_custom_toastview.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/line_item_asset_view.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/line_item_assets.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/nominees_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/relations_item.xml" value="0.264" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/menu/asset_distribution.xml" value="0.20778110303548525" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/menu/faq_appbar.xml" value="0.16296296296296298" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/menu/mutualfunds_appbar.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/menu/profile_topbar_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

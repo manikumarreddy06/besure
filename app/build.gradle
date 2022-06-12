@@ -8,7 +8,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.myproject.livwell"
+        applicationId "com.bsure"
         minSdk 28
         targetSdk 31
         versionCode 1

@@ -39,7 +39,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/pageTitle"
         android:layout_marginTop="9dp"
-        android:background="@color/bg_white"
         tools:listitem="@layout/categories_item" />
 
 

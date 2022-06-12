@@ -1,4 +1,4 @@
-package com.myproject.livwell;
+package com.bsure;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.myproject.livwell", appContext.getPackageName());
+        assertEquals("com.bsure", appContext.getPackageName());
     }
 }

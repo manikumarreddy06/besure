@@ -37,23 +37,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/filledTextField2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/colorPrimary"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        app:hintTextColor="@color/colorPrimary"
-        android:hint="@string/enter_relationship_with_nominee">
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_nomineerelation"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:background="@drawable/shape_outline_rect_gray">
+
+        <Spinner
+            android:id="@+id/spStatus"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="35dp"
+            android:layout_toLeftOf="@+id/pbStatus"
+            android:entries="@array/statespinners"
+            android:minHeight="38dp" />
+
+        <ProgressBar
+            android:id="@+id/pbStatus"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

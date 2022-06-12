@@ -1,4 +1,4 @@
-package com.myproject.livwell;
+package com.bsure;
 
 import org.junit.Test;
 

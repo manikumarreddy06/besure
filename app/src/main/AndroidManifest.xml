@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myproject.livwell">
+    package="com.bsure">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -40,9 +40,6 @@
             android:name=".FAQ.FAQ_Activity"
             android:exported="false" />
         <activity
-            android:name=".DisplayRelationResponses"
-            android:exported="false" />
-        <activity
             android:name=".usernominees_will_Activity"
             android:exported="false" />
         <activity
@@ -75,7 +72,7 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".Nominees_Activity"
+            android:name=".NomineesAdditionActivity"
             android:exported="true">
 
         </activity>
@@ -103,6 +100,12 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".NomineeListActivity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

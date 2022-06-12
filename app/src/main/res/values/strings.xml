@@ -229,4 +229,10 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
 
 
     <string name="change_number"><u>Modify Number</u>.</string>
+
+    <string name="nominee_name">Nominee Name :</string>
+    <string name="nominee_relation">Relation</string>
+    <string name="nominee_number">Mobile Number</string>
+    <string name="add_nominee">Add new Nominee</string>
+
 </resources>

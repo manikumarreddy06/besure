@@ -93,7 +93,7 @@
     <string name="bank_name">Bank Name:</string>
     <string name="account_number">Account Number:</string>
     <string name="agree_to_terms_and_conditions">Agree to <font color='#2EA9C9'>Terms and conditions</font></string>
-    <string name="add_any_attachment">Add any attachment</string>
+    <string name="add_any_attachment">Attach an ID proof of nominee</string>
     <string name="write_your_will_here">write your will here</string>
     <string name="edit">Edit</string>
     <string name="confirm">confirm</string>
@@ -125,7 +125,8 @@
     <string name="familyicon">familyIcon</string>
 
     <!--    Nudge Starts Here-->
-    <string name="nudge_desc"> 1. Bsure tracks the status of user on time to time.\n2. Notifies the family members when no input received from user. \n3. In case of any untoward incident, shares the asset information with nominees.</string>
+    <string name="nudge_desc"> 1. Bsure tracks the status of user on time to time.\n
+ 2. Notifies the family members when no input received from user. \n3. In case of any untoward incident, shares the asset information with nominees.</string>
 
     <string name="bullted_benifit_nudge">
 1. one.\n2. Two.\n3. Three.</string>

@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginVertical="7dp"
-                android:drawablePadding="20dp"
+                android:drawablePadding="10dp"
                 android:text="@string/contact_us"
                 android:textColor="@color/primary_text_color"
                 app:drawableStartCompat="@drawable/ic_contact_us" />

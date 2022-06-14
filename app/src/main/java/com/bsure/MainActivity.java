@@ -3,12 +3,9 @@ package com.bsure;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.bsure.R;
 import com.google.android.material.appbar.MaterialToolbar;
-
+import com.bsure.R;
 public class MainActivity extends AppCompatActivity  {
 
     @Override
@@ -23,11 +20,6 @@ public class MainActivity extends AppCompatActivity  {
         LinearLayout llnominee = findViewById(R.id.nominee);
         LinearLayout llnudge = findViewById(R.id.nudge);
         LinearLayout lldistribution = findViewById(R.id.distribution);
-
-        //Implementing category recyclerview
-//        recyclerView.findViewById(R.id.category_recycler_view);
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         llassets.setOnClickListener(view -> {
             Intent i=new Intent(MainActivity.this, Asset_Categories_Activity.class);

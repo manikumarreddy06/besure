@@ -4,22 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TnC.TnC_Activity">
+    tools:context="com.bsure.TnC.TnC_Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="30dp">
+        android:elevation="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="15dp"
             android:text="@string/terms_amp_conditions"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="34sp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </LinearLayout>
 

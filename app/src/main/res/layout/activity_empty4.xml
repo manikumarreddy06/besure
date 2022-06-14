@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Asset_Categories_Activity"
+    tools:context="com.bsure.Asset_Categories_Activity"
     android:layout_marginHorizontal="15dp">
 
     <TextView

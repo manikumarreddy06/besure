@@ -2,9 +2,11 @@ package com.bsure;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.bsure.FAQ.FAQ_Activity;
 import com.bsure.R;
@@ -12,6 +14,7 @@ import com.bsure.TnC.TnC_Activity;
 
 public class Profile extends AppCompatActivity {
     TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout;
+    CardView editProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ public class Profile extends AppCompatActivity {
         tv_faq = findViewById(R.id.tv_faq);
         tv_contactUs = findViewById(R.id.tv_contactUs);
         tv_logout = findViewById(R.id.tv_logout);
+        editProfile = findViewById(R.id.cv_editProfile);
 
         tv_aboutUs.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, About_Us.class);
@@ -41,6 +45,10 @@ public class Profile extends AppCompatActivity {
         });
         tv_logout.setOnClickListener(view -> {
             // TODO
+        });
+        editProfile.setOnClickListener(view -> {
+            Intent i=new Intent(Profile.this, User_Profile.class);
+            startActivity(i);
         });
     }
 }

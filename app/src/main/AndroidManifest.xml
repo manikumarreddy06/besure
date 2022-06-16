@@ -14,6 +14,13 @@
         android:theme="@style/Theme.Livwell"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".EditProfileDetails"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".User_Profile"
+            android:exported="false" />
+        <activity
             android:name=".Asset_Categories_Activity"
             android:exported="false" />
         <activity
@@ -30,9 +37,7 @@
             android:exported="false" />
         <activity
             android:name=".TnC.TnC_Activity"
-            android:exported="false" >
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".About_Us"
             android:exported="false" />
@@ -66,16 +71,15 @@
         <activity
             android:name=".Splashscreen_Activity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".NomineesAdditionActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".bankaccounts"
             android:exported="false" />
@@ -84,9 +88,10 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -100,9 +105,7 @@
 
         <activity
             android:name=".NomineeListActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

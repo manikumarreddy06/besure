@@ -124,7 +124,6 @@
                 android:textSize="30sp"
                 android:layout_weight="1"
                 android:inputType="number"
-
                 android:maxLength="1"
                 android:background="@drawable/otpwithboxes" />
 
@@ -134,7 +133,6 @@
 
 
         <!--  <com.google.android.material.textfield.TextInputLayout
-
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
@@ -149,7 +147,6 @@
               app:boxStrokeErrorColor="@color/error_color"
               app:endIconMode="password_toggle"
               app:startIconDrawable="@drawable/lock_icon">
-
               <com.google.android.material.textfield.TextInputEditText
                   android:id="@+id/inputPw"
                   android:layout_width="match_parent"
@@ -193,8 +190,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -213,7 +208,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <TextView
                 android:id="@+id/dontHvAcc"
                 android:layout_width="wrap_content"

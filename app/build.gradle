@@ -9,9 +9,9 @@ android {
 
     defaultConfig {
         applicationId "com.bsure"
-        minSdk 28
+        minSdk 24
         targetSdk 31
-        versionCode 1
+        versionCode 3
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -54,4 +54,7 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
     implementation('com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.7')
+
+    //For Razorpay checkout SDK
+    implementation 'com.razorpay:checkout:1.6.20'
 }

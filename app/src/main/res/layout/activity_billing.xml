@@ -29,6 +29,7 @@
         tools:context=".Nudge_activity">
 
         <TextView
+            android:id="@+id/tvPlanDetails"
             style="@style/Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,6 +40,7 @@
             android:text="Plan Details :" />
 
         <TextView
+            android:id="@+id/tvPlanPrice"
             style="@style/Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +63,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="18sp" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="5dp"
@@ -77,8 +79,16 @@
             android:drawablePadding="20dp"
             android:hint="Enter Coupon Code"
             android:inputType="text" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_8dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/shape_button_rounded"
+            android:text="APPLY"></Button>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <TextView
         style="@style/Title"
@@ -117,6 +127,7 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/tvplanPrice"
                 style="@style/Description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -144,6 +155,7 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/tvdisPrice"
                 style="@style/Description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -171,6 +183,7 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/tvgstPrice"
                 style="@style/Description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -206,6 +219,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvtotalPrice"
                 style="@style/Description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

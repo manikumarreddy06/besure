@@ -36,8 +36,13 @@ public class Asset_Categories_Activity extends AppCompatActivity {
             @Override
             public void onResponse(Call<CategoryResponseBean> call, Response<CategoryResponseBean> response) {
 
-
-                adapterupdate(response.body().getCategorysReponse());
+                CategoryResponseBean bean=response.body();
+                if(bean.getIsvalid()) {
+                    adapterupdate(response.body().getCategorysReponse());
+                }
+                else{
+                    Toast.makeText(Asset_Categories_Activity.this,"failure",Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override

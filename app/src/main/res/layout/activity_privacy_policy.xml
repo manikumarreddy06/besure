@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".privacy_Policy">
+        <LinearLayout
+            android:id="@+id/faq_title"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/logo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="25dp"
+                android:layout_weight="0.55"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/privacy_animation" />
+        </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:scrollbarSize="6dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_tnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="@string/pp_desc" />
+
+
+            <TextView
+                style="@style/subTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.  Information we collect:" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_desc1" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. How do we use the Information we collect" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_desc2" />
+
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tnc_desc2" />
+
+            <TextView
+                style="@style/TnC_Description"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/copyright" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

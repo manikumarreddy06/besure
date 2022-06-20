@@ -6,9 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bsure.R;
-
-public class Nudge_activity extends AppCompatActivity {
+public class nudgeActivity extends AppCompatActivity {
     Button btn_proceed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +16,7 @@ public class Nudge_activity extends AppCompatActivity {
         btn_proceed = findViewById(R.id.btn_proceed);
         btn_proceed.setOnClickListener(view -> {
             //  carry card data
-            Intent i=new Intent(Nudge_activity.this, Billing.class);
+            Intent i=new Intent(nudgeActivity.this, Billing.class);
             startActivity(i);
         });
     }

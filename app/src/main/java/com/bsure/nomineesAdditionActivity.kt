@@ -17,7 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class NomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     var data:RelationResponseBean?=null
     lateinit var relationList:List<RelationsResponse>
     var selectedPosition:Int=-1
@@ -66,13 +66,13 @@ class NomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
                     response: Response<BaseResponse>
                 ) {
                     if(data!!.isvalid) {
-                        Utils.toast("nominee added successfully",this@NomineesAdditionActivity)
+                        Utils.toast("nominee added successfully",this@nomineesAdditionActivity)
                         finish()
                     }
                 }
 
                 override fun onFailure(call: Call<BaseResponse>, t: Throwable) {
-                    Toast.makeText(this@NomineesAdditionActivity, "failure", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@nomineesAdditionActivity, "failure", Toast.LENGTH_SHORT).show()
                 }
             })
 
@@ -91,7 +91,7 @@ class NomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
                 outlet.add(item.relationName)
 
             val adapter = ArrayAdapter<String>(
-                this@NomineesAdditionActivity,
+                this@nomineesAdditionActivity,
                 android.R.layout.simple_spinner_dropdown_item,
                 outlet
             )
@@ -118,7 +118,7 @@ class NomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             }
 
             override fun onFailure(call: Call<RelationResponseBean>, t: Throwable) {
-                Toast.makeText(this@NomineesAdditionActivity, "failure", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@nomineesAdditionActivity, "failure", Toast.LENGTH_SHORT).show()
             }
         })
     }

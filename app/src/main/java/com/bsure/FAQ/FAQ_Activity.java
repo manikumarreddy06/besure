@@ -4,6 +4,7 @@ package com.bsure.FAQ;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,11 +19,19 @@ public class FAQ_Activity extends AppCompatActivity {
     ArrayList<com.bsure.FAQ.FAQ_items>FAQ_itemsList;
     RecyclerView recyclerView;
     Button sendMessage;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
 
+        // dealing with actionbar functionalities
+//        setSupportActionBar(findViewById(R.id.top));
+//        val navController
+//        toolbar=findViewById(R.id.topappbar);
+//        setActionBar(toolbar);
+//        getSupportActionBar().setTitle("FAQ");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // adding data to the arraylist
         recyclerView = findViewById(R.id.recycler_view);
@@ -36,6 +45,12 @@ public class FAQ_Activity extends AppCompatActivity {
             startActivity(i);
         });
     }
+
+//    @Override
+//    public boolean onSupportNavigateUp() {
+//        onBackPressed();
+//        return super.onSupportNavigateUp();
+//    }
 
     private void setRecyclerView() {
         FAQ_item_Adapter faq_item_adapter = new FAQ_item_Adapter(FAQ_itemsList);

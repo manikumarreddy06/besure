@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.bsure"
-        minSdk 24
+        minSdk 26
         targetSdk 31
         versionCode 3
         versionName "1.0"

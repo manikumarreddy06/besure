@@ -5,6 +5,7 @@ import com.bsure.models.BaseResponse;
 import com.bsure.models.CategoryResponseBean;
 import com.bsure.models.NomineeListResponseBean;
 import com.bsure.models.NomineeRequest;
+import com.bsure.models.PlanDetailsResponseBean;
 import com.bsure.models.RelationResponseBean;
 import com.bsure.models.SaveAssetRequest;
 import com.bsure.models.UserAsset;
@@ -51,6 +52,10 @@ public interface Apiinterface {
     @POST("v1/getAssets")
     Call<UserAssetResponseBean>getUserLevelAssetsByCategory(@Body UserAsset request);
 
+
+
+    @POST("v1/getPlanDetails")
+    Call<PlanDetailsResponseBean>getPlanDetails();
 
 
 

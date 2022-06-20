@@ -2,7 +2,7 @@
 <!--<ScrollView
 
      android:layout_height="wrap_content"
-    tools:context=".Nudge_activity"
+    tools:context=".nudgeActivity"
     android:background="@color/bg_white"
     android:layout_width="match_parent">-->
     <LinearLayout
@@ -39,13 +39,13 @@
         <TextView
             style="@style/TnC_TitleText"
             android:textSize="18sp"
+            android:layout_marginHorizontal="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="What is Nudge?"
-            android:paddingHorizontal="5dp"
             android:textColor="@color/primary_text_color" />
         <TextView
-            style="@style/TnC_Description"
+            style="@style/Description"
             android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,10 +70,30 @@
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
             android:textSize="23sp"/>-->
+            android:paddingHorizontal="15dp" />
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginVertical="10dp"-->
+<!--            android:layout_marginHorizontal="5dp"-->
+<!--            android:src="@drawable/tap_icon"/>-->
+<!--        <TextView-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginHorizontal="5dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/start_using_bsure_nwith_premium_benifits"-->
+<!--            style="@style/TnC_TitleText"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="23sp"/>-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:layout_marginVertical="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginHorizontal="10dp"
             android:orientation="horizontal">
             <com.google.android.material.card.MaterialCardView
@@ -161,17 +181,26 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="*Coupons if any can be applied next page"
+            android:textSize="14sp"
+            android:textStyle="bold" />
         <Button
-                android:id="@+id/btn_proceed"
+            android:id="@+id/btn_proceed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="20dp"
                 android:background="@drawable/shape_button_rounded"
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
-                android:paddingTop="@dimen/btn_paddingTopBottom"
-                android:paddingBottom="@dimen/btn_paddingTopBottom"
+                android:layout_marginVertical="15dp"
                 android:text="Proceed"
                 style="@style/button"
                 android:elevation="10dp"

@@ -14,6 +14,15 @@
         android:theme="@style/Theme.Livwell"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".privacy_Policy"
+            android:exported="false" />
+        <activity
+            android:name=".refundPolicy.refundPolicy_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".AssetDistribution"
+            android:exported="false" />
+        <activity
             android:name=".EditProfileDetails"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
@@ -27,7 +36,7 @@
             android:name=".Billing"
             android:exported="true" />
         <activity
-            android:name=".Nudge_activity"
+            android:name=".NudgeActivity"
             android:exported="false" />
         <activity
             android:name=".ContactUs"
@@ -78,7 +87,7 @@
              </intent-filter>
         </activity>
         <activity
-            android:name=".NomineesAdditionActivity"
+            android:name=".nomineesAdditionActivity"
             android:exported="true" />
         <activity
             android:name=".bankaccounts"
@@ -89,6 +98,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".DynamicFormActivity"

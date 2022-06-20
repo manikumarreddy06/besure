@@ -61,11 +61,17 @@
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_margin="8dp"
-            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
             android:text="save"
-            android:textColor="@color/white" />
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/shape_button_rounded"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size"
+            app:backgroundTint="@color/colorPrimary"/>
 
 
     </LinearLayout>

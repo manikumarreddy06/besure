@@ -10,14 +10,14 @@
 
     <TextView
         android:id="@+id/pageTitle"
+        style="@style/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginVertical="10dp"
         android:drawablePadding="10dp"
-        android:text="Assets"
-        style="@style/Title"
         android:paddingHorizontal="10dp"
+        android:text="Assets"
         android:textColor="@color/colorPrimary"
         android:textSize="28sp" />
 

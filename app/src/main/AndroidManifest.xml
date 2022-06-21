@@ -36,7 +36,7 @@
             android:name=".Billing"
             android:exported="true" />
         <activity
-            android:name=".nudgeActivity"
+            android:name=".NudgeActivity"
             android:exported="false" />
         <activity
             android:name=".ContactUs"
@@ -98,11 +98,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".DynamicFormActivity"

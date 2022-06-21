@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         llnudge.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this, nudgeActivity.class);
+            Intent i=new Intent(MainActivity.this, NudgeActivity.class);
             startActivity(i);
         });
         lldistribution.setOnClickListener(view -> {

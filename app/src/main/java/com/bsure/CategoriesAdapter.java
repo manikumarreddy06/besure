@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bsure.R;
 import com.bsure.models.CategorysReponse;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -37,6 +39,9 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         holder.categoryName.setText(Asset_categories.getCategoryName());
         Log.d("srini","srini"+Asset_categories.getCategoryName());
 
+        Glide.with(mContext).load(Asset_categories.getCategoryImage())
+                .into(holder.imageView);
+
         holder.ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,11 +62,13 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView categoryName;
+        ImageView imageView;
         LinearLayout ll;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             categoryName = itemView.findViewById(R.id.categoryName);
+            imageView=itemView.findViewById(R.id.categoryImage);
             ll=itemView.findViewById(R.id.ll);
         }
     }

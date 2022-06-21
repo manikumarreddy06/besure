@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class nudgeActivity extends AppCompatActivity {
 import com.bsure.R;
 import com.bsure.models.CategoryResponseBean;
 import com.bsure.models.PlanDetail;
@@ -20,7 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Nudge_activity extends AppCompatActivity {
+public class NudgeActivity extends AppCompatActivity {
     Button btn_proceed;
     RadioButton rbLifetimePlan;
     RadioButton rbYearlyPlan;
@@ -37,7 +36,7 @@ public class Nudge_activity extends AppCompatActivity {
 
             if(rbYearlyPlan.isChecked()|| rbLifetimePlan.isChecked()) {
 
-                Intent i = new Intent(Nudge_activity.this, Billing.class);
+                Intent i = new Intent(NudgeActivity.this, Billing.class);
 
                 if(rbYearlyPlan.isChecked()){
                     i.putExtra("plan",rbYearlyPlan.getText());
@@ -90,13 +89,13 @@ public class Nudge_activity extends AppCompatActivity {
                     updatePriceDetails(bean);
                 }
                 else{
-                    Toast.makeText(Nudge_activity.this,"failure",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(NudgeActivity.this,"failure",Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<PlanDetailsResponseBean> call, Throwable t) {
-                Toast.makeText(Nudge_activity.this,"failure",Toast.LENGTH_SHORT).show();
+                Toast.makeText(NudgeActivity.this,"failure",Toast.LENGTH_SHORT).show();
             }
         });
 

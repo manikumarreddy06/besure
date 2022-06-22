@@ -10,7 +10,7 @@
 
     <color name="colorPrimary">#019FC5</color>
     <color name="bg_primary">#EDFCFF</color>
-    <color name="bg_white">#F3F3F3</color>
+    <color name="bg_white">#F1F1F1</color>
 
     <color name="primary_text_color">#363A43</color>
     <color name="secondary_text_color">#7A8089</color>

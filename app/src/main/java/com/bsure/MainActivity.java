@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.bsure.R;
+
 public class MainActivity extends AppCompatActivity  {
 
     @Override
@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         llnudge.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this, Nudge_activity.class);
+            Intent i=new Intent(MainActivity.this, NudgeActivity.class);
             startActivity(i);
         });
-//        lldistribution.setOnClickListener(view -> {
-//            Intent i=new Intent(MainActivity.this,empty_activity3.class);
-//            startActivity(i);
-//        });
+        lldistribution.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this,AssetDistribution.class);
+            startActivity(i);
+        });
 
 
 //        topappbar.setNavigationOnClickListener(view -> {

@@ -10,13 +10,16 @@
 
     <TextView
         android:id="@+id/pageTitle"
+        style="@style/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginVertical="10dp"
         android:drawablePadding="10dp"
+        android:paddingHorizontal="10dp"
         android:text="Assets"
-        android:textSize="24sp" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp" />
 
 
     <TextView
@@ -39,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/pageTitle"
         android:layout_marginTop="9dp"
-        android:background="@color/bg_white"
+        android:background="#FEFEFE"
         tools:listitem="@layout/categories_item" />
 
 

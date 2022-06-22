@@ -2,19 +2,15 @@ package com.bsure
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bsure.R
 import android.widget.TextView
 import android.content.Intent
 import android.view.View
-import com.bsure.NomineesAdditionActivity
 import com.bsure.models.NomineeListResponseBean
 import com.bsure.retrofitUtil.RetrofitClient
 import android.widget.Toast
 import com.bsure.models.NomineeDetailsResponse
 import androidx.recyclerview.widget.RecyclerView
-import com.bsure.NomineesAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_empt2.*
 import kotlinx.android.synthetic.main.activity_nomineelist.*
 import kotlinx.android.synthetic.main.activity_nomineelist.btn_add
 import kotlinx.android.synthetic.main.activity_nomineelist.tvdontadd
@@ -35,12 +31,12 @@ class NomineeListActivity : AppCompatActivity() {
         pageTitle.text="Nominee Details"
         val addNew = findViewById<TextView>(R.id.addAccount)
         addNew.setOnClickListener {
-            val i = Intent(this@NomineeListActivity, NomineesAdditionActivity::class.java)
+            val i = Intent(this@NomineeListActivity, nomineesAdditionActivity::class.java)
             startActivity(i)
         }
 
         btn_add.setOnClickListener(View.OnClickListener {
-            val i = Intent(this@NomineeListActivity, NomineesAdditionActivity::class.java)
+            val i = Intent(this@NomineeListActivity, nomineesAdditionActivity::class.java)
 
             startActivity(i)
         })

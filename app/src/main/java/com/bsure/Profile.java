@@ -80,6 +80,7 @@ public class Profile extends AppCompatActivity {
                                    Intent i=new Intent(Profile.this,Asset_Categories_Activity.class){
 
 
+
                                    };
                                     finish();
                                 }

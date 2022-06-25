@@ -11,6 +11,7 @@ import android.widget.Toast
 import com.bsure.models.NomineeDetailsResponse
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_asset_categories.*
 import kotlinx.android.synthetic.main.activity_nomineelist.*
 import kotlinx.android.synthetic.main.activity_nomineelist.btn_add
 import kotlinx.android.synthetic.main.activity_nomineelist.tvdontadd

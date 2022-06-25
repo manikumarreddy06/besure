@@ -8,12 +8,15 @@ import com.bsure.models.NomineeRequest;
 import com.bsure.models.PlanDetailsResponseBean;
 import com.bsure.models.RelationResponseBean;
 import com.bsure.models.SaveAssetRequest;
+import com.bsure.models.UpdateUserAccountRequest;
+import com.bsure.models.UpdateUserAccountResponse;
 import com.bsure.models.UserAsset;
 import com.bsure.models.UserAssetResponseBean;
 import com.bsure.models.signup;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -57,7 +60,8 @@ public interface Apiinterface {
     @POST("v1/getPlanDetails")
     Call<PlanDetailsResponseBean>getPlanDetails();
 
-
+    @POST("update/details")
+    Call<UpdateUserAccountResponse> updateUserAccount(@Body UpdateUserAccountRequest updateUserAccountRequest);
 
 
 }

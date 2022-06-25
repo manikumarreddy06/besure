@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "631555439148",
-    "project_id": "bsure-9d0eb",
-    "storage_bucket": "bsure-9d0eb.appspot.com"
+    "project_number": "147060159431",
+    "project_id": "bsure-9ab90",
+    "storage_bucket": "bsure-9ab90.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:631555439148:android:16f1754b11d3d7481d2f89",
+        "mobilesdk_app_id": "1:147060159431:android:6d691fb107d3fe78d4dfe2",
         "android_client_info": {
           "package_name": "com.bsure"
         }
       },
       "oauth_client": [
         {
-          "client_id": "631555439148-qfnt0afuk5e9d0ltgkcv3ulj5bl558j9.apps.googleusercontent.com",
+          "client_id": "147060159431-g7e9f9333qt9aas4n8b9i1lrieljm1c8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bsure",
+            "certificate_hash": "54e0efee495580f7309d060fcff0970a5309eb2c"
+          }
+        },
+        {
+          "client_id": "147060159431-h7v7oevc7l1daqu3t3ngs2dhigbm6a68.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBunuwhAwPu9l7CAOfJz7yDNe-84XvmN1g"
+          "current_key": "AIzaSyANfOmq9kI4YvlJG_XwvgbKso8QtYQtg8c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "631555439148-qfnt0afuk5e9d0ltgkcv3ulj5bl558j9.apps.googleusercontent.com",
+              "client_id": "147060159431-h7v7oevc7l1daqu3t3ngs2dhigbm6a68.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

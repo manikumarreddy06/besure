@@ -1,11 +1,13 @@
 package com.bsure;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -56,7 +58,54 @@ public class Profile extends AppCompatActivity {
             startActivity(i);
         });
         tv_logout.setOnClickListener(view -> {
-            // TODO
+            AlertDialog.Builder builder
+                    = new AlertDialog
+                    .Builder(Profile.this);
+            builder.setMessage("Confirm to Logout ?");
+            builder.setTitle("Logout!");
+            builder.setCancelable(false);
+
+            builder
+                    .setPositiveButton(
+                            "Yes",
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+                                    PreferenceManager.instance(Profile.this).clearUserSession();
+                                   Toast.makeText(Profile.this,"Logged  out successfully",Toast.LENGTH_SHORT).show();
+                                   Intent i=new Intent(Profile.this,Asset_Categories_Activity.class){
+
+
+
+                                   };
+                                    finish();
+                                }
+                            });
+
+            builder
+                    .setNegativeButton(
+                            "No",
+
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+
+
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alertDialog = builder.create();
+
+
+            alertDialog.show();
         });
 //        btn_editProfile.setOnClickListener(view -> {
 //            Intent i=new Intent(Profile.this, User_Profile.class);

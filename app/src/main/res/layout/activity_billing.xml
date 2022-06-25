@@ -77,8 +77,11 @@
             android:layout_marginVertical="5dp"
             android:drawableStart="@drawable/ic_tag_icon"
             android:drawablePadding="20dp"
+            android:textColorHint="@color/black"
             android:hint="Enter Coupon Code"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="@color/black" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,7 +89,7 @@
             android:layout_margin="@dimen/margin_8dp"
             app:backgroundTint="@color/colorPrimary"
             android:background="@drawable/shape_button_rounded"
-            android:text="APPLY"></Button>
+            android:text="APPLY" />
 
     </RelativeLayout>
 
@@ -123,7 +126,7 @@
                 android:layout_weight="0.7"
                 android:gravity="start"
                 android:text="Cost of the Plan  :"
-                android:textColor="@color/primary_text_color"
+                android:textColor="@color/black"
                 android:textSize="17sp" />
 
             <TextView
@@ -151,7 +154,7 @@
                 android:layout_weight="0.7"
                 android:gravity="start"
                 android:text="Coupon Discount :"
-                android:textColor="@color/primary_text_color"
+                android:textColor="@color/black"
                 android:textSize="17sp" />
 
             <TextView
@@ -179,7 +182,7 @@
                 android:layout_weight="0.7"
                 android:gravity="start"
                 android:text="Applying GST (18%) :"
-                android:textColor="@color/primary_text_color"
+                android:textColor="@color/black"
                 android:textSize="17sp" />
 
             <TextView
@@ -214,7 +217,7 @@
                 android:layout_weight="0.7"
                 android:gravity="start"
                 android:text="Total Amount"
-                android:textColor="@color/primary_text_color"
+                android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -227,7 +230,7 @@
                 android:layout_weight="0.3"
                 android:gravity="end"
                 android:text="330.4"
-                android:textColor="@color/primary_text_color"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
         </LinearLayout>
 

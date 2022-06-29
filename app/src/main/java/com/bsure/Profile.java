@@ -1,6 +1,7 @@
 package com.bsure;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -57,6 +58,12 @@ public class Profile extends AppCompatActivity {
         });
         tv_logout.setOnClickListener(view -> {
             // TODO
+
+            PreferenceManager.instance(this).clearUserSession();
+            Intent i=new Intent(Profile.this, Splashscreen_Activity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+
         });
         btn_editProfile.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, User_Profile.class);

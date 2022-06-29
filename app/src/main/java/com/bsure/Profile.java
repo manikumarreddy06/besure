@@ -1,5 +1,6 @@
 package com.bsure;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -30,7 +32,7 @@ public class Profile extends AppCompatActivity {
         tv_logout = findViewById(R.id.tv_logout);
         tv_privacypolicy = findViewById(R.id.tv_privacypolicy);
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
-        btn_editProfile = findViewById(R.id.cv_editProfile);
+//        btn_editProfile = findViewById(R.id.cv_editProfile);
 
         tv_aboutUs.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, About_Us.class);
@@ -57,17 +59,62 @@ public class Profile extends AppCompatActivity {
             startActivity(i);
         });
         tv_logout.setOnClickListener(view -> {
+            AlertDialog.Builder builder
+                    = new AlertDialog
+                    .Builder(Profile.this);
+            builder.setMessage("Confirm to Logout ?");
+            builder.setTitle("Logout!");
+            builder.setCancelable(false);
+
+            builder
+                    .setPositiveButton(
+                            "Yes",
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+                                    PreferenceManager.instance(Profile.this).clearUserSession();
+                                    Intent i=new Intent(Profile.this, Splashscreen_Activity.class);
+                                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(i);
+                                }
+                            });
+
+            builder
+                    .setNegativeButton(
+                            "No",
+
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+
+
+                                    dialog.cancel();
+                                }
+                            });
+            AlertDialog alertDialog = builder.create();
+
+
+            alertDialog.show();
             // TODO
 
-            PreferenceManager.instance(this).clearUserSession();
-            Intent i=new Intent(Profile.this, Splashscreen_Activity.class);
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(i);
+
 
         });
         btn_editProfile.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, User_Profile.class);
             startActivity(i);
         });
+//        btn_editProfile.setOnClickListener(view -> {
+//            Intent i=new Intent(Profile.this, User_Profile.class);
+//            startActivity(i);
+//        });
     }
 }

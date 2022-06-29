@@ -15,7 +15,9 @@
         android:layout_gravity="center"
         android:layout_marginVertical="10dp"
         android:drawablePadding="10dp"
+        android:fontFamily="@font/allerta"
         android:text="Assets"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp" />
 
 
@@ -23,12 +25,12 @@
         android:id="@+id/addAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="10dp"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:text="Add New"
-        android:layout_alignParentRight="true"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         app:drawableLeftCompat="@drawable/ic_add_icon" />

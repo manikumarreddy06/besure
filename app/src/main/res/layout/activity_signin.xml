@@ -1,135 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5"
+    android:background="#FDFDFD"
     android:orientation="vertical"
     tools:context="com.bsure.Signin_Activity">
 
-    <ImageView
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:contentDescription="@string/logo"
-        android:gravity="center"
-        android:src="@drawable/logo"
-        android:textSize="35sp" />
-
-
-
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:orientation="vertical"
         android:padding="@dimen/card_view_layout_content_padding">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginVertical="30dp"
+            android:contentDescription="@string/logo"
+            android:gravity="center"
+            android:src="@drawable/ic_logo"
+            android:textSize="35sp" />
+
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
-            android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd"
             android:hint="@string/enter_mobile_number"
             android:textSize="16sp"
-            app:hintTextColor="@color/colorPrimary"
             app:boxStrokeColor="@color/colorPrimary"
-            android:fontFamily="sans-serif"
             app:boxStrokeErrorColor="@color/error_color"
+            app:hintTextColor="@color/colorPrimary"
             app:startIconDrawable="@drawable/call_icon">
+            <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etmobile_signin"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:inputType="number"
-                android:maxLength="10"
-                android:layout_height="wrap_content" />
+                android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:id="@+id/tvChangeNumber"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginBottom="15dp"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginVertical="15dp"
             android:padding="10dp"
-            android:layout_marginTop="15dp"
-            android:textStyle="bold"
-            android:visibility="gone"
             android:text="@string/change_number"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
         <LinearLayout
             android:id="@+id/root_otp_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:orientation="horizontal"
             android:padding="10dp"
             android:visibility="gone"
-            android:orientation="horizontal"
             android:weightSum="5">
 
             <EditText
                 android:id="@+id/otp_edit_box1"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpwithboxes"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textSize="30sp"
-                android:background="@drawable/otpwithboxes"/>
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/otp_edit_box2"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpwithboxes"
                 android:gravity="center"
-                android:textSize="30sp"
                 android:inputType="number"
                 android:maxLength="1"
-                android:background="@drawable/otpwithboxes"/>
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/otp_edit_box3"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpwithboxes"
                 android:gravity="center"
-                android:textSize="30sp"
                 android:inputType="number"
                 android:maxLength="1"
-                android:background="@drawable/otpwithboxes"/>
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/otp_edit_box4"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:layout_weight="1"
-                android:inputType="number"
                 android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/otpwithboxes"
+                android:gravity="center"
+                android:inputType="number"
                 android:maxLength="1"
-                android:background="@drawable/otpwithboxes" />
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/otp_edit_box5"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:gravity="center"
-                android:textSize="30sp"
                 android:layout_weight="1"
+                android:background="@drawable/otpwithboxes"
+                android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                android:background="@drawable/otpwithboxes" />
+                android:textSize="30sp" />
 
 
         </LinearLayout>
-
 
 
         <!--  <com.google.android.material.textfield.TextInputLayout
@@ -160,25 +159,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:layout_marginHorizontal="16dp"
-            android:fontFamily="sans-serif"
             android:buttonTint="@color/colorPrimary"
-            android:textSize="16sp"
-            android:text="@string/agree_to_terms_and_conditions" />
-
+            android:fontFamily="sans-serif"
+            android:text="@string/agree_to_terms_and_conditions"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="@dimen/btn_marginStartEnd"
-            android:layout_marginTop="12dp"
+            android:layout_marginVertical="20dp"
             android:background="@drawable/shape_button_rounded"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:paddingTop="@dimen/btn_paddingTopBottom"
-            android:paddingBottom="@dimen/btn_paddingTopBottom"
+            android:paddingVertical="@dimen/btn_paddingTopBottom"
             android:text="@string/sign_in"
             android:textColor="@android:color/white"
             android:textSize="@dimen/btn_text_size"
@@ -186,38 +181,41 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_below="@id/ll1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginEnd="30dp"
+            android:layout_height="250dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="35dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:visibility="gone"
             android:text="@string/forgot_password"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/dontHvAcc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif"
-                android:visibility="gone"
                 android:text="@string/don_t_have_an_account"
                 android:textAlignment="textEnd"
                 android:textColor="@color/dummy_color"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/joinnow"
@@ -228,20 +226,30 @@
                 android:padding="6dp"
                 android:text="@string/register_here"
                 android:textAlignment="textStart"
-                android:visibility="gone"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:visibility="gone" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/logo"
-        android:gravity="bottom"
-        android:scaleType="fitXY"
-        android:src="@drawable/footersignin"/>
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_weight="0.5"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/signin_family_animation" />
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:contentDescription="@string/logo"-->
+    <!--        android:gravity="bottom"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:src="@drawable/footersignin" />-->
 
-</LinearLayout>
+</RelativeLayout>

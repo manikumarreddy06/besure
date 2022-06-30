@@ -32,7 +32,7 @@ public class Profile extends AppCompatActivity {
         tv_logout = findViewById(R.id.tv_logout);
         tv_privacypolicy = findViewById(R.id.tv_privacypolicy);
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
-//        btn_editProfile = findViewById(R.id.cv_editProfile);
+       btn_editProfile = findViewById(R.id.btn_editDetails);
 
         tv_aboutUs.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, About_Us.class);
@@ -108,13 +108,13 @@ public class Profile extends AppCompatActivity {
 
 
         });
-        btn_editProfile.setOnClickListener(view -> {
+       /* btn_editProfile.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, User_Profile.class);
             startActivity(i);
-        });
-//        btn_editProfile.setOnClickListener(view -> {
-//            Intent i=new Intent(Profile.this, User_Profile.class);
-//            startActivity(i);
-//        });
+        });*/
+       btn_editProfile.setOnClickListener(view -> {
+           Intent i=new Intent(Profile.this, User_Profile.class);
+           startActivity(i);
+       });
     }
 }

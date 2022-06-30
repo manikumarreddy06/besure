@@ -5,10 +5,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.Button;
+import android.widget.ImageView;
 
+import com.bsure.About_Us;
 import com.bsure.ContactUs;
 import com.bsure.FAQ.FAQ_Activity;
+import com.bsure.Profile;
 import com.bsure.R;
 
 import java.util.ArrayList;
@@ -17,6 +21,7 @@ public class refundPolicy_Activity extends AppCompatActivity {
     ArrayList<refund_items>refundItemsList;
     RecyclerView recyclerView;
     Button sendMessage;
+    ImageView btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,12 @@ public class refundPolicy_Activity extends AppCompatActivity {
             Intent i=new Intent(refundPolicy_Activity.this, ContactUs.class);
             startActivity(i);
         });
+
+        // back btn
+//        btnBack.setOnClickListener(view -> {
+//            Intent i=new Intent(refundPolicy_Activity.this, About_Us.class);
+//            startActivity(i);
+//        });
     }
 
     private void setRecyclerView() {

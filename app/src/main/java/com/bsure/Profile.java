@@ -2,6 +2,7 @@ package com.bsure;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,7 +32,7 @@ public class Profile extends AppCompatActivity {
         tv_logout = findViewById(R.id.tv_logout);
         tv_privacypolicy = findViewById(R.id.tv_privacypolicy);
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
-        btn_editProfile = findViewById(R.id.cv_editProfile);
+//        btn_editProfile = findViewById(R.id.cv_editProfile);
 
         tv_aboutUs.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, About_Us.class);
@@ -76,13 +77,9 @@ public class Profile extends AppCompatActivity {
                                                     int which)
                                 {
                                     PreferenceManager.instance(Profile.this).clearUserSession();
-                                   Toast.makeText(Profile.this,"Logged  out successfully",Toast.LENGTH_SHORT).show();
-                                   Intent i=new Intent(Profile.this,Asset_Categories_Activity.class){
-
-
-
-                                   };
-                                    finish();
+                                    Intent i=new Intent(Profile.this, Splashscreen_Activity.class);
+                                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(i);
                                 }
                             });
 
@@ -106,12 +103,18 @@ public class Profile extends AppCompatActivity {
 
 
             alertDialog.show();
+            // TODO
+
+
+
         });
-
-
         btn_editProfile.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, User_Profile.class);
             startActivity(i);
         });
+//        btn_editProfile.setOnClickListener(view -> {
+//            Intent i=new Intent(Profile.this, User_Profile.class);
+//            startActivity(i);
+//        });
     }
 }

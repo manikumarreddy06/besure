@@ -8,80 +8,64 @@
     android:orientation="vertical"
     tools:context=".refundPolicy.refundPolicy_Activity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/top"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topappbar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                app:menu="@menu/mutualfunds_appbar"
+                app:title="Bsure"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/refundPolicy_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
+        android:layout_below="@+id/top"
+        android:layout_height="160dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topappbar"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
-            app:menu="@menu/mutualfunds_appbar"
-            app:title="Bsure"
-            app:titleTextAppearance="@style/Toolbar.TitleText"
-            app:titleTextColor="@color/white" />
-    </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45">
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/refundPolicy_title"-->
-<!--        android:layout_below="@id/top"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="170dp"-->
-<!--        android:layout_marginHorizontal="5dp"-->
-<!--        android:layout_marginVertical="15dp"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <RelativeLayout-->
-<!--            android:id="@+id/logo"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="0.45">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:layout_gravity="bottom"-->
-<!--                android:gravity="right"-->
-<!--                android:text="Refund policy"-->
-<!--                android:textColor="@color/colorPrimary"-->
-<!--                android:textSize="32sp"-->
-<!--                android:textStyle="bold" />-->
-<!--        </RelativeLayout>-->
-
-<!--        <com.airbnb.lottie.LottieAnimationView-->
-<!--            android:id="@+id/animationView"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginHorizontal="10dp"-->
-<!--            android:layout_weight="0.55"-->
-<!--            app:lottie_autoPlay="true"-->
-<!--            app:lottie_loop="true"-->
-<!--            app:lottie_rawRes="@drawable/ic_refund_policy_icon" />-->
-<!--    </LinearLayout>-->
-
-        <LinearLayout
-            android:id="@+id/refundPolicy_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/top"
-            android:elevation="10dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="20dp"
-                android:paddingHorizontal="10dp"
-                android:layout_marginVertical="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="10dp"
+                android:gravity="right"
                 android:text="Refund Policy"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold" />
-        </LinearLayout>
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="0.55"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/refund_animation" />
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -89,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/footer"
         android:layout_below="@+id/refundPolicy_title"
+        android:layout_marginTop="10dp"
         android:background="@color/bg_white"
         android:scrollbarSize="5dp"
         android:scrollbars="vertical"

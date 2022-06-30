@@ -1,5 +1,7 @@
 package com.bsure;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,10 +43,24 @@ public class ContactUs extends AppCompatActivity {
 
         });
         website.setOnClickListener(view -> {
-
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://bsure.live/"));
+            startActivity(browserIntent);
         });
         send.setOnClickListener(view -> {
-
+            String[] address = {"suggestions@bsure.live"};
+            String subject = "Suggestion to Bsure";
+            String body = et_suggestion.getText().toString();
+            composeEmail(address,subject, body);
         });
+    }
+    public void composeEmail(String[] addresses, String subject, String body) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, body);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }

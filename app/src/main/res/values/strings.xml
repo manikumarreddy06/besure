@@ -262,7 +262,7 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
     <!--    Tnc strings Ends-->
 
 
-    <string-array name="statespinners">
+   <!-- <string-array name="statespinners">
         <item>Andhra pradesh</item>
         <item>Telangana</item>
         <item>Tamilnadu</item>
@@ -270,7 +270,7 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
         <item>Orissa</item>
         <item>Madhyapradesh</item>
     </string-array>
-
+-->
 
     <string name="change_number"><u>Modify Number</u>.</string>
 

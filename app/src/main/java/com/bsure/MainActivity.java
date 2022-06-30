@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         llnudge.setOnClickListener(view -> {
-//            Intent i=new Intent(MainActivity.this, NudgeActivity.class);
-//            startActivity(i);
-            Utils.Companion.toast("coming soon",this);
+            Intent i=new Intent(MainActivity.this, NudgeActivity.class);
+            startActivity(i);
+            //Utils.Companion.toast("coming soon",this);
         });
         lldistribution.setOnClickListener(view -> {
 //            Intent i=new Intent(MainActivity.this,AssetDistribution.class);

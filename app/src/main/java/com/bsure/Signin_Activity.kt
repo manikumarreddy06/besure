@@ -1,14 +1,18 @@
 package com.bsure
 
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bsure.TnC.TnC_Activity
 import com.bsure.models.signup
 import com.bsure.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_signin.*
+import kotlinx.android.synthetic.main.activity_signin.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +23,7 @@ class Signin_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+        disableSignInButton()
         btn_sign_in.setOnClickListener(View.OnClickListener {
             if(!verifyOtpFlag) {
                 signinAPICall()
@@ -32,6 +37,20 @@ class Signin_Activity : AppCompatActivity() {
             disableOtpUI()
             verifyOtpFlag=false
         }
+        checkBox.setOnClickListener(){
+            if(checkBox.isChecked){
+                enableSignInButton()
+            }
+            else{
+                disableSignInButton()
+            }
+        }
+        terms.setOnClickListener(){
+            val i = Intent(Signin_Activity@this, TnC_Activity::class.java)
+            startActivity(i)
+
+        }
+
     }
 
     fun signinAPICall() {
@@ -123,4 +142,15 @@ class Signin_Activity : AppCompatActivity() {
         otp_edit_box4.setOnKeyListener(GenericKeyEvent(otp_edit_box4, otp_edit_box3))
         otp_edit_box5.setOnKeyListener(GenericKeyEvent(otp_edit_box5, otp_edit_box4))
     }
+
+    fun disableSignInButton(){
+        btn_sign_in.isClickable=false
+        btn_sign_in.alpha=0.3f
+    }
+    fun enableSignInButton(){
+        btn_sign_in.isClickable=true
+        btn_sign_in.alpha=1f
+    }
+
+    
 }

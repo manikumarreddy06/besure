@@ -19,7 +19,7 @@
         android:paddingHorizontal="10dp"
         android:text="Assets"
         android:textColor="@color/colorPrimary"
-        android:textSize="28sp" />
+        android:textSize="20sp" />
 
 
     <TextView
@@ -30,10 +30,10 @@
         android:layout_marginVertical="10dp"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
-        android:text="Add New"
+        android:text="Add"
         android:layout_alignParentRight="true"
         android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:drawableLeftCompat="@drawable/ic_add_icon" />
 
     <androidx.recyclerview.widget.RecyclerView

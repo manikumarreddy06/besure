@@ -139,7 +139,7 @@
         android:id="@+id/uriTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="*Name of the attached file"
+        android:text="@string/preview"
         android:textSize="12sp"
         android:layout_marginHorizontal="25dp"
         android:gravity="right"/>

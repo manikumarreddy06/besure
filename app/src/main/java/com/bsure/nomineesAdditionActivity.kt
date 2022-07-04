@@ -31,6 +31,8 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
     lateinit var uri: Uri
     lateinit var mStorage: StorageReference
 
+    lateinit var attachmentUrl: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nominees)
@@ -39,7 +41,7 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
 
         btn_attachFile.setOnClickListener (View.OnClickListener {
             view:View?-> val intent = Intent()
-            intent.setType("pdf/*")
+            intent.setType("image/*")
             intent.setAction(Intent.ACTION_GET_CONTENT)
             startActivityForResult(Intent.createChooser(intent, "Select PDF"),PDF)
 
@@ -48,7 +50,7 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
         getNomineeRelations()
         btn_nomineesavedata.setOnClickListener(){
             saveData()
-            upload()
+
         }
     }
 
@@ -57,29 +59,42 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
         if(resultCode== RESULT_OK){
             if(requestCode==PDF){
                 uri= data!!.data!!
-                uriTxt.text = uri.toString()
+                //uriTxt.text = uri.toString()
+                upload()
             }
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
 
     private fun upload(){
-        var s: String = nomineePhoneNo.text.toString()
+        Utils.showDialog(this@nomineesAdditionActivity,"uploading")
+        var s: String = uri.toString()
         var mReference = mStorage.child(s)
-//        var mReference = mStorage.child(uri.lastPathSegment!!)
         try{
-            mReference.putFile(uri).addOnSuccessListener{
-                    taskSnapshot: UploadTask.TaskSnapshot->var url= taskSnapshot.getStorage().getDownloadUrl();
-                    // url has download referance
-//                val dwnTxt = findViewById<View>(R.id.dwnTxt) as TextView
-//                dwnTxt.text = url.toString()
-                Toast.makeText(this,"Successfully Uploaded",Toast.LENGTH_LONG).show()
-                val i = Intent(this@nomineesAdditionActivity, MainActivity::class.java)
-                startActivity(i)
+            var uploadTask = mReference.putFile(uri)
+            val urlTask = uploadTask.continueWithTask { task ->
+                if (!task.isSuccessful) {
+                    task.exception?.let {
+                        throw it
+                    }
+                }
+                mReference.downloadUrl
+            }.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Utils.hideDialog()
+                    val downloadUri = task.result
+                    attachmentUrl=task.result.toString()
+                    Toast.makeText(this,"Successfully Uploaded"+attachmentUrl,Toast.LENGTH_LONG).show()
+                } else {
+                    Utils.hideDialog()
+                    Toast.makeText(this,"Upload failure",Toast.LENGTH_LONG).show()
+                }
             }
         }catch (e:Exception){
             Toast.makeText(this,e.toString(),Toast.LENGTH_LONG).show()
         }
+
+
     }
 
 
@@ -97,7 +112,7 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             Utils.toast("nominee mobile can`t be empty",this)
         }
         else if(selectedPosition==-1){
-            Utils.toast("nominee name can`t be empty",this)
+            Utils.toast("nominee relation can`t be empty",this)
         }
         else{
             var relationId=relationList.get(selectedPosition).relationId
@@ -108,6 +123,7 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             request.userNomineeMobileNumber=nomineeMobileNumber
             request.userNomineeName=nomineeName
             request.userNomineeRelationId= relationId.toString()
+            request.userNomineeAttachment=attachmentUrl
 
             val call = RetrofitClient.getInstance().apiinterface().addNomineeDetails(request)
             call.enqueue(object : Callback<BaseResponse> {

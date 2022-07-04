@@ -294,4 +294,6 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
 
     <string name="copyright">COPYRIGHT \u00A9 2022 BSURE.LIVE - ALL RIGHTS RESERVED</string>
     <string name="asset_distribution">Asset\nDistribution</string>
+
+    <string name="preview"><u>Preview</u></string>
 </resources>

@@ -2,6 +2,7 @@ package com.bsure;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -59,7 +60,11 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
         alertDialogBuilder.setCancelable(false);
         alertDialogBuilder.setTitle("Payment Result");
         alertDialogBuilder.setPositiveButton("Ok", (dialog, which) -> {
-            //do nothing
+
+
+            Intent i=new Intent(Billing.this, MainActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
         });
 
         updatePriceDetails();
@@ -90,25 +95,19 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
         final Checkout co = new Checkout();
 
 
-        co.setKeyID("rzp_test_iX5vUbaxTsNk5R");
+        co.setKeyID("rzp_live_kaS85ZjjJygKfr");
 
 
         try {
             JSONObject options = new JSONObject();
-            options.put("name", "planDetails");
-            options.put("description", "Demoing Charges");
+            options.put("name", "Bsure");
+            options.put("description", "Bsure Plan purchase");
             options.put("send_sms_hash",true);
             options.put("allow_rotation", true);
             //You can omit the image option to fetch the image from dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
             options.put("amount", finalAmountStringFormat);
-
-//            JSONObject preFill = new JSONObject();
-//            preFill.put("email", "test@razorpay.com");
-//            preFill.put("contact", "9876543210");
-//
-//            options.put("prefill", preFill);
 
             co.open(activity, options);
         } catch (Exception e) {
@@ -144,8 +143,9 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
     @Override
     public void onPaymentError(int i, String s, PaymentData paymentData) {
         try{
-            alertDialogBuilder.setMessage("Payment Failed:\nPayment Data: "+paymentData.getData());
-            alertDialogBuilder.show();
+            Utils.Companion.toast("Payment Failed:\nPayment Data: "+paymentData.getData(),Billing.this);
+            //alertDialogBuilder.setMessage("Payment Failed:\nPayment Data: "+paymentData.getData());
+            //alertDialogBuilder.show();
         }catch (Exception e){
             e.printStackTrace();
         }

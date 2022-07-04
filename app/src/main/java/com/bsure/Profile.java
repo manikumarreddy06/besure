@@ -2,6 +2,7 @@ package com.bsure;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -65,26 +66,56 @@ public class Profile extends AppCompatActivity {
             builder.setTitle("Logout!");
             builder.setCancelable(false);
 
-            builder .setPositiveButton("Yes",
-                            (dialog, which) -> {
-                                PreferenceManager.instance(Profile.this).clearUserSession();
-                               Toast.makeText(Profile.this,"Logged  out successfully",Toast.LENGTH_SHORT).show();
-                               Intent i=new Intent(Profile.this,Asset_Categories_Activity.class){
-                               };
-                                finish();
+            builder
+                    .setPositiveButton(
+                            "Yes",
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+                                    PreferenceManager.instance(Profile.this).clearUserSession();
+                                    Intent i=new Intent(Profile.this, Splashscreen_Activity.class);
+                                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(i);
+                                }
                             });
 
             builder
                     .setNegativeButton(
-                            "No", (dialog, which) -> dialog.cancel());
+                            "No",
+
+                            new DialogInterface
+                                    .OnClickListener() {
+
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which)
+                                {
+
+
+                                    dialog.cancel();
+                                }
+                            });
             AlertDialog alertDialog = builder.create();
 
+
             alertDialog.show();
+            // TODO
+
+
+
         });
 
         btn_editProfile.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, User_Profile.class);
             startActivity(i);
         });
+       /* btn_editProfile.setOnClickListener(view -> {
+            Intent i=new Intent(Profile.this, User_Profile.class);
+            startActivity(i);
+        });*/
     }
 }

@@ -32,6 +32,8 @@
         android:background="#FEFEFE"
         tools:listitem="@layout/categories_item" />
 
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/llNodata"
         android:layout_width="match_parent"

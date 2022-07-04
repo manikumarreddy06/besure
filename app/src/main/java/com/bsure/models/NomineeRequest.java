@@ -5,6 +5,7 @@ public class NomineeRequest {
     private String userNomineeName;
     private String userNomineeMobileNumber;
     private String userNomineeRelationId;
+    private String userNomineeAttachment;
     private final static long serialVersionUID = 2074851219762988987L;
 
     public String getUserId() {
@@ -39,5 +40,12 @@ public class NomineeRequest {
         this.userNomineeRelationId = userNomineeRelationId;
     }
 
+    public String getUserNomineeAttachment() {
+        return userNomineeAttachment;
+    }
+
+    public void setUserNomineeAttachment(String userNomineeAttachment) {
+        this.userNomineeAttachment = userNomineeAttachment;
+    }
 
 }

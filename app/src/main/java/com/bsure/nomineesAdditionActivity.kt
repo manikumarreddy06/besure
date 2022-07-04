@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bsure.dialog.ImageViewDialog
 import com.bsure.models.BaseResponse
 import com.bsure.models.NomineeRequest
 import com.bsure.models.RelationResponseBean
@@ -52,10 +53,15 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             saveData()
 
         }
+        preview.setOnClickListener(){
+            val dailog = ImageViewDialog(nomineesAdditionActivity@this, attachmentUrl)
+            dailog.show()
+        }
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        val uriTxt = findViewById<View>(R.id.uriTxt) as TextView
         if(resultCode== RESULT_OK){
             if(requestCode==PDF){
                 uri= data!!.data!!

@@ -136,11 +136,12 @@
             app:backgroundTint="@color/colorPrimary" />
     </LinearLayout>
     <TextView
-        android:id="@+id/uriTxt"
+        android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/preview"
         android:textSize="12sp"
+        android:visibility="gone"
         android:layout_marginHorizontal="25dp"
         android:gravity="right"/>
 <!--    <com.google.android.material.textfield.TextInputLayout-->

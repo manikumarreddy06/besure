@@ -152,5 +152,5 @@ class Signin_Activity : AppCompatActivity() {
         btn_sign_in.alpha=1f
     }
 
-    
+
 }

@@ -31,7 +31,7 @@ public class Profile extends AppCompatActivity {
         tv_logout = findViewById(R.id.tv_logout);
         tv_privacypolicy = findViewById(R.id.tv_privacypolicy);
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
-//        btn_editProfile = findViewById(R.id.cv_editProfile);
+        btn_editProfile = findViewById(R.id.cv_editProfile);
 
         tv_aboutUs.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, About_Us.class);
@@ -65,51 +65,26 @@ public class Profile extends AppCompatActivity {
             builder.setTitle("Logout!");
             builder.setCancelable(false);
 
-            builder
-                    .setPositiveButton(
-                            "Yes",
-                            new DialogInterface
-                                    .OnClickListener() {
-
-                                @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which)
-                                {
-                                    PreferenceManager.instance(Profile.this).clearUserSession();
-                                   Toast.makeText(Profile.this,"Logged  out successfully",Toast.LENGTH_SHORT).show();
-                                   Intent i=new Intent(Profile.this,Asset_Categories_Activity.class){
-
-
-
-                                   };
-                                    finish();
-                                }
+            builder .setPositiveButton("Yes",
+                            (dialog, which) -> {
+                                PreferenceManager.instance(Profile.this).clearUserSession();
+                               Toast.makeText(Profile.this,"Logged  out successfully",Toast.LENGTH_SHORT).show();
+                               Intent i=new Intent(Profile.this,Asset_Categories_Activity.class){
+                               };
+                                finish();
                             });
 
             builder
                     .setNegativeButton(
-                            "No",
-
-                            new DialogInterface
-                                    .OnClickListener() {
-
-                                @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which)
-                                {
-
-
-                                    dialog.cancel();
-                                }
-                            });
+                            "No", (dialog, which) -> dialog.cancel());
             AlertDialog alertDialog = builder.create();
-
 
             alertDialog.show();
         });
-//        btn_editProfile.setOnClickListener(view -> {
-//            Intent i=new Intent(Profile.this, User_Profile.class);
-//            startActivity(i);
-//        });
+
+        btn_editProfile.setOnClickListener(view -> {
+            Intent i=new Intent(Profile.this, User_Profile.class);
+            startActivity(i);
+        });
     }
 }

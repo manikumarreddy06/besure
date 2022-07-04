@@ -12,6 +12,7 @@ import com.bsure.models.UpdateUserAccountRequest;
 import com.bsure.models.UpdateUserAccountResponse;
 import com.bsure.models.UserAsset;
 import com.bsure.models.UserAssetResponseBean;
+import com.bsure.models.UserProfileDataResponsebean;
 import com.bsure.models.signup;
 
 import retrofit2.Call;
@@ -19,6 +20,7 @@ import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface Apiinterface {
@@ -47,21 +49,19 @@ public interface Apiinterface {
     @GET("v1/getAssetConfig/{id}")
     Call<AssetsConfigResponse>getAssestsConfigurations(@Path("id") String id);
 
-
     @POST("v1/user/saveAssetInfo")
     Call<BaseResponse>saveAssetData(@Body SaveAssetRequest request);
-
 
     @POST("v1/getAssets")
     Call<UserAssetResponseBean>getUserLevelAssetsByCategory(@Body UserAsset request);
 
-
-
     @POST("v1/getPlanDetails")
     Call<PlanDetailsResponseBean>getPlanDetails();
 
+    @GET("v1/profile/data/{userId}")
+    Call<UserProfileDataResponsebean>getUserProfileData();
+
     @POST("update/details")
     Call<UpdateUserAccountResponse> updateUserAccount(@Body UpdateUserAccountRequest updateUserAccountRequest);
-
 
 }

@@ -8,49 +8,70 @@
     tools:context=".Asset_Categories_Activity"
     android:layout_marginHorizontal="15dp">
 
-    <TextView
-        android:id="@+id/pageTitle"
+    <LinearLayout
+        android:id="@+id/headAnimation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginVertical="10dp"
-        android:drawablePadding="10dp"
-        android:fontFamily="@font/allerta"
-        android:text="Assets"
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp" />
+        android:layout_height="170dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
 
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45">
+            <TextView
+                android:id="@+id/nomineePageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:gravity="end"
+                android:text="Assets"
+                android:textColor="@color/colorPrimary"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="0.55"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/nominee_animation" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/addAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:text="Add New"
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
-        app:drawableLeftCompat="@drawable/ic_add_icon" />
+<!--    <TextView-->
+<!--        android:id="@+id/pageTitle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:layout_marginVertical="15dp"-->
+<!--        android:fontFamily="@font/allerta"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:text="Assets"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold" />-->
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pageTitle"
-        android:layout_marginTop="9dp"
+        android:layout_below="@+id/headAnimation"
+        android:layout_marginTop="5dp"
         tools:listitem="@layout/categories_item" />
-
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/llNodata"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/pageTitle"
+        android:layout_below="@+id/headAnimation"
         android:layout_centerInParent="true"
         android:visibility="gone"
         android:background="@drawable/white_border_shape_button_rounded">
@@ -101,9 +122,31 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_marginTop="10dp" />
 
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp">
+
+        <TextView
+            android:id="@+id/addAccount"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="8dp"
+            android:gravity="center_vertical"
+            android:text="Add New"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:drawableLeftCompat="@drawable/ic_add_icon" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

@@ -29,7 +29,7 @@ class NomineeListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nomineelist)
-        pageTitle.text="Nominee Details"
+        nomineePageTitle.text="Nominee Details"
         val addNew = findViewById<TextView>(R.id.addAccount)
         addNew.setOnClickListener {
             val i = Intent(this@NomineeListActivity, nomineesAdditionActivity::class.java)

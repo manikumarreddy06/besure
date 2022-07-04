@@ -85,6 +85,7 @@ class AssetListActivity : AppCompatActivity() {
     }
 
     private fun adapterupdate(res: List<UserAsset>) {
+        llNodata.visibility=View.GONE
         val adapter = AssetsAdapter(this, res)
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter

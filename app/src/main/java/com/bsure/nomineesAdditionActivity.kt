@@ -90,9 +90,11 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
                     Utils.hideDialog()
                     val downloadUri = task.result
                     attachmentUrl=task.result.toString()
-                    Toast.makeText(this,"Successfully Uploaded"+attachmentUrl,Toast.LENGTH_LONG).show()
+                    preview.visibility=View.VISIBLE
+                    //Toast.makeText(this,"Successfully Uploaded"+attachmentUrl,Toast.LENGTH_LONG).show()
                 } else {
                     Utils.hideDialog()
+                    preview.visibility=View.GONE
                     Toast.makeText(this,"Upload failure",Toast.LENGTH_LONG).show()
                 }
             }

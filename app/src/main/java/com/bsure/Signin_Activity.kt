@@ -144,11 +144,11 @@ class Signin_Activity : AppCompatActivity() {
     }
 
     fun disableSignInButton(){
-        btn_sign_in.isClickable=false
+        btn_sign_in.isEnabled=false
         btn_sign_in.alpha=0.3f
     }
     fun enableSignInButton(){
-        btn_sign_in.isClickable=true
+        btn_sign_in.isEnabled=true
         btn_sign_in.alpha=1f
     }
 

@@ -24,9 +24,9 @@ import retrofit2.Response;
 public class EditProfileDetails extends AppCompatActivity {
 
     EditText etUsername,etEmail,etSecondaryNo,etWhatsappNo,etAddress;
-    RadioGroup rgGender; TextView trial;
+    RadioGroup rgGender;
     Button btnUpdateProfile;
-    String strGender;
+    String strGender,userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +38,6 @@ public class EditProfileDetails extends AppCompatActivity {
         etWhatsappNo = findViewById(R.id.etWhatsappNo);
         etAddress = findViewById(R.id.etAddress);
         rgGender = findViewById(R.id.rgGender);
-        trial= findViewById(R.id.trial);
         btnUpdateProfile = findViewById(R.id.btnUpdateProfile);
         // handling gender radio group click actions
         rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -83,7 +82,12 @@ public class EditProfileDetails extends AppCompatActivity {
 //    }
 
     public UpdateUserAccountRequest createRequest(){
+        PreferenceManager mInstance = PreferenceManager.instance(this);
+        userId= mInstance.get(PreferenceManager.USER_ID,null);
+
         UpdateUserAccountRequest updateUserAccountRequest = new UpdateUserAccountRequest();
+
+        updateUserAccountRequest.setUserId(userId);
         updateUserAccountRequest.setUserName(etUsername.getText().toString());
         updateUserAccountRequest.setGender(strGender);
         updateUserAccountRequest.setEmail(etEmail.getText().toString());

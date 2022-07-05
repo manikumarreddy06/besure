@@ -10,7 +10,6 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bsure.databinding.ActivityUserProfileBinding;
 import com.bsure.models.UserDataResponse;
 import com.bsure.models.UserProfileDataResponse;
 import com.bsure.retrofitUtil.RetrofitClient;
@@ -65,12 +64,11 @@ public class User_Profile extends AppCompatActivity {
                     userName.setText(response.body().toString());
                     userGender.setText(response.body().getUserDataResponses().getGender());
 //                    Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
-//                    binding.userName.setText(response.body().getUserDataResponses().getUserName());
-//                    binding.userWhatsappNo.setText(response.body().getUserDataResponses().getWhatsUpNumber());
-//                    binding.userSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
-//                    binding.userMailId.setText(response.body().getUserDataResponses().getEmail());
-//                    binding.userAddress.setText(response.body().getUserDataResponses().getAddess());
-//                    binding.userGender.setText(response.body().getUserDataResponses().getGender());
+                    userName.setText(response.body().getUserDataResponses().getUserName());
+                    userWhatsappNo.setText(response.body().getUserDataResponses().getWhatsUpNumber());
+                    userSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
+                    userMailId.setText(response.body().getUserDataResponses().getEmail());
+                    userAddress.setText(response.body().getUserDataResponses().getAddess());
                     Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
                 }
             }

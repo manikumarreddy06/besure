@@ -59,18 +59,19 @@ public class User_Profile extends AppCompatActivity {
                 if (!(response.body().getIsvalid())) {
                     userName.setText("Username Not Set yet");
 //                    Toast.makeText(User_Profile.this, "failed to update",Toast.LENGTH_LONG).show();
-                }if (response.body().getIsvalid()) {
+                }
+                if (response.body().getIsvalid()) {
                     String s= response.message();
                     final String TAG = "Profile activity";
                     userName.setText(response.body().toString());
                     userGender.setText(response.body().getUserDataResponses().getGender());
-//                    Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
-//                    binding.userName.setText(response.body().getUserDataResponses().getUserName());
-//                    binding.userWhatsappNo.setText(response.body().getUserDataResponses().getWhatsUpNumber());
-//                    binding.userSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
-//                    binding.userMailId.setText(response.body().getUserDataResponses().getEmail());
-//                    binding.userAddress.setText(response.body().getUserDataResponses().getAddess());
-//                    binding.userGender.setText(response.body().getUserDataResponses().getGender());
+                    Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
+                   /* binding.userName.setText(response.body().getUserDataResponses().getUserName());
+                    binding.userWhatsappNo.setText(response.body().getUserDataResponses().getWhatsUpNumber());
+                    binding.userSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
+                   binding.userMailId.setText(response.body().getUserDataResponses().getEmail());
+                   binding.userAddress.setText(response.body().getUserDataResponses().getAddess());
+                    binding.userGender.setText(response.body().getUserDataResponses().getGender());*/
                     Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
                 }
             }

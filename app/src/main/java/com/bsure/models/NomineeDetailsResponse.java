@@ -22,6 +22,10 @@ public class NomineeDetailsResponse {
     @Expose
     private Object userNomineePercentage;
 
+    @SerializedName("userNomineeAttachment")
+    @Expose
+    private String userNomineeAttachment;
+
     public String getUserId() {
         return userId;
     }
@@ -62,4 +66,11 @@ public class NomineeDetailsResponse {
         this.userNomineePercentage = userNomineePercentage;
     }
 
+    public String getUserNomineeAttachment() {
+        return userNomineeAttachment;
+    }
+
+    public void setUserNomineeAttachment(String userNomineeAttachment) {
+        this.userNomineeAttachment = userNomineeAttachment;
+    }
 }

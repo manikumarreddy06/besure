@@ -169,7 +169,7 @@
                 android:text="Agree to "
                 android:textSize="16sp" />
             <TextView
-                android:id="@+id/signintvTnc"
+                android:id="@+id/terms"
                 android:layout_width="wrap_content"
                 android:text=" terms and Conditions"
                 android:textColor="@color/colorPrimary"

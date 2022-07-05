@@ -1,6 +1,5 @@
 package com.bsure
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -12,7 +11,6 @@ import com.bsure.TnC.TnC_Activity
 import com.bsure.models.signup
 import com.bsure.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_signin.*
-import kotlinx.android.synthetic.main.activity_signin.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,8 +44,8 @@ class Signin_Activity : AppCompatActivity() {
             }
         }
         terms.setOnClickListener(){
-            val i = Intent(Signin_Activity@this, TnC_Activity::class.java)
-            startActivity(i)
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bsure.live/terms-%26-conditions/f/bsure-terms-conditions"))
+            startActivity(browserIntent)
 
         }
 

@@ -34,6 +34,12 @@ public class Profile extends AppCompatActivity {
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
         btn_editProfile = findViewById(R.id.cv_editProfile);
 
+        // Edit Profile
+        btn_editProfile.setOnClickListener(view -> {
+            Intent i=new Intent(Profile.this, User_Profile.class);
+            startActivity(i);
+        });
+
         tv_aboutUs.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, About_Us.class);
             startActivity(i);
@@ -83,25 +89,12 @@ public class Profile extends AppCompatActivity {
                                 }
                             });
 
-            builder
-                    .setNegativeButton(
-                            "No",
-
-                            new DialogInterface
-                                    .OnClickListener() {
-
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                                 @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which)
-                                {
-
-
-                                    dialog.cancel();
-                                }
+                                public void onClick(DialogInterface dialog, int which)
+                                {  dialog.cancel(); }
                             });
             AlertDialog alertDialog = builder.create();
-
-
             alertDialog.show();
             // TODO
 
@@ -109,13 +102,5 @@ public class Profile extends AppCompatActivity {
 
         });
 
-        btn_editProfile.setOnClickListener(view -> {
-            Intent i=new Intent(Profile.this, User_Profile.class);
-            startActivity(i);
-        });
-       /* btn_editProfile.setOnClickListener(view -> {
-            Intent i=new Intent(Profile.this, User_Profile.class);
-            startActivity(i);
-        });*/
     }
 }

@@ -4,33 +4,30 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class UserDataResponse {
-    @SerializedName("userId")
-    @Expose
+
     private String userId;
 
-    @SerializedName("userName")
-    @Expose
     private String userName;
 
-    @SerializedName("email")
-    @Expose
     private String email;
 
-    @SerializedName("gender")
-    @Expose
     private String gender;
 
-    @SerializedName("addess")
-    @Expose
     private String addess;
 
-    @SerializedName("alternateNumber")
-    @Expose
     private String alternateNumber;
 
-    @SerializedName("whatsUpNumber")
-    @Expose
     private String whatsUpNumber;
+
+    public UserDataResponse(String userId, String userName, String email, String gender, String addess, String alternateNumber, String whatsUpNumber) {
+        this.userId = userId;
+        this.userName = userName;
+        this.email = email;
+        this.gender = gender;
+        this.addess = addess;
+        this.alternateNumber = alternateNumber;
+        this.whatsUpNumber = whatsUpNumber;
+    }
 
     public String getUserId() {
         return userId;

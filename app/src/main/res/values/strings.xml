@@ -92,7 +92,6 @@
     <string name="branch_name">Branch Name:</string>
     <string name="bank_name">Bank Name:</string>
     <string name="account_number">Account Number:</string>
-    <string name="agree_to_terms_and_conditions">Agree to <font color='#2EA9C9'>Terms and conditions</font></string>
     <string name="add_any_attachment">Attach an ID proof of nominee</string>
     <string name="write_your_will_here">write your will here</string>
     <string name="edit">Edit</string>

@@ -1,6 +1,7 @@
 package com.bsure
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bsure.models.signup
 import com.bsure.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_signin.*
+import kotlinx.android.synthetic.main.activity_signin.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +21,13 @@ class Signin_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
+        // tnc website intent
+        signintvTnc.setOnClickListener(View.OnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bsure.live/terms-%26-conditions/f/bsure-terms-conditions"))
+            startActivity(browserIntent)
+        })
+        // signin
         btn_sign_in.setOnClickListener(View.OnClickListener {
             if(!verifyOtpFlag) {
                 signinAPICall()
@@ -28,6 +37,7 @@ class Signin_Activity : AppCompatActivity() {
             }
         })
 
+        // if user wants to change the entered number
         tvChangeNumber.setOnClickListener(){
             disableOtpUI()
             verifyOtpFlag=false
@@ -50,7 +60,6 @@ class Signin_Activity : AppCompatActivity() {
                         PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,response.body()!!.userId)
                     }
                 }
-
                 override fun onFailure(call: Call<signup?>, t: Throwable) {
                     Toast.makeText(this@Signin_Activity, "failure", Toast.LENGTH_SHORT).show()
                 }
@@ -85,7 +94,6 @@ class Signin_Activity : AppCompatActivity() {
                 })
         }
         else{
-
             Toast.makeText(this@Signin_Activity, "enter otp", Toast.LENGTH_SHORT).show()
         }
     }

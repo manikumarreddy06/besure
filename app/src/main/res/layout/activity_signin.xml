@@ -52,6 +52,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_marginVertical="15dp"
+            android:textColor="@color/colorPrimary"
             android:padding="10dp"
             android:text="@string/change_number"
             android:textSize="14sp"
@@ -153,16 +154,28 @@
                   android:inputType="textPassword" />
           </com.google.android.material.textfield.TextInputLayout>-->
 
-
-        <CheckBox
-            android:id="@+id/checkBox"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:buttonTint="@color/colorPrimary"
-            android:fontFamily="sans-serif"
-            android:text="@string/agree_to_terms_and_conditions"
-            android:textSize="16sp" />
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:drawablePadding="10dp"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:fontFamily="@font/allerta"
+                android:text="Agree to "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/signintvTnc"
+                android:layout_width="wrap_content"
+                android:text=" terms and Conditions"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_sign_in"
@@ -182,9 +195,9 @@
 
     <LinearLayout
         android:id="@+id/ll2"
-        android:layout_below="@id/ll1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/ll1"
         android:orientation="vertical">
 
         <TextView
@@ -231,7 +244,6 @@
                 android:visibility="gone" />
 
         </LinearLayout>
-
     </LinearLayout>
 
     <com.airbnb.lottie.LottieAnimationView
@@ -244,12 +256,5 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/signin_family_animation" />
-    <!--    <ImageView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:contentDescription="@string/logo"-->
-    <!--        android:gravity="bottom"-->
-    <!--        android:scaleType="fitXY"-->
-    <!--        android:src="@drawable/footersignin" />-->
 
 </RelativeLayout>

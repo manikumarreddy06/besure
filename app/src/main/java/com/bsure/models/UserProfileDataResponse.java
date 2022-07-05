@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class UserProfileDataResponsebean {
+public class UserProfileDataResponse {
     @SerializedName("isvalid")
     @Expose
     private Boolean isvalid;
@@ -16,6 +16,11 @@ public class UserProfileDataResponsebean {
     @Expose
     private UserDataResponse userDataResponses;
 
+    public UserProfileDataResponse(Boolean isvalid, String message, UserDataResponse userDataResponses) {
+        this.isvalid = isvalid;
+        this.message = message;
+        this.userDataResponses = userDataResponses;
+    }
     public Boolean getIsvalid() {
         return isvalid;
     }

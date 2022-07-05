@@ -54,13 +54,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="3dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/nm"
                     android:textSize="19sp"
                     android:fontFamily="@font/allerta"
                     android:layout_width="0dp"
@@ -194,9 +194,8 @@
                     android:text="city \nstate "/>
             </LinearLayout>
 
-
             <androidx.cardview.widget.CardView
-                android:id="@+id/btn_editDetails"
+                android:id="@+id/btn_editProfileDetails"
                 android:layout_marginVertical="20dp"
                 android:layout_width="wrap_content"
                 app:cardBackgroundColor="@color/colorPrimary"

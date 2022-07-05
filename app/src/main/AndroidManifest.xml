@@ -113,6 +113,10 @@
             android:name=".NomineeListActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".WebViewActivity"
+            />
+
         <meta-data
             android:name="com.razorpay.ApiKey"
             android:value="rzp_live_kaS85ZjjJygKfr``        " />

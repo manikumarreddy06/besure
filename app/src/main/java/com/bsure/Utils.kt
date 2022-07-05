@@ -4,11 +4,16 @@ package com.bsure
 import android.app.ProgressDialog
 import android.content.Context
 import android.view.LayoutInflater
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.ListPopupWindow
+import com.bumptech.glide.Glide
+import com.bumptech.glide.Priority
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 
 class Utils {
 
@@ -99,6 +104,28 @@ class Utils {
             }
 
         }
+
+        fun loadImage(context: Context, view: ImageView, url: String, roundImage: Boolean) {
+
+            val options = RequestOptions()
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.placeholder)
+                .fallback(R.drawable.placeholder)
+                .priority(Priority.NORMAL)
+
+            if (roundImage) {
+                options.circleCrop()
+                options.apply(RequestOptions.circleCropTransform())
+            }
+
+            Glide.with(context)
+                .load(url)
+                .apply(options)
+                .transition(DrawableTransitionOptions.withCrossFade(300))
+                .into(view)
+
+        }
+
 
     }
 }

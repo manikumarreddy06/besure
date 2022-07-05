@@ -1,5 +1,6 @@
 package com.bsure
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bsure.TnC.TnC_Activity
 import com.bsure.models.signup
 import com.bsure.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_signin.*
@@ -21,13 +23,7 @@ class Signin_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
-
-        // tnc website intent
-        signintvTnc.setOnClickListener(View.OnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bsure.live/terms-%26-conditions/f/bsure-terms-conditions"))
-            startActivity(browserIntent)
-        })
-        // signin
+        disableSignInButton()
         btn_sign_in.setOnClickListener(View.OnClickListener {
             if(!verifyOtpFlag) {
                 signinAPICall()
@@ -37,11 +33,24 @@ class Signin_Activity : AppCompatActivity() {
             }
         })
 
-        // if user wants to change the entered number
         tvChangeNumber.setOnClickListener(){
             disableOtpUI()
             verifyOtpFlag=false
         }
+        checkBox.setOnClickListener(){
+            if(checkBox.isChecked){
+                enableSignInButton()
+            }
+            else{
+                disableSignInButton()
+            }
+        }
+        terms.setOnClickListener(){
+            val i = Intent(Signin_Activity@this, TnC_Activity::class.java)
+            startActivity(i)
+
+        }
+
     }
 
     fun signinAPICall() {
@@ -60,6 +69,7 @@ class Signin_Activity : AppCompatActivity() {
                         PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,response.body()!!.userId)
                     }
                 }
+
                 override fun onFailure(call: Call<signup?>, t: Throwable) {
                     Toast.makeText(this@Signin_Activity, "failure", Toast.LENGTH_SHORT).show()
                 }
@@ -94,6 +104,7 @@ class Signin_Activity : AppCompatActivity() {
                 })
         }
         else{
+
             Toast.makeText(this@Signin_Activity, "enter otp", Toast.LENGTH_SHORT).show()
         }
     }
@@ -131,4 +142,15 @@ class Signin_Activity : AppCompatActivity() {
         otp_edit_box4.setOnKeyListener(GenericKeyEvent(otp_edit_box4, otp_edit_box3))
         otp_edit_box5.setOnKeyListener(GenericKeyEvent(otp_edit_box5, otp_edit_box4))
     }
+
+    fun disableSignInButton(){
+        btn_sign_in.isEnabled=false
+        btn_sign_in.alpha=0.3f
+    }
+    fun enableSignInButton(){
+        btn_sign_in.isEnabled=true
+        btn_sign_in.alpha=1f
+    }
+
+
 }

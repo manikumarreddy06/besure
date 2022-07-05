@@ -170,6 +170,7 @@
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/terms"
+                android:fontFamily="@font/allerta"
                 android:layout_width="wrap_content"
                 android:text=" terms and Conditions"
                 android:textColor="@color/colorPrimary"

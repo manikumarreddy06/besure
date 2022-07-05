@@ -46,7 +46,6 @@ class Signin_Activity : AppCompatActivity() {
         terms.setOnClickListener(){
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bsure.live/terms-%26-conditions/f/bsure-terms-conditions"))
             startActivity(browserIntent)
-
         }
 
     }

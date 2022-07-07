@@ -221,7 +221,7 @@ We may use, store and process the information provided by you to (1) improve the
 
 2.3 Sharing and Disclosure of data with Third Parties As required by law, at times we might be required to disclose your personal information including personal, transactional and financial information to relevant regulatory, and governmental authorities and also to our advisors such as law firms and audit firms while responding to request from the regulatory authorities. In some cases, when we believe that such disclosure is necessary to protect our rights, or the rights of others, or to comply with a judicial proceeding, court order, or legal process served on our website/app we would share such information pursuant to a lawful request from law enforcement agencies.
     </string>
-    <string name="tnc_desc8" >1.My amount got deducted still subscription is not shown. What is to be done?
+    <string name="tnc_desc8">1.My amount got deducted still subscription is not shown. What is to be done?
 Generally, if the amount was stuck with Payment gateway and your bank, it will be automatically sent to your account in 7 days. If the amount is received by Bsure, we will mark this as subscription fees payment. If you have made more than one payment, we will refund the excess account to your source within 7-14 days.
         2.I have already taken lifetime subscription but have changed my mind. Can I get my money back?
 3.Bsure have a no question ask refund policy. If you are not happy with Bsure\'s services, we will refund the amount deducting the charges already incurred. We will refund your money no questions asked.
@@ -262,7 +262,7 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
     <!--    Tnc strings Ends-->
 
 
-   <!-- <string-array name="statespinners">
+    <!-- <string-array name="statespinners">
         <item>Andhra pradesh</item>
         <item>Telangana</item>
         <item>Tamilnadu</item>
@@ -278,10 +278,10 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
     <string name="nominee_relation">Relation</string>
     <string name="nominee_number">Mobile Number</string>
     <string name="add_nominee">Add new Nominee</string>
-<!--darkmode background colors-->
+    <!--darkmode background colors-->
 
 
-<!--    privacy policy-->
+    <!--    privacy policy-->
     <string name="pp_desc">We at Bsure.live are committed to protecting the privacy and security of your personal information. Your privacy is important to us and maintaining your trust is paramount.  This Privacy Policy explains how we collect, use, process and disclose information about you. By using our website/app and affiliated services, you consent to the terms of our privacy policy (“Privacy Policy”) in addition to our Terms of Use. We encourage you to read this Privacy Policy regarding the collection, use, and disclosure of your information from time to time to keep yourself updated with the changes &amp; updated that we make to this Policy. This Privacy Policy describes our privacy practices for all websites, products and services that are linked to it.\n</string>
     <string name="pp_desc1">The following information is collected by or on behalf of Bsure.live.\n
     <br> 1.1 Information You provide us When you start using the Bsure.live App, we ask you to provide certain information as part of the registration process, and in the course of your interface with the Bsure.live App. We will collect this information through various means and in various places through the Bsure.live App, including account registration forms, contact us forms, or when you otherwise interact with Bsure.live including at customer support.  At the time of registration, we ask for the following personal information. Name (First Name, Last Name); Mobile Number; Email ID; Date of Birth; ID proof.  Pursuant to the services consumed by You from time to time, we may explicitly seek additional information including address, Asset details (including but not limited to bank account details, Insurance details, Mutual fund details, stock details, property details and any other governmental identification numbers or documents. You may choose to provide such information if you wish to use the services provided by the App.  We will also maintain a record of the information you provide to us when using customer support services.  From time to time, during your use of the Bsure App, Bsure.live may require access to certain additional information such as SMS and contact details. Prior to accessing any such additional information, explicit consent shall be sought from you. Please note that even after consent has been provided by you, we only read transactional or promotional SMS and do not open, access or read any personal SMS.\n</br>

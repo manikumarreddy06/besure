@@ -36,9 +36,10 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_billing.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_edit_profile_details.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_empty4.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_main.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_mutualfunds.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_nudge.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_payment_success.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_payment_success.xml" value="0.2" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_profile.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_signin.xml" value="0.25" />
@@ -46,6 +47,7 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_user_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_usernominees_will.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/bankslayout_one_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/categories_item.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/item_asset_details.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/nominee_line_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/relations_item.xml" value="0.234375" />

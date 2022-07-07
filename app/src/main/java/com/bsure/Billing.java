@@ -133,8 +133,10 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
         try{
-            alertDialogBuilder.setMessage("Payment Successful :\nPayment ID: "+s+"\nPayment Data: "+paymentData.getData());
-            alertDialogBuilder.show();
+            Intent i=new Intent(Billing.this,payment_success.class);
+            startActivity(i);
+           /* alertDialogBuilder.setMessage("Payment Successful :\nPayment ID: "+s+"\nPayment Data: "+paymentData.getData());
+            alertDialogBuilder.show();*/
         }catch (Exception e){
             e.printStackTrace();
         }

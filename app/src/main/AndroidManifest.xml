@@ -31,7 +31,7 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".User_Profile"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Asset_Categories_Activity"
             android:exported="false" />
@@ -91,7 +91,7 @@
         </activity>
         <activity
             android:name=".nomineesAdditionActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".bankaccounts"
             android:exported="false" />
@@ -100,7 +100,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DynamicFormActivity"
             android:exported="true" />

@@ -2,9 +2,8 @@ package com.bsure;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Button;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,18 +12,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.bsure.FAQ.FAQ_Activity;
-import com.bsure.R;
 import com.bsure.TnC.TnC_Activity;
+import com.bsure.models.UserProfileDataResponse;
 import com.bsure.refundPolicy.refundPolicy_Activity;
+import com.bsure.retrofitUtil.RetrofitClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Profile extends AppCompatActivity {
-    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy;
-    CardView btn_editProfile;
+    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_user_name,tv_user_credential;
+    CardView btn_editProfile; String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        tv_user_name = findViewById(R.id.tv_user_name);
+        tv_user_credential = findViewById(R.id.tv_user_credential);
         tv_aboutUs = findViewById(R.id.tv_aboutUs);
         tv_tnc = findViewById(R.id.tv_tnc);
         tv_faq = findViewById(R.id.tv_faq);
@@ -34,9 +40,12 @@ public class Profile extends AppCompatActivity {
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
         btn_editProfile = findViewById(R.id.cv_editProfile);
 
+        // get user data
+        getUserProfileData();
+
         // Edit Profile
         btn_editProfile.setOnClickListener(view -> {
-            Intent i=new Intent(Profile.this, User_Profile.class);
+            Intent i=new Intent(Profile.this, User_Profile_Activity.class);
             startActivity(i);
         });
 
@@ -72,21 +81,11 @@ public class Profile extends AppCompatActivity {
             builder.setTitle("Logout!");
             builder.setCancelable(false);
 
-            builder
-                    .setPositiveButton(
-                            "Yes",
-                            new DialogInterface
-                                    .OnClickListener() {
-
-                                @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which)
-                                {
-                                    PreferenceManager.instance(Profile.this).clearUserSession();
-                                    Intent i=new Intent(Profile.this, Splashscreen_Activity.class);
-                                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                    startActivity(i);
-                                }
+            builder.setPositiveButton( "Yes", (dialog, which) -> {
+                                PreferenceManager.instance(Profile.this).clearUserSession();
+                                Intent i=new Intent(Profile.this, Splashscreen_Activity.class);
+                                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(i);
                             });
 
             builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -98,9 +97,33 @@ public class Profile extends AppCompatActivity {
             alertDialog.show();
             // TODO
 
-
-
         });
-
+    }
+    // get user profile data
+    private void getUserProfileData() {
+        // Retrofit
+        PreferenceManager mInstance = PreferenceManager.instance(this);
+        userId= mInstance.get(PreferenceManager.USER_ID,null);
+        Call<UserProfileDataResponse> userProfileDataResponsebeanCall = RetrofitClient.getInstance().apiinterface().getUserProfileData(userId);
+        userProfileDataResponsebeanCall.enqueue(new Callback<UserProfileDataResponse>() {
+            @Override
+            public void onResponse(Call<UserProfileDataResponse> call, Response<UserProfileDataResponse> response) {
+                // Checking for the Response
+                if (!(response.body().getIsvalid())) {
+                    Utils.Companion.toast("failed to update user data",Profile.this);
+//                    Toast.makeText(User_Profile.this, "failed to update",Toast.LENGTH_LONG).show();
+                }
+                if (response.body().getIsvalid()) {
+//                    Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
+                    tv_user_name.setText(response.body().getUserDataResponses().getUserName());
+                    tv_user_credential.setText(response.body().getUserDataResponses().getEmail());
+//                    Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
+                }
+            }
+            @Override
+            public void onFailure(Call<UserProfileDataResponse> call, Throwable t) {
+                Toast.makeText(Profile.this, "Not getting response",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }

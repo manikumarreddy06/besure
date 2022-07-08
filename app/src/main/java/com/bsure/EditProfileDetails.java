@@ -1,16 +1,12 @@
 package com.bsure;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bsure.models.UpdateUserAccountRequest;
@@ -107,7 +103,7 @@ public class EditProfileDetails extends AppCompatActivity {
                     Toast.makeText(EditProfileDetails.this,"updated successfully ",Toast.LENGTH_SHORT).show();
 //                    Log.i("Edit Profile", "Updated successfully ");
 
-                    Intent i=new Intent(EditProfileDetails.this, User_Profile.class);
+                    Intent i=new Intent(EditProfileDetails.this, User_Profile_Activity.class);
                     startActivity(i);
                 }else{
 //                    Log.i("Edit Profile", "request failed");

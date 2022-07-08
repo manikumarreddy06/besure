@@ -36,10 +36,8 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_billing.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_edit_profile_details.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_empty4.xml" value="0.18333333333333332" />
-        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_main.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_mutualfunds.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_nudge.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_payment_success.xml" value="0.2" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_profile.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_signin.xml" value="0.25" />
@@ -47,7 +45,6 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_user_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_usernominees_will.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/bankslayout_one_item.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/categories_item.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/item_asset_details.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/nominee_line_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/relations_item.xml" value="0.234375" />
@@ -59,6 +56,7 @@
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/background_main.xml" value="0.1755" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/card_edge.xml" value="0.213" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_add_icon.xml" value="0.2" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_add_icon_black.xml" value="0.126" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_bank_account.xml" value="0.1705" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.2" />
@@ -132,6 +130,7 @@
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_nomineelist.xml" value="0.2" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_nominees.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_nudge.xml" value="0.264" />
+        <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_payment_success.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_privacy_policy.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/layout/activity_refund_policy.xml" value="0.20863616930312098" />
@@ -167,7 +166,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

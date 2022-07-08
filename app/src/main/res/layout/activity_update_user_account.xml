@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/bg_white"
     tools:context=".EditProfileDetails">
 
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp"
+            android:layout_marginVertical="15dp"
             android:background="@color/white"
             android:elevation="5dp"
             app:cardCornerRadius="10dp"
@@ -89,7 +89,7 @@
                         android:fontFamily="@font/allerta"
                         android:text="Name"
                         android:textColor="@color/primary_text_color"
-                        android:textSize="19sp" />
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/etUsername"
@@ -115,7 +115,7 @@
                         android:fontFamily="@font/allerta"
                         android:text="Gender"
                         android:textColor="@color/primary_text_color"
-                        android:textSize="19sp" />
+                        android:textSize="18sp" />
 
                     <RadioGroup
                         android:id="@+id/rgGender"
@@ -163,7 +163,7 @@
                         android:fontFamily="@font/allerta"
                         android:text="WhatsApp No"
                         android:textColor="@color/primary_text_color"
-                        android:textSize="19sp" />
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/etWhatsappNo"
@@ -188,7 +188,7 @@
                         android:fontFamily="@font/allerta"
                         android:text="Secondary No"
                         android:textColor="@color/primary_text_color"
-                        android:textSize="19sp" />
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/etSecondaryNo"
@@ -213,7 +213,7 @@
                         android:fontFamily="@font/allerta"
                         android:text="Email Id"
                         android:textColor="@color/primary_text_color"
-                        android:textSize="19sp" />
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/etEmail"
@@ -238,7 +238,7 @@
                         android:fontFamily="@font/allerta"
                         android:text="Address"
                         android:textColor="@color/primary_text_color"
-                        android:textSize="19sp" />
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/etAddress"

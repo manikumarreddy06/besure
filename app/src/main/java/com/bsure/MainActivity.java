@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.google.android.material.appbar.MaterialToolbar;
 
 public class MainActivity extends AppCompatActivity  {
@@ -14,12 +16,15 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
         // TODO toolbar actions need to be handled
-
         MaterialToolbar topappbar = findViewById(R.id.topappbar);
         LinearLayout llassets = findViewById(R.id.assets);
         LinearLayout llnominee = findViewById(R.id.nominee);
         LinearLayout llnudge = findViewById(R.id.nudge);
         LinearLayout lldistribution = findViewById(R.id.distribution);
+        CardView step1 = findViewById(R.id.step1);
+        CardView step2 = findViewById(R.id.step2);
+        CardView step3 = findViewById(R.id.step3);
+        CardView step4 = findViewById(R.id.step4);
 
         llassets.setOnClickListener(view -> {
             Intent i=new Intent(MainActivity.this, Asset_Categories_Activity.class);
@@ -42,6 +47,25 @@ public class MainActivity extends AppCompatActivity  {
         });
 
 
+        // steps to follow
+        step1.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this, User_Profile_Activity.class);
+            startActivity(i);
+        });
+        step2.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this, Asset_Categories_Activity.class);
+            startActivity(i);
+        });
+        step3.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this, NomineeListActivity.class);
+            startActivity(i);
+        });
+        step4.setOnClickListener(view -> {
+            Intent i=new Intent(MainActivity.this, NudgeActivity.class);
+            startActivity(i);
+        });
+
+
 //        topappbar.setNavigationOnClickListener(view -> {
 //
 //        });
@@ -52,13 +76,5 @@ public class MainActivity extends AppCompatActivity  {
             }
             return false;
         });
-
-
-
-
-
     }
-
-
-
 }

@@ -22,7 +22,7 @@
             android:textColor="@color/primary_text_color"
             android:textSize="17sp"
             android:drawablePadding="10dp"
-            app:drawableEndCompat="@drawable/ic_add_icon" />
+            app:drawableEndCompat="@drawable/ic_add_icon_black" />
 
         <RelativeLayout
             android:id="@+id/expandable_layout"

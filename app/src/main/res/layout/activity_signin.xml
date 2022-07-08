@@ -19,12 +19,12 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginVertical="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
             android:contentDescription="@string/logo"
             android:gravity="center"
             android:src="@drawable/ic_logo"
             android:textSize="35sp" />
-
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_mobile_number"
             android:textSize="16sp"
+            android:layout_marginHorizontal="10dp"
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeErrorColor="@color/error_color"
             app:hintTextColor="@color/colorPrimary"
@@ -44,7 +45,6 @@
                 android:inputType="number"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <TextView
             android:id="@+id/tvChangeNumber"
@@ -127,8 +127,6 @@
                 android:inputType="number"
                 android:maxLength="1"
                 android:textSize="30sp" />
-
-
         </LinearLayout>
 
 
@@ -158,6 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
             android:orientation="horizontal">
             <CheckBox
                 android:id="@+id/checkBox"
@@ -183,13 +182,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginVertical="20dp"
+            android:layout_marginVertical="30dp"
+            android:layout_marginHorizontal="10dp"
             android:background="@drawable/shape_button_rounded"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
             android:paddingVertical="@dimen/btn_paddingTopBottom"
             android:text="@string/sign_in"
             android:textColor="@android:color/white"
+            android:fontFamily="@font/allerta"
             android:textSize="@dimen/btn_text_size"
             app:backgroundTint="@color/colorPrimary" />
     </LinearLayout>

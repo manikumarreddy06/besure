@@ -37,26 +37,12 @@
             android:id="@+id/animationView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="0.55"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/nominee_animation" />
     </LinearLayout>
-
-<!--    <TextView-->
-<!--        android:id="@+id/pageTitle"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginHorizontal="10dp"-->
-<!--        android:layout_marginVertical="15dp"-->
-<!--        android:fontFamily="@font/allerta"-->
-<!--        android:gravity="center_horizontal"-->
-<!--        android:text="Assets"-->
-<!--        android:textColor="@color/colorPrimary"-->
-<!--        android:textSize="30sp"-->
-<!--        android:textStyle="bold" />-->
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
@@ -134,6 +120,7 @@
         android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
         android:elevation="20dp"
+        app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="20dp">
 
         <TextView
@@ -142,11 +129,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="8dp"
+            android:layout_marginVertical="7dp"
             android:gravity="center_vertical"
             android:text="Add New"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
             app:drawableLeftCompat="@drawable/ic_add_icon" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

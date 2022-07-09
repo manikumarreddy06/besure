@@ -70,6 +70,7 @@ public class User_Profile extends AppCompatActivity {
                     userMailId.setText(response.body().getUserDataResponses().getEmail());
                     userAddress.setText(response.body().getUserDataResponses().getAddess());
                     Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
+                    PreferenceManager.instance(User_Profile.this).set(PreferenceManager.USER_NAME,response.body().getUserDataResponses().getUserName());
                 }
             }
             @Override

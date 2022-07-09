@@ -15,6 +15,8 @@ public class PreferenceManager {
     public static final String USER_MOBILE_NUMBER = "USER_MOBILE_NUMBER";
     public static final String LOGIN_STATUS = "LOGIN_STATUS";
 
+    public static final String USER_NAME = "USER_NAME";
+
 
 
     private PreferenceManager(Context c) {

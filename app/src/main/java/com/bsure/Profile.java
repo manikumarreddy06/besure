@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,10 +21,18 @@ import com.bsure.refundPolicy.refundPolicy_Activity;
 public class Profile extends AppCompatActivity {
     TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy;
     CardView btn_editProfile;
+    TextView tvUsername;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+
+        tvUsername = findViewById(R.id.tv_user_name);
+        String userName=PreferenceManager.instance(Profile.this).get(PreferenceManager.USER_NAME,null);
+        if(!TextUtils.isEmpty(userName)){
+            tvUsername.setText(userName);
+        }
 
         tv_aboutUs = findViewById(R.id.tv_aboutUs);
         tv_tnc = findViewById(R.id.tv_tnc);

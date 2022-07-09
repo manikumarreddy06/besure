@@ -1,7 +1,6 @@
 package com.bsure
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
@@ -44,8 +43,10 @@ class Signin_Activity : AppCompatActivity() {
             }
         }
         terms.setOnClickListener(){
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bsure.live/terms-%26-conditions/f/bsure-terms-conditions"))
-            startActivity(browserIntent)
+//            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bsure.live/terms-%26-conditions/f/bsure-terms-conditions"))
+//            startActivity(browserIntent)
+            val i = Intent(this@Signin_Activity, TnC_Activity::class.java)
+            startActivity(i)
         }
 
     }

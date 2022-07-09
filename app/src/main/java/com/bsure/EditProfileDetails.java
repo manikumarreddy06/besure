@@ -60,6 +60,9 @@ public class EditProfileDetails extends AppCompatActivity {
                         strGender="other";
 //                        Toast.makeText(EditProfileDetails.this, "oth is clicked",Toast.LENGTH_LONG).show();
                         break;
+                    default:
+                        strGender="other";
+                        break;
                 }
             }
         });
@@ -70,21 +73,21 @@ public class EditProfileDetails extends AppCompatActivity {
         });
     }
     //  adding validation
-//        public boolean validate() {
-//        String userName = etUsername.getText().toString().trim();
-//        String email = etEmail.getText().toString().trim();
-//        String phNo = etPhNo.getText().toString().trim();
-//        String whatsappNo = etWhatsappNo.getText().toString().trim();
-//        String address = etAddress.getText().toString().trim();
-//        if(userName.isEmpty()){etUsername.setError("Please enter User name"); etUsername.requestFocus(); return false;}
-//        if(email.isEmpty()){etEmail.setError("Please enter Email address"); etEmail.requestFocus(); return false;}
-//        if(phNo.isEmpty()){etPhNo.setError("Please enter Phone no"); etPhNo.requestFocus(); return false;}
-//        if(whatsappNo.isEmpty()){etWhatsappNo.setError("Please enter Whatsapp no"); etWhatsappNo.requestFocus(); return false;}
-//        if(address.isEmpty()){etAddress.setError("Please enter Address"); etAddress.requestFocus(); return false;}
-//
-//        // if everything goes right
-//        return true;
-//    }
+        public boolean validate() {
+        String userName = etUsername.getText().toString().trim();
+        String email = etEmail.getText().toString().trim();
+        String secondaryNo = etSecondaryNo.getText().toString().trim();
+        String whatsappNo = etWhatsappNo.getText().toString().trim();
+        String address = etAddress.getText().toString().trim();
+        if(userName.isEmpty()){etUsername.setError("Please enter User name"); etUsername.requestFocus(); return false;}
+        if(email.isEmpty()){etEmail.setError("Please enter Email address"); etEmail.requestFocus(); return false;}
+        if(secondaryNo.isEmpty()){etSecondaryNo.setError("Please enter Phone no"); etSecondaryNo.requestFocus(); return false;}
+        if(whatsappNo.isEmpty()){etWhatsappNo.setError("Please enter Whatsapp no"); etWhatsappNo.requestFocus(); return false;}
+        if(address.isEmpty()){etAddress.setError("Please enter Address"); etAddress.requestFocus(); return false;}
+
+        // if everything goes right
+        return true;
+    }
 
     public UpdateUserAccountRequest createRequest(){
         PreferenceManager mInstance = PreferenceManager.instance(this);
@@ -104,27 +107,28 @@ public class EditProfileDetails extends AppCompatActivity {
     }
 
     public void updateUserAccount(UpdateUserAccountRequest updateUserAccountRequest){
-        Call<UpdateUserAccountResponse> updateUserAccountResponseCall = RetrofitClient.getInstance().apiinterface().updateUserAccount(updateUserAccountRequest);
-        updateUserAccountResponseCall.enqueue(new Callback<UpdateUserAccountResponse>() {
-            @Override
-            public void onResponse( Call<UpdateUserAccountResponse> call, Response<UpdateUserAccountResponse> response) {
-                if(response.isSuccessful()){
-                    Toast.makeText(EditProfileDetails.this,"updated successfully ",Toast.LENGTH_SHORT).show();
+        if(validate()){
+            Call<UpdateUserAccountResponse> updateUserAccountResponseCall = RetrofitClient.getInstance().apiinterface().updateUserAccount(updateUserAccountRequest);
+            updateUserAccountResponseCall.enqueue(new Callback<UpdateUserAccountResponse>() {
+                @Override
+                public void onResponse( Call<UpdateUserAccountResponse> call, Response<UpdateUserAccountResponse> response) {
+                    if(response.isSuccessful()){
+                        Toast.makeText(EditProfileDetails.this,"updated successfully ",Toast.LENGTH_SHORT).show();
 //                    Log.i("Edit Profile", "Updated successfully ");
 
-                    Intent i=new Intent(EditProfileDetails.this, User_Profile_Activity.class);
-                    startActivity(i);
-                }else{
+                        Intent i=new Intent(EditProfileDetails.this, User_Profile_Activity.class);
+                        startActivity(i);
+                    }else{
 //                    Log.i("Edit Profile", "request failed");
-                    Toast.makeText(EditProfileDetails.this,"request failed",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProfileDetails.this,"request failed",Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-
-            @Override
-            public void onFailure( Call<UpdateUserAccountResponse> call, Throwable t) {
-                Toast.makeText(EditProfileDetails.this,"request failed here "+t,Toast.LENGTH_LONG).show();
-            }
-        });
+                @Override
+                public void onFailure( Call<UpdateUserAccountResponse> call, Throwable t) {
+                    Toast.makeText(EditProfileDetails.this,"request failed here "+t,Toast.LENGTH_LONG).show();
+                }
+            });
+        }
     }
 
     // get user profile data

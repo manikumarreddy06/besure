@@ -45,25 +45,23 @@ public class EditProfileDetails extends AppCompatActivity {
         getUserProfileData();
 
         // handling gender radio group click actions
-        rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch(checkedId){
-                    case R.id.rb_male:
-                        strGender="male";
+        rgGender.setOnCheckedChangeListener((group, checkedId) -> {
+            switch(checkedId){
+                case R.id.rb_male:
+                    strGender="male";
 //                        Toast.makeText(EditProfileDetails.this, "male is clicked",Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.rb_female:
-                        strGender="female";
+                    break;
+                case R.id.rb_female:
+                    strGender="female";
 //                        Toast.makeText(EditProfileDetails.this, "female is clicked",Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.rb_other:
-                        strGender="other";
+                    break;
+                case R.id.rb_other:
+                    strGender="other";
 //                        Toast.makeText(EditProfileDetails.this, "oth is clicked",Toast.LENGTH_LONG).show();
-                        break;
-                    default:
-                        strGender="other";
-                        break;
-                }
+                    break;
+                default:
+                    strGender="other";
+                    break;
             }
         });
 
@@ -90,6 +88,7 @@ public class EditProfileDetails extends AppCompatActivity {
     }
 
     public UpdateUserAccountRequest createRequest(){
+        // getting user id
         PreferenceManager mInstance = PreferenceManager.instance(this);
         userId= mInstance.get(PreferenceManager.USER_ID,null);
 
@@ -152,9 +151,9 @@ public class EditProfileDetails extends AppCompatActivity {
                     etSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
                     etWhatsappNo.setText(response.body().getUserDataResponses().getWhatsUpNumber());
                     etAddress.setText(response.body().getUserDataResponses().getAddess());
-                    if(response.body().getUserDataResponses().getGender()=="male"){
+                    if(response.body().getUserDataResponses().getGender().equals("male")){
                         rbMale.setChecked(true);
-                    } else if(response.body().getUserDataResponses().getGender()=="female"){
+                    } else if(response.body().getUserDataResponses().getGender().equals("female")){
                         rbFemale.setChecked(true);
                     } else{
                         rbOther.setChecked(true);

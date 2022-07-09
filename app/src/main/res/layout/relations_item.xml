@@ -23,7 +23,7 @@
             android:layout_weight="0.25"
             android:background="@color/white"
             android:layout_gravity="center"
-            android:src="@drawable/ic_add_icon"
+            android:src="@drawable/ic_add_icon_black"
             android:contentDescription="add" />
         <ImageButton
             android:layout_width="0dp"

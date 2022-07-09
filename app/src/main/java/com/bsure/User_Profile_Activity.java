@@ -3,10 +3,8 @@ package com.bsure;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,10 +15,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class User_Profile extends AppCompatActivity {
+public class User_Profile_Activity extends AppCompatActivity {
     CardView btn_editProfileDetails;
     TextView userName,userGender,userWhatsappNo,userSecondaryNo,userMailId,userAddress;
-    private UserDataResponse userDetails;
     String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +37,7 @@ public class User_Profile extends AppCompatActivity {
 
         // to let the user edit user data
         btn_editProfileDetails.setOnClickListener(view -> {
-            Intent i=new Intent(User_Profile.this, EditProfileDetails.class);
+            Intent i=new Intent(User_Profile_Activity.this, EditProfileDetails.class);
             startActivity(i);
         });
     }
@@ -59,8 +56,6 @@ public class User_Profile extends AppCompatActivity {
                     userName.setText("Username Not Set yet");
 //                    Toast.makeText(User_Profile.this, "failed to update",Toast.LENGTH_LONG).show();
                 }if (response.body().getIsvalid()) {
-                    String s= response.message();
-                    final String TAG = "Profile activity";
                     userName.setText(response.body().toString());
                     userGender.setText(response.body().getUserDataResponses().getGender());
 //                    Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
@@ -69,13 +64,12 @@ public class User_Profile extends AppCompatActivity {
                     userSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
                     userMailId.setText(response.body().getUserDataResponses().getEmail());
                     userAddress.setText(response.body().getUserDataResponses().getAddess());
-                    Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
-                    PreferenceManager.instance(User_Profile.this).set(PreferenceManager.USER_NAME,response.body().getUserDataResponses().getUserName());
+//                    Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
                 }
             }
             @Override
             public void onFailure(Call<UserProfileDataResponse> call, Throwable t) {
-                Toast.makeText(User_Profile.this, "Not getting response",Toast.LENGTH_LONG).show();
+                Toast.makeText(User_Profile_Activity.this, "Not getting response",Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -33,7 +33,6 @@ public class NudgeActivity extends AppCompatActivity {
         btn_proceed = findViewById(R.id.btn_proceed);
         btn_proceed.setOnClickListener(view -> {
             //  carry card data
-
             if(rbYearlyPlan.isChecked()|| rbLifetimePlan.isChecked()) {
 
                 Intent i = new Intent(NudgeActivity.this, Billing.class);

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment_success">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/payment_succ"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:lottie_autoPlay="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:elevation="5dp"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/payment_success"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/plansuccess"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:lottie_autoPlay="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:elevation="5dp"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/plan_success"
+        />
+
+    <TextView
+        android:id="@+id/textview_paysuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="payment successful"
+        android:textColor="#25E185"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/payment_succ"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="80dp"
+        android:textSize="30dp"
+        />
+    <TextView
+        android:id="@+id/textview_nudge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="your nudge plan is activated successfully"
+        android:textColor="#25E185"
+        android:layout_below="@id/payment_succ"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        android:layout_marginLeft="80dp"
+        android:textSize="30dp"
+        />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/teal_700"
+        android:text="Done"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+</RelativeLayout>

@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.bsure.models.UpdateUserAccountRequest;
 import com.bsure.models.UpdateUserAccountResponse;
+import com.bsure.models.UserProfileDataResponse;
 import com.bsure.retrofitUtil.RetrofitClient;
 
 import retrofit2.Call;
@@ -20,7 +22,7 @@ import retrofit2.Response;
 public class EditProfileDetails extends AppCompatActivity {
 
     EditText etUsername,etEmail,etSecondaryNo,etWhatsappNo,etAddress;
-    RadioGroup rgGender;
+    RadioGroup rgGender; RadioButton rbMale,rbFemale, rbOther;
     Button btnUpdateProfile;
     String strGender,userId;
     @Override
@@ -35,6 +37,13 @@ public class EditProfileDetails extends AppCompatActivity {
         etAddress = findViewById(R.id.etAddress);
         rgGender = findViewById(R.id.rgGender);
         btnUpdateProfile = findViewById(R.id.btnUpdateProfile);
+        rbMale = findViewById(R.id.rb_male);
+        rbFemale = findViewById(R.id.rb_female);
+        rbOther = findViewById(R.id.rb_other);
+
+        // Show old data
+        getUserProfileData();
+
         // handling gender radio group click actions
         rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -61,7 +70,7 @@ public class EditProfileDetails extends AppCompatActivity {
         });
     }
     //  adding validation
-    //    public boolean validate() {
+//        public boolean validate() {
 //        String userName = etUsername.getText().toString().trim();
 //        String email = etEmail.getText().toString().trim();
 //        String phNo = etPhNo.getText().toString().trim();
@@ -114,6 +123,43 @@ public class EditProfileDetails extends AppCompatActivity {
             @Override
             public void onFailure( Call<UpdateUserAccountResponse> call, Throwable t) {
                 Toast.makeText(EditProfileDetails.this,"request failed here "+t,Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    // get user profile data
+    private void getUserProfileData() {
+        // Retrofit
+        PreferenceManager mInstance = PreferenceManager.instance(this);
+        userId= mInstance.get(PreferenceManager.USER_ID,null);
+        Call<UserProfileDataResponse> userProfileDataResponsebeanCall = RetrofitClient.getInstance().apiinterface().getUserProfileData(userId);
+        userProfileDataResponsebeanCall.enqueue(new Callback<UserProfileDataResponse>() {
+            @Override
+            public void onResponse(Call<UserProfileDataResponse> call, Response<UserProfileDataResponse> response) {
+                // Checking for the Response
+//                if (!(response.body().getIsvalid())) {
+//                    Utils.Companion.toast("failed to update user data",EditProfileDetails.this);
+//                    Toast.makeText(User_Profile.this, "failed to update",Toast.LENGTH_LONG).show();
+//                }
+                if (response.body() != null && response.body().getIsvalid()) {
+                    // Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
+                    etUsername.setText(response.body().getUserDataResponses().getUserName());
+                    etEmail.setText(response.body().getUserDataResponses().getEmail());
+                    etSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
+                    etWhatsappNo.setText(response.body().getUserDataResponses().getWhatsUpNumber());
+                    etAddress.setText(response.body().getUserDataResponses().getAddess());
+                    if(response.body().getUserDataResponses().getGender()=="male"){
+                        rbMale.setChecked(true);
+                    } else if(response.body().getUserDataResponses().getGender()=="female"){
+                        rbFemale.setChecked(true);
+                    } else{
+                        rbOther.setChecked(true);
+                    }
+                }
+            }
+            @Override
+            public void onFailure(Call<UserProfileDataResponse> call, Throwable t) {
+                Toast.makeText(EditProfileDetails.this, "Not getting response",Toast.LENGTH_LONG).show();
             }
         });
     }

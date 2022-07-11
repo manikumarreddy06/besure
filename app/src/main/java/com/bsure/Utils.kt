@@ -3,6 +3,7 @@ package com.bsure
 
 import android.app.ProgressDialog
 import android.content.Context
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.Spinner
@@ -125,6 +126,8 @@ class Utils {
                 .into(view)
 
         }
+
+
 
 
     }

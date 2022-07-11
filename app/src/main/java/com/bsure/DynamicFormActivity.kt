@@ -6,8 +6,10 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bsure.adapters.DropDownAdapter
 import com.bsure.models.*
 import com.bsure.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_dynamic.*
@@ -46,6 +48,7 @@ public class DynamicFormActivity : AppCompatActivity(){
 
 
     private var textBoxAdapterList = ArrayList<TextBoxAdapter>()
+    private var dropDownAdapterList = ArrayList<DropDownAdapter>()
 
     private fun prepareListView(data: List<CategoryDetailsBean> ) {
         //progress.visibility = View.GONE
@@ -64,9 +67,12 @@ public class DynamicFormActivity : AppCompatActivity(){
             label.text = "sample"
 
             val textBoxList = ArrayList<CategoryDetailsBean>()
+            val dropdownList = java.util.ArrayList<CategoryDetailsBean>()
 
             when (item.dataType) {
-
+                "dropdown" -> {
+                    dropdownList.add(item)
+                }
                 "TEXT" -> {
                     textBoxList.add(item)
                 }
@@ -75,9 +81,18 @@ public class DynamicFormActivity : AppCompatActivity(){
                 }
 
 
+
             }
 
 
+            if (dropdownList.isNotEmpty()) {
+                val adapter = DropDownAdapter(this, dropdownList)
+                rvTextBox.adapter = adapter
+                rvTextBox.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+                //rvTextBox.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+                dropDownAdapterList.add(adapter)
+                rvTextBox.visibility = View.VISIBLE
+            }
 
             if (textBoxList.isNotEmpty()) {
                 val adapter = TextBoxAdapter(this, textBoxList)
@@ -90,6 +105,7 @@ public class DynamicFormActivity : AppCompatActivity(){
 
 
 
+
             dataContainer.addView(view)
         }
 
@@ -99,14 +115,22 @@ public class DynamicFormActivity : AppCompatActivity(){
     private fun validateForm() {
         var finalList = ArrayList<AssetData>()
         var textBoxError = false
+        var dropdownError = false
         if (textBoxAdapterList.size == 0) textBoxError = true
+        if (dropDownAdapterList.size == 0) dropdownError = true
+        for (adapter in dropDownAdapterList) {
+            dropdownError = adapter.validate()
+            if (dropdownError)
+                finalList.addAll(adapter.getData())
+            else break
+        }
         for (adapter in textBoxAdapterList) {
                 textBoxError = adapter.validate()
                 if (textBoxError)
                     finalList.addAll(adapter.getData())
                 else break
         }
-        if (textBoxError)  {
+        if (textBoxError && dropdownError)  {
             updatedAssetData(finalList)
         }
 

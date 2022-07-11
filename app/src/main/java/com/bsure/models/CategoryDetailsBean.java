@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 public class CategoryDetailsBean {
 
 
-
+    private String otherTextField;
     private String parameterValue;
 
     @SerializedName("subCategoryId")
@@ -25,6 +25,10 @@ public class CategoryDetailsBean {
     @SerializedName("categoryId")
     @Expose
     private String categoryId;
+
+    @SerializedName("values")
+    @Expose
+    private String values;
 
     public String getSubCategoryId() {
         return subCategoryId;
@@ -73,5 +77,21 @@ public class CategoryDetailsBean {
 
     public void setParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
+    }
+
+    public String getOtherTextField() {
+        return otherTextField;
+    }
+
+    public void setOtherTextField(String otherTextField) {
+        this.otherTextField = otherTextField;
+    }
+
+    public String getValues() {
+        return values;
+    }
+
+    public void setValues(String values) {
+        this.values = values;
     }
 }

@@ -4,4 +4,8 @@
     <attr name="background_color" format="color"/>
     <attr name="text_color" format="color"/>
     <attr name="button_color" format="color"/>attr name="prima"
+
+    <declare-styleable name="SearchableSpinner">
+        <attr name="hintText" format="string"/>
+    </declare-styleable>
 </resources>

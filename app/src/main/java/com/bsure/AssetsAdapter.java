@@ -1,6 +1,7 @@
 package com.bsure;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bsure.R;
+import com.bsure.dialog.ImageViewDialog;
 import com.bsure.models.Assets;
 import com.bsure.models.UserAsset;
 
@@ -42,8 +44,27 @@ public class AssetsAdapter extends RecyclerView.Adapter<AssetsAdapter.ViewHolder
 
             TextView titleText = (TextView) newView.findViewById(R.id.titleName);
             TextView valueTxt = (TextView) newView.findViewById(R.id.valueTxt);
+            TextView previewTxt = (TextView) newView.findViewById(R.id.previewTxt);
             titleText.setText(data.getLabel());
             valueTxt.setText(data.getValue());
+
+            if(!TextUtils.isEmpty(data.getType()) && data.getType().equalsIgnoreCase("IMAGE")){
+                previewTxt.setVisibility(View.VISIBLE);
+                valueTxt.setVisibility(View.GONE);
+            }
+            else{
+                previewTxt.setVisibility(View.GONE);
+                valueTxt.setVisibility(View.VISIBLE);
+            }
+
+            previewTxt.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ImageViewDialog dailog = new ImageViewDialog(mContext,data.getValue());
+                    dailog.show();
+                }
+            });
+
             holder.llContainer.addView(newView);
         }
 

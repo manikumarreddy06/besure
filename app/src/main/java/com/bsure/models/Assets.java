@@ -16,6 +16,12 @@ public class Assets {
     @Expose
     private String label;
 
+    @SerializedName("type")
+    @Expose
+    private String type;
+
+
+
     public Object getId() {
         return id;
     }
@@ -40,4 +46,11 @@ public class Assets {
         this.label = label;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }

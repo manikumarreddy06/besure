@@ -25,6 +25,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="State bank of India"/>
+
+            <TextView
+                android:id="@+id/previewTxt"
+                android:layout_width="0dp"
+                android:layout_weight="0.55"
+                android:textAlignment="textStart"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:text="@string/preview"/>
         </LinearLayout>
 
 </LinearLayout>

@@ -28,6 +28,7 @@ class   TextBoxAdapter(val context: Context, val mData: ArrayList<CategoryDetail
         holder.tvTitle.text = bean.subCategoryName
         val type = bean.dataType
         holder.text_input_layout.hint=bean.subCategoryName
+        holder.verify_text_input_layout.hint="verify "+bean.subCategoryName
 
 
 
@@ -58,6 +59,46 @@ class   TextBoxAdapter(val context: Context, val mData: ArrayList<CategoryDetail
                     }
                 }
         })
+
+        if(bean.dataType.equals("VerifyText")){
+            holder.verify_etInput.visibility=View.VISIBLE
+            holder.verify_text_input_layout.visibility=View.VISIBLE
+
+            holder.verify_etInput.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(
+                    s: CharSequence,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
+
+                }
+
+                override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+
+                }
+
+                override fun afterTextChanged(s: Editable?) {
+                    var temptext = s.toString()
+                    if (!TextUtils.isEmpty(mData[position].parameterValue) && mData[position].parameterValue.isNotEmpty()) {
+                        if (temptext.equals(mData[position].parameterValue)) {
+                            holder.errorMsg.visibility = View.GONE
+                        } else {
+                            holder.errorMsg.visibility = View.VISIBLE
+                        }
+                    } else {
+                        holder.errorMsg.visibility = View.GONE
+                    }
+
+                }
+            })
+        }
+        else{
+
+            holder.verify_etInput.visibility=View.GONE
+            holder.verify_text_input_layout.visibility=View.GONE
+            holder.errorMsg.visibility=View.GONE
+        }
 
 
 
@@ -96,6 +137,11 @@ class   TextBoxAdapter(val context: Context, val mData: ArrayList<CategoryDetail
         var tvTitle: TextView = itemView.findViewById(R.id.tvTitle)
         var etInput: EditText = itemView.findViewById(R.id.etInput)
         var text_input_layout: TextInputLayout =itemView.findViewById(R.id.text_input_layout)
+
+
+        var verify_etInput: EditText = itemView.findViewById(R.id.verify_etInput)
+        var verify_text_input_layout: TextInputLayout =itemView.findViewById(R.id.verify_text_input_layout)
+        var errorMsg: TextView = itemView.findViewById(R.id.errorMsg)
 
 
     }

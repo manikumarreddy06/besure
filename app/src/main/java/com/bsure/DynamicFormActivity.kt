@@ -80,7 +80,7 @@ public class DynamicFormActivity : AppCompatActivity(){
             val textBoxList = ArrayList<CategoryDetailsBean>()
             val dropdownList = ArrayList<CategoryDetailsBean>()
 
-            val attachmentList = ArrayList<CategoryDetailsBean>()
+            val  attachmentList = ArrayList<CategoryDetailsBean>()
             Log.d("srini","sri ni"+item.dataType)
 
             when (item.dataType) {

@@ -63,4 +63,11 @@ public interface Apiinterface {
     Call<UpdateUserAccountResponse> updateUserAccount(@Body UpdateUserAccountRequest updateUserAccountRequest);
 
 
+    @POST("v1/asset/inactive")
+    Call<UserAssetResponseBean>deleteAsset(@Body UserAsset request);
+
+
+
+
+
 }

@@ -133,6 +133,10 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             request.userNomineeRelationId= relationId.toString()
             request.userNomineeAttachment=attachmentUrl
 
+            request.userGardianName=etNomGuardianName.text.toString()
+            request.userGardianMobileNumber=etNomGuardianPhNo.text.toString()
+            request.userNomineeAge=etNomAge.text.toString()
+
             val call = RetrofitClient.getInstance().apiinterface().addNomineeDetails(request)
             call.enqueue(object : Callback<BaseResponse> {
                 override fun onResponse(

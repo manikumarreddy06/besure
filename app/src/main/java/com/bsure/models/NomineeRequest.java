@@ -6,6 +6,9 @@ public class NomineeRequest {
     private String userNomineeMobileNumber;
     private String userNomineeRelationId;
     private String userNomineeAttachment;
+    private String userGardianName;
+    private String userGardianMobileNumber;
+    private String userNomineeAge;
     private final static long serialVersionUID = 2074851219762988987L;
 
     public String getUserId() {
@@ -48,4 +51,27 @@ public class NomineeRequest {
         this.userNomineeAttachment = userNomineeAttachment;
     }
 
+    public String getUserGardianName() {
+        return userGardianName;
+    }
+
+    public void setUserGardianName(String userGardianName) {
+        this.userGardianName = userGardianName;
+    }
+
+    public String getUserGardianMobileNumber() {
+        return userGardianMobileNumber;
+    }
+
+    public void setUserGardianMobileNumber(String userGardianMobileNumber) {
+        this.userGardianMobileNumber = userGardianMobileNumber;
+    }
+
+    public String getUserNomineeAge() {
+        return userNomineeAge;
+    }
+
+    public void setUserNomineeAge(String userNomineeAge) {
+        this.userNomineeAge = userNomineeAge;
+    }
 }

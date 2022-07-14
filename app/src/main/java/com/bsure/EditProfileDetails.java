@@ -115,8 +115,10 @@ public class EditProfileDetails extends AppCompatActivity {
                         Toast.makeText(EditProfileDetails.this,"updated successfully ",Toast.LENGTH_SHORT).show();
 //                    Log.i("Edit Profile", "Updated successfully ");
 
-                        Intent i=new Intent(EditProfileDetails.this, User_Profile_Activity.class);
+
+                        Intent i=new Intent(EditProfileDetails.this, MainActivity.class);
                         startActivity(i);
+                        finish();
                     }else{
 //                    Log.i("Edit Profile", "request failed");
                         Toast.makeText(EditProfileDetails.this,"request failed",Toast.LENGTH_SHORT).show();

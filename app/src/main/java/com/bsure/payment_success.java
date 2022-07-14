@@ -26,6 +26,7 @@ public class payment_success extends AppCompatActivity {
         btndone=findViewById(R.id.btn_done);
         //starting bgthread on main thread
         thread.start();
+        PreferenceManager.instance(this).set(PreferenceManager.PLAN_PAID_FLAG,"true");
         btndone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,4 +56,13 @@ public class payment_success extends AppCompatActivity {
             });
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent i=new Intent(payment_success.this, MainActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(i);
+    }
 }

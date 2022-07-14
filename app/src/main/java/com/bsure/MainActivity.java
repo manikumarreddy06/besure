@@ -70,8 +70,16 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         step4.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this, NudgeActivity.class);
-            startActivity(i);
+            String paidFlag=PreferenceManager.instance(this).get(PreferenceManager.PLAN_PAID_FLAG,"");
+
+            if(!TextUtils.isEmpty(paidFlag) && paidFlag.equalsIgnoreCase("true")){
+                Intent i = new Intent(MainActivity.this, Nudgesuccess_Activity.class);
+                startActivity(i);
+            }
+            else {
+                Intent i = new Intent(MainActivity.this, NudgeActivity.class);
+                startActivity(i);
+            }
         });
 
 

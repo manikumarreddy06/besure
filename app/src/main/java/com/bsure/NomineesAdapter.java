@@ -39,6 +39,10 @@ public class NomineesAdapter extends RecyclerView.Adapter<NomineesAdapter.ViewHo
         holder.tvNomRelation.setText(nomineeBean.getUserNomineeRelation());
         holder.tvNomNumber.setText(nomineeBean.getUserNomineeMobileNumber());
 
+        holder.tvNomAge.setText(nomineeBean.getUserNomineeAge());
+        holder.tvGuardianName.setText(nomineeBean.getUserGardianName());
+        holder.tvGuardianPhNo.setText(nomineeBean.getUserGardianMobileNumber());
+
         if(!TextUtils.isEmpty(nomineeBean.getUserNomineeAttachment())){
             holder.llAttachment.setVisibility(View.VISIBLE);
         }
@@ -63,7 +67,7 @@ public class NomineesAdapter extends RecyclerView.Adapter<NomineesAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-
+        TextView tvNomAge, tvGuardianPhNo, tvGuardianName;
         TextView tvNomName;
         TextView tvNomRelation;
         TextView tvNomNumber;
@@ -77,6 +81,10 @@ public class NomineesAdapter extends RecyclerView.Adapter<NomineesAdapter.ViewHo
             tvNomNumber = itemView.findViewById(R.id.tvNomNumber);
             llAttachment = itemView.findViewById(R.id.llAttachment);
             tvPreview = itemView.findViewById(R.id.tvPreview);
+
+            tvNomAge = itemView.findViewById(R.id.tvNomAge);
+            tvGuardianName = itemView.findViewById(R.id.tvNomGuardianName);
+            tvGuardianPhNo = itemView.findViewById(R.id.tvGuardianPhNumber);
 
         }
     }

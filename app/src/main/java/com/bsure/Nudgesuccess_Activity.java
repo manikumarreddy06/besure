@@ -16,6 +16,7 @@ public class Nudgesuccess_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nudgesuccess);
+        btndone=findViewById(R.id.btndone_nudge);
         btndone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

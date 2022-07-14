@@ -3,6 +3,7 @@ package com.bsure;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -109,6 +110,7 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onResponse(Call<UserProfileDataResponse> call, Response<UserProfileDataResponse> response) {
                 // Checking for the Response
+                UserProfileDataResponse bean=response.body();
                 if (!(response.body().getIsvalid())) {
                     Utils.Companion.toast("failed to update user data",Profile.this);
 //                    Toast.makeText(User_Profile.this, "failed to update",Toast.LENGTH_LONG).show();
@@ -117,6 +119,10 @@ public class Profile extends AppCompatActivity {
 //                    Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
                     tv_user_name.setText(response.body().getUserDataResponses().getUserName());
                     tv_user_credential.setText(response.body().getUserDataResponses().getEmail());
+                    if(!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
+                        PreferenceManager.instance(Profile.this).set(PreferenceManager.PLAN_PAID_FLAG, bean.getUserDataResponses().getPaidFlag());
+                        PreferenceManager.instance(Profile.this).set(PreferenceManager.PLAN_DETAILS, bean.getUserDataResponses().getPlanDetails());
+                    }
 //                    Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
                 }
             }

@@ -2,6 +2,7 @@ package com.bsure;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -35,8 +36,16 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         llnudge.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this, NudgeActivity.class);
-            startActivity(i);
+            String paidFlag=PreferenceManager.instance(this).get(PreferenceManager.PLAN_PAID_FLAG,"");
+
+            if(!TextUtils.isEmpty(paidFlag) && paidFlag.equalsIgnoreCase("true")){
+                Intent i = new Intent(MainActivity.this, Nudgesuccess_Activity.class);
+                startActivity(i);
+            }
+            else {
+                Intent i = new Intent(MainActivity.this, NudgeActivity.class);
+                startActivity(i);
+            }
             //Utils.Companion.toast("coming soon",this);
         });
         lldistribution.setOnClickListener(view -> {

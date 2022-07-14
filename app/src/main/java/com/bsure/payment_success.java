@@ -31,6 +31,7 @@ public class payment_success extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i=new Intent(payment_success.this,MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }

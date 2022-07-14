@@ -160,9 +160,9 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageView
+                       <!-- <ImageView
                             android:layout_width="65dp"
-                            android:layout_height="65dp"
+                            android:layout_height="60dp"
                             android:layout_gravity="center"
                             android:layout_marginHorizontal="5dp"
                             android:contentDescription="@string/distribution"
@@ -177,7 +177,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="@string/distribution"
-                            android:textColor="@color/primary_text_color" />
+                            android:textColor="@color/primary_text_color" />-->
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

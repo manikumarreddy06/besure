@@ -26,6 +26,18 @@ public class NomineeDetailsResponse {
     @Expose
     private String userNomineeAttachment;
 
+    @SerializedName("userGardianName")
+    @Expose
+    private String userGardianName;
+
+    @SerializedName("userGardianMobileNumber")
+    @Expose
+    private String userGardianMobileNumber;
+
+    @SerializedName("userNomineeAge")
+    @Expose
+    private String userNomineeAge;
+
     public String getUserId() {
         return userId;
     }
@@ -72,5 +84,29 @@ public class NomineeDetailsResponse {
 
     public void setUserNomineeAttachment(String userNomineeAttachment) {
         this.userNomineeAttachment = userNomineeAttachment;
+    }
+
+    public String getUserGardianName() {
+        return userGardianName;
+    }
+
+    public void setUserGardianName(String userGardianName) {
+        this.userGardianName = userGardianName;
+    }
+
+    public String getUserGardianMobileNumber() {
+        return userGardianMobileNumber;
+    }
+
+    public void setUserGardianMobileNumber(String userGardianMobileNumber) {
+        this.userGardianMobileNumber = userGardianMobileNumber;
+    }
+
+    public String getUserNomineeAge() {
+        return userNomineeAge;
+    }
+
+    public void setUserNomineeAge(String userNomineeAge) {
+        this.userNomineeAge = userNomineeAge;
     }
 }

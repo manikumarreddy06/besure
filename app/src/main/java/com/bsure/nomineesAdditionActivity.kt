@@ -3,7 +3,9 @@ package com.bsure
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
 import android.text.TextUtils
+import android.text.TextWatcher
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -32,7 +34,7 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
     lateinit var uri: Uri
     lateinit var mStorage: StorageReference
 
-    lateinit var attachmentUrl: String
+    var attachmentUrl: String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +60,48 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             dailog.show()
         }
 
+        etNomAge.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(
+                s: CharSequence,
+                start: Int,
+                count: Int,
+                after: Int
+            ) {
 
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if (s != null && s.length > 0) {
+                    var temp=s.toString().toInt()
+                    if(temp>18){
+                        hideGaurdianDetails()
+                    }
+                    else{
+                        showGaurdianDetails()
+                    }
+                }
+                else{
+
+                }
+
+
+            }
+        })
+
+
+    }
+
+    private fun showGaurdianDetails() {
+        tlGuardianName.visibility=View.VISIBLE
+        tlGuardianPhNo.visibility=View.VISIBLE
+    }
+    private fun hideGaurdianDetails() {
+        tlGuardianName.visibility=View.GONE
+        tlGuardianPhNo.visibility=View.GONE
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -133,8 +176,8 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             request.userNomineeRelationId= relationId.toString()
             request.userNomineeAttachment=attachmentUrl
 
-            request.userGardianName=etNomGuardianName.text.toString()
-            request.userGardianMobileNumber=etNomGuardianPhNo.text.toString()
+            request.userGardianName=etGuardianName.text.toString()
+            request.userGardianMobileNumber=etGuardianPhNo.text.toString()
             request.userNomineeAge=etNomAge.text.toString()
 
             val call = RetrofitClient.getInstance().apiinterface().addNomineeDetails(request)

@@ -40,8 +40,21 @@ public class NomineesAdapter extends RecyclerView.Adapter<NomineesAdapter.ViewHo
         holder.tvNomNumber.setText(nomineeBean.getUserNomineeMobileNumber());
 
         holder.tvNomAge.setText(nomineeBean.getUserNomineeAge());
-        holder.tvGuardianName.setText(nomineeBean.getUserGardianName());
-        holder.tvGuardianPhNo.setText(nomineeBean.getUserGardianMobileNumber());
+
+        if(!TextUtils.isEmpty(nomineeBean.getUserGardianName())) {
+            holder.llNomGuardianName.setVisibility(View.VISIBLE);
+            holder.tvGuardianName.setText(nomineeBean.getUserGardianName());
+        }
+        else{
+            holder.llNomGuardianName.setVisibility(View.GONE);
+        }
+        if(!TextUtils.isEmpty(nomineeBean.getUserGardianMobileNumber())) {
+            holder.llGuardianPhNumber.setVisibility(View.VISIBLE);
+            holder.tvGuardianPhNo.setText(nomineeBean.getUserGardianMobileNumber());
+        }
+        else{
+            holder.llGuardianPhNumber.setVisibility(View.GONE);
+        }
 
         if(!TextUtils.isEmpty(nomineeBean.getUserNomineeAttachment())){
             holder.llAttachment.setVisibility(View.VISIBLE);
@@ -71,7 +84,7 @@ public class NomineesAdapter extends RecyclerView.Adapter<NomineesAdapter.ViewHo
         TextView tvNomName;
         TextView tvNomRelation;
         TextView tvNomNumber;
-        LinearLayout llAttachment;
+        LinearLayout llAttachment,llNomGuardianName,llGuardianPhNumber;
         TextView tvPreview;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -85,6 +98,10 @@ public class NomineesAdapter extends RecyclerView.Adapter<NomineesAdapter.ViewHo
             tvNomAge = itemView.findViewById(R.id.tvNomAge);
             tvGuardianName = itemView.findViewById(R.id.tvNomGuardianName);
             tvGuardianPhNo = itemView.findViewById(R.id.tvGuardianPhNumber);
+
+            llNomGuardianName = itemView.findViewById(R.id.llNomGuardianName);
+            llGuardianPhNumber = itemView.findViewById(R.id.llGuardianPhNumber);
+
 
         }
     }

@@ -296,4 +296,9 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
     <string name="asset_distribution">Asset\nDistribution</string>
 
     <string name="preview"><u>Preview</u></string>
+    <string name="we_will_nudge_to_know_your_well_being">we will nudge to know your well being</string>
+    <string name="your_nudge_plan_was_activated_successfully">Your nudge plan was activated successfully</string>
+    <string name="welcome">Welcome !</string>
+    <string name="payment_successful">payment successful</string>
+    <string name="your_nudge_plan_is_activated_successfully">your nudge plan is activated successfully</string>
 </resources>

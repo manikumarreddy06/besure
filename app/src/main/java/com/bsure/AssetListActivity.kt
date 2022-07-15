@@ -86,8 +86,34 @@ class AssetListActivity : AppCompatActivity() {
 
     private fun adapterupdate(res: List<UserAsset>) {
         llNodata.visibility=View.GONE
-        val adapter = AssetsAdapter(this, res)
+        val adapter = AssetsAdapter(this, res,object:AssetsAdapter.Callback{
+
+            override fun deleteAsset(assets: UserAsset?) {
+                deleteAssetAPI(assets)
+            }
+        })
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter
+    }
+
+
+    private fun deleteAssetAPI(assets: UserAsset?) {
+        var userAsset:UserAsset= UserAsset()
+        userAsset.uamId=assets?.uamId
+        userAsset.setUserId(PreferenceManager.instance(this).get(PreferenceManager.USER_ID,null)
+        )
+        val call = RetrofitClient.getInstance().apiinterface().deleteAsset(userAsset)
+        call.enqueue(object : Callback<UserAssetResponseBean> {
+            override fun onResponse(
+                call: Call<UserAssetResponseBean>,
+                response: Response<UserAssetResponseBean>
+            ) {
+                getAssestsData();
+            }
+
+            override fun onFailure(call: Call<UserAssetResponseBean>, t: Throwable) {
+                Toast.makeText(this@AssetListActivity, "failure", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }

@@ -12,7 +12,7 @@
         android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="10dp"
         android:orientation="vertical"
         android:padding="@dimen/card_view_layout_content_padding">
 
@@ -156,24 +156,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="10dp"
             android:orientation="horizontal">
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
-                android:drawablePadding="10dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/colorPrimary"
                 android:fontFamily="@font/allerta"
                 android:text="Agree to "
-                android:textSize="16sp" />
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/terms"
                 android:fontFamily="@font/allerta"
                 android:layout_width="wrap_content"
                 android:text=" terms and Conditions"
                 android:textColor="@color/colorPrimary"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 

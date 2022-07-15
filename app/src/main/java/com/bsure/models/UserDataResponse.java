@@ -19,6 +19,10 @@ public class UserDataResponse {
 
     private String whatsUpNumber;
 
+    private String paidFlag;
+    private String planDetails;
+
+
     public UserDataResponse(String userId, String userName, String email, String gender, String addess, String alternateNumber, String whatsUpNumber) {
         this.userId = userId;
         this.userName = userName;
@@ -83,5 +87,21 @@ public class UserDataResponse {
 
     public void setWhatsUpNumber(String whatsUpNumber) {
         this.whatsUpNumber = whatsUpNumber;
+    }
+
+    public String getPaidFlag() {
+        return paidFlag;
+    }
+
+    public void setPaidFlag(String paidFlag) {
+        this.paidFlag = paidFlag;
+    }
+
+    public String getPlanDetails() {
+        return planDetails;
+    }
+
+    public void setPlanDetails(String planDetails) {
+        this.planDetails = planDetails;
     }
 }

@@ -40,8 +40,13 @@ public class Splashscreen_Activity extends AppCompatActivity {
         if(com.bsure.PreferenceManager.instance(this).get(PreferenceManager.LOGIN_STATUS,false)){
 
             KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
-            Intent screenLockIntent = keyguardManager.createConfirmDeviceCredentialIntent("Enter phone screen lock pattern, PIN, password or fingerprint", "unlock Bsure");
-            startActivityForResult(screenLockIntent, LOCK_REQUEST_CODE);
+            if (keyguardManager.isKeyguardSecure()){
+                Intent screenLockIntent = keyguardManager.createConfirmDeviceCredentialIntent("Enter phone screen lock pattern, PIN, password or fingerprint", "unlock Bsure");
+                startActivityForResult(screenLockIntent, LOCK_REQUEST_CODE);
+            }else {
+                launchHomeScreen();
+            }
+
         }
         else{
             Intent i=new Intent(Splashscreen_Activity.this, Signin_Activity.class);
@@ -60,6 +65,7 @@ public class Splashscreen_Activity extends AppCompatActivity {
                 launchHomeScreen();
             } else {
                 //Authentication failed
+                finish();
             }
         }
     }

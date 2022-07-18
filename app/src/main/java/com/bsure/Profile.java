@@ -24,8 +24,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Profile extends AppCompatActivity {
-    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_user_name,tv_user_credential,tvshare,btn_editProfile;
-    /*CardView ; */String userId;
+    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_user_name,tv_user_credential,tvshare;
+    CardView btn_editProfile; String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

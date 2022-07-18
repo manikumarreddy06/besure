@@ -250,12 +250,13 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="10dp"
         android:layout_weight="0.5"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        android:layout_marginTop="15dp"
         app:lottie_rawRes="@raw/signin_family_animation" />
 
 </RelativeLayout>

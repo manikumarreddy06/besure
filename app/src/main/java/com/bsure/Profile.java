@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,13 +24,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Profile extends AppCompatActivity {
-    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_user_name,tv_user_credential;
-    CardView btn_editProfile; String userId;
+    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_user_name,tv_user_credential,tvshare,btn_editProfile;
+    /*CardView ; */String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
         tv_user_name = findViewById(R.id.tv_user_name);
         tv_user_credential = findViewById(R.id.tv_user_credential);
         tv_aboutUs = findViewById(R.id.tv_aboutUs);
@@ -40,6 +40,7 @@ public class Profile extends AppCompatActivity {
         tv_privacypolicy = findViewById(R.id.tv_privacypolicy);
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
         btn_editProfile = findViewById(R.id.cv_editProfile);
+        tvshare=findViewById(R.id.tv_share);
 
         // get user data
         getUserProfileData();
@@ -98,6 +99,23 @@ public class Profile extends AppCompatActivity {
             alertDialog.show();
             // TODO
 
+        });
+        tvshare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                    String shareMessage= "\nI have secured my family's future with Bsure. You can also do the same for your family. Download now. \n\n";
+                    String sharemsg2="\n Use my coupon code \"xxxxxx\" for extra benefits during payment";
+                    shareMessage = shareMessage + "http://surl.li/clkca"+   "\n\n "+sharemsg2;
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "Share via"));
+                } catch(Exception e) {
+                    //e.toString();
+                }
+            }
         });
     }
     // get user profile data

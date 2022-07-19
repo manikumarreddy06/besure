@@ -45,7 +45,14 @@ public class DynamicFormActivity : AppCompatActivity(){
         call.enqueue(object : Callback<AssetsConfigResponse> {
             override fun onResponse(call: Call<AssetsConfigResponse>, response: Response<AssetsConfigResponse>) {
 
-                prepareListView(response.body()!!.categoryDetailsBean)
+                var bean: AssetsConfigResponse? =response.body()
+                if(bean!=null && bean.isvalid) {
+
+                    prepareListView(bean?.categoryDetailsBean)
+                }
+                else{
+                    Toast.makeText(this@DynamicFormActivity, "failure", Toast.LENGTH_SHORT).show()
+                }
             }
 
             override fun onFailure(call: Call<AssetsConfigResponse>, t: Throwable) {

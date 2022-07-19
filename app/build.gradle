@@ -12,14 +12,24 @@ android {
         applicationId "com.bsure"
         minSdk 25
         targetSdk 31
-        versionCode 9
+        versionCode 11
         versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

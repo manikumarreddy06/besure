@@ -214,6 +214,7 @@
                     android:layout_marginVertical="7dp"
                     android:drawablePadding="10dp"
                     android:text="@string/share"
+                    android:visibility="gone"
                     android:textColor="@color/primary_text_color"
                     app:drawableEndCompat="@drawable/ic_right_arrow"
                     app:drawableStartCompat="@drawable/ic_baseline_share_24" />

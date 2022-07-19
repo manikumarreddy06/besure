@@ -19,6 +19,16 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity  {
 
+    String paidFlag=null;
+    @Override
+    protected void onResume() {
+        super.onResume();
+        paidFlag=PreferenceManager.instance(this).get(PreferenceManager.PLAN_PAID_FLAG,null);
+        if(paidFlag==null) {
+            getUserProfileData();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +45,7 @@ public class MainActivity extends AppCompatActivity  {
         CardView step3 = findViewById(R.id.step3);
         CardView step4 = findViewById(R.id.step4);
 
-        String paidFlag=PreferenceManager.instance(this).get(PreferenceManager.PLAN_PAID_FLAG,"");
-        if(!TextUtils.isEmpty(paidFlag) && paidFlag.equalsIgnoreCase("false")) {
-            getUserProfileData();
-        }
+
 
         llassets.setOnClickListener(view -> {
             Intent i=new Intent(MainActivity.this, Asset_Categories_Activity.class);
@@ -122,6 +129,7 @@ public class MainActivity extends AppCompatActivity  {
                 }
                 if (response.body().getIsvalid()) {
                     if(!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
+                        paidFlag=bean.getUserDataResponses().getPaidFlag();
                         PreferenceManager.instance(MainActivity.this).set(PreferenceManager.PLAN_PAID_FLAG, bean.getUserDataResponses().getPaidFlag());
                         PreferenceManager.instance(MainActivity.this).set(PreferenceManager.PLAN_DETAILS, bean.getUserDataResponses().getPlanDetails());
                     }

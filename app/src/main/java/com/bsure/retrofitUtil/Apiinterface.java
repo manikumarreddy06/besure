@@ -27,7 +27,7 @@ public interface Apiinterface {
      Call<signup>usersignin(@Body signup data );
 
     @POST("v1/user/verifyOtp")
-    Call<signup>verifyOtp(@Body signup data );
+    Call<BaseResponse>verifyOtp(@Body signup data );
 
     @POST("v1/categories")
     Call<CategoryResponseBean>getAssetCategories();

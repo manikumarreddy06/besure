@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bsure.TnC.TnC_Activity
+import com.bsure.models.BaseResponse
 import com.bsure.models.signup
 import com.bsure.retrofitUtil.RetrofitClient
 import kotlinx.android.synthetic.main.activity_signin.*
@@ -85,17 +86,28 @@ class Signin_Activity : AppCompatActivity() {
             obj.otp=enterOtp
             obj.userId=PreferenceManager.instance(this@Signin_Activity).get(PreferenceManager.USER_ID,null)
             val call = RetrofitClient.getInstance().apiinterface().verifyOtp(obj)
-            call.enqueue(object : Callback<signup?> {
-                override fun onResponse(call: Call<signup?>, response: Response<signup?>) {
-                        if (response.isSuccessful) {
+            call.enqueue(object : Callback<BaseResponse?> {
+                override fun onResponse(call: Call<BaseResponse?>, response: Response<BaseResponse?>) {
+                        var bean: BaseResponse? =response.body()
+                        if (bean!!.isvalid) {
                             openMainActvity()
                             PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.LOGIN_STATUS,true)
 
                         }
+                        else{
+                            if (!TextUtils.isEmpty(bean.message)) {
+                                Toast.makeText(this@Signin_Activity, bean.message, Toast.LENGTH_SHORT)
+                                    .show()
+                            }
+                            else{
+                                Toast.makeText(this@Signin_Activity, "failure", Toast.LENGTH_SHORT)
+                                    .show()
+                            }
+                        }
                         Utils.hideDialog()
                     }
 
-                    override fun onFailure(call: Call<signup?>, t: Throwable) {
+                    override fun onFailure(call: Call<BaseResponse?>, t: Throwable) {
                         Toast.makeText(this@Signin_Activity, "failure", Toast.LENGTH_SHORT).show()
                         Utils.hideDialog()
                     }

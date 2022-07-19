@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import com.bsure.models.UpdateUserAccountRequest;
 import com.bsure.models.UpdateUserAccountResponse;
+import com.bsure.models.UserDataResponse;
 import com.bsure.models.UserProfileDataResponse;
 import com.bsure.retrofitUtil.RetrofitClient;
 
@@ -141,24 +143,23 @@ public class EditProfileDetails extends AppCompatActivity {
         userProfileDataResponsebeanCall.enqueue(new Callback<UserProfileDataResponse>() {
             @Override
             public void onResponse(Call<UserProfileDataResponse> call, Response<UserProfileDataResponse> response) {
-                // Checking for the Response
-//                if (!(response.body().getIsvalid())) {
-//                    Utils.Companion.toast("failed to update user data",EditProfileDetails.this);
-//                    Toast.makeText(User_Profile.this, "failed to update",Toast.LENGTH_LONG).show();
-//                }
+
                 if (response.body() != null && response.body().getIsvalid()) {
-                    // Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
-                    etUsername.setText(response.body().getUserDataResponses().getUserName());
-                    etEmail.setText(response.body().getUserDataResponses().getEmail());
-                    etSecondaryNo.setText(response.body().getUserDataResponses().getAlternateNumber());
-                    etWhatsappNo.setText(response.body().getUserDataResponses().getWhatsUpNumber());
-                    etAddress.setText(response.body().getUserDataResponses().getAddess());
-                    if(response.body().getUserDataResponses().getGender().equals("male")){
-                        rbMale.setChecked(true);
-                    } else if(response.body().getUserDataResponses().getGender().equals("female")){
-                        rbFemale.setChecked(true);
-                    } else{
-                        rbOther.setChecked(true);
+                    UserDataResponse bean=response.body().getUserDataResponses();
+                    if(bean!=null) {
+                        etUsername.setText(bean.getUserName());
+                        etEmail.setText(bean.getEmail());
+                        etSecondaryNo.setText(bean.getAlternateNumber());
+                        etWhatsappNo.setText(bean.getWhatsUpNumber());
+                        etAddress.setText(bean.getAddess());
+                        if (!TextUtils.isEmpty(bean.getGender()))
+                            if (bean.getGender().equals("male")) {
+                                rbMale.setChecked(true);
+                            } else if (bean.getGender().equals("female")) {
+                                rbFemale.setChecked(true);
+                            } else {
+                                rbOther.setChecked(true);
+                            }
                     }
                 }
             }

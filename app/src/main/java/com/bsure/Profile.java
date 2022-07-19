@@ -100,7 +100,7 @@ public class Profile extends AppCompatActivity {
             // TODO
 
         });
-        tvshare.setOnClickListener(new View.OnClickListener() {
+        /*tvshare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -116,7 +116,7 @@ public class Profile extends AppCompatActivity {
                     //e.toString();
                 }
             }
-        });
+        });*/
     }
     // get user profile data
     private void getUserProfileData() {

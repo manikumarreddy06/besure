@@ -26,6 +26,7 @@ import retrofit2.Response;
 public class Profile extends AppCompatActivity {
     TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_user_name,tv_user_credential,tvshare;
     CardView btn_editProfile; String userId;
+    String Couponcode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,7 +101,7 @@ public class Profile extends AppCompatActivity {
             // TODO
 
         });
-        /*tvshare.setOnClickListener(new View.OnClickListener() {
+        tvshare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -108,7 +109,7 @@ public class Profile extends AppCompatActivity {
                     shareIntent.setType("text/plain");
                     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
                     String shareMessage= "\nI have secured my family's future with Bsure. You can also do the same for your family. Download now. \n\n";
-                    String sharemsg2="\n Use my coupon code \"xxxxxx\" for extra benefits during payment";
+                    String sharemsg2="\n Use my coupon code"+Couponcode+ " for extra benefits during payment";
                     shareMessage = shareMessage + "http://surl.li/clkca"+   "\n\n "+sharemsg2;
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "Share via"));
@@ -116,7 +117,7 @@ public class Profile extends AppCompatActivity {
                     //e.toString();
                 }
             }
-        });*/
+        });
     }
     // get user profile data
     private void getUserProfileData() {
@@ -137,6 +138,8 @@ public class Profile extends AppCompatActivity {
 //                    Log.i(TAG, "name of the user " + response.body().getUserDataResponses().getUserName());
                     tv_user_name.setText(response.body().getUserDataResponses().getUserName());
                     tv_user_credential.setText(response.body().getUserDataResponses().getEmail());
+                    Couponcode=response.body().getUserDataResponses().getRefralCode();
+
                     if(!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
                         PreferenceManager.instance(Profile.this).set(PreferenceManager.PLAN_PAID_FLAG, bean.getUserDataResponses().getPaidFlag());
                         PreferenceManager.instance(Profile.this).set(PreferenceManager.PLAN_DETAILS, bean.getUserDataResponses().getPlanDetails());

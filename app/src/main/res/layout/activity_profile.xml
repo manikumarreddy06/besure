@@ -205,7 +205,7 @@
                     android:textColor="@color/primary_text_color"
                     app:drawableEndCompat="@drawable/ic_right_arrow"
                     app:drawableStartCompat="@drawable/ic_logout_icon" />
-              <!--  <TextView
+                <TextView
                     android:id="@+id/tv_share"
                     style="@style/Description"
                     android:layout_width="match_parent"
@@ -214,11 +214,9 @@
                     android:layout_marginVertical="7dp"
                     android:drawablePadding="10dp"
                     android:text="@string/share"
-                    android:visibility="gone"
                     android:textColor="@color/primary_text_color"
                     app:drawableEndCompat="@drawable/ic_right_arrow"
                     app:drawableStartCompat="@drawable/ic_baseline_share_24" />
--->
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </ScrollView>

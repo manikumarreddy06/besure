@@ -19,11 +19,15 @@ public class UserDataResponse {
 
     private String whatsUpNumber;
 
+    private String refralCode;
+
     private String paidFlag;
     private String planDetails;
 
 
-    public UserDataResponse(String userId, String userName, String email, String gender, String addess, String alternateNumber, String whatsUpNumber) {
+
+
+    public UserDataResponse(String userId, String userName, String email, String gender, String addess, String alternateNumber, String whatsUpNumber, String refralCode) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
@@ -31,6 +35,7 @@ public class UserDataResponse {
         this.addess = addess;
         this.alternateNumber = alternateNumber;
         this.whatsUpNumber = whatsUpNumber;
+        this.refralCode=refralCode;
     }
 
     public String getUserId() {
@@ -103,5 +108,12 @@ public class UserDataResponse {
 
     public void setPlanDetails(String planDetails) {
         this.planDetails = planDetails;
+    }
+    public String getRefralCode() {
+        return refralCode;
+    }
+
+    public void setRefralCode(String refralCode) {
+        this.refralCode = refralCode;
     }
 }

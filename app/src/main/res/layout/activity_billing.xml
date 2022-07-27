@@ -76,6 +76,7 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/et_couponcode"
             android:layout_weight="0.7"
             android:layout_marginVertical="5dp"
             android:drawableStart="@drawable/ic_tag_icon"
@@ -88,6 +89,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/btn_apply"
             android:layout_weight="0.3"
             android:layout_alignParentRight="true"
             android:layout_marginStart="@dimen/margin_8dp"

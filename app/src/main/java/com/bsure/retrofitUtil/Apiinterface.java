@@ -14,6 +14,8 @@ import com.bsure.models.UserAsset;
 import com.bsure.models.UserAssetResponseBean;
 import com.bsure.models.UserProfileDataResponse;
 import com.bsure.models.signup;
+import com.bsure.models.userdiscountrequest;
+import com.bsure.models.userdiscountresponsebean;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -62,9 +64,11 @@ public interface Apiinterface {
     @POST("/v1/profile/update")
     Call<UpdateUserAccountResponse> updateUserAccount(@Body UpdateUserAccountRequest updateUserAccountRequest);
 
-
     @POST("v1/asset/inactive")
     Call<UserAssetResponseBean>deleteAsset(@Body UserAsset request);
+
+    @POST("v1/redeem/code")
+    Call<userdiscountresponsebean>userdiscount(@Body userdiscountrequest discountrequest);
 
 
 

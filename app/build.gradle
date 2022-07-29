@@ -90,4 +90,7 @@ dependencies {
     implementation 'com.github.chivorns:smartmaterialspinner:1.5.0'
 
 
+    implementation 'dev.shreyaspatil.EasyUpiPayment:EasyUpiPayment:3.0.3'
+
+
 }

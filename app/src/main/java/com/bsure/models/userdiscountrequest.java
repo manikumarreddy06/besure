@@ -1,6 +1,8 @@
 package com.bsure.models;
 
-public class userdiscountrequest {
+import java.io.Serializable;
+
+public class userdiscountrequest  implements Serializable {
     private String userId;
     private String code;
     private String planAmount;

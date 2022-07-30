@@ -2,7 +2,10 @@ package com.bsure;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -51,9 +54,13 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
     String discountcoupon;
     String userplanprice;
 
+
+
     double totalAmount=0;
 
     double GSTPercentage=0;
+    Dialog dialog;
+
 
 
     @Override
@@ -81,6 +88,8 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
         et_apply = findViewById(R.id.et_couponcode);
         btn_apply = findViewById(R.id.btn_apply);
         userplanprice = tvPlanPrice.getText().toString();
+
+        dialog=new Dialog(this);
         btn_apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -220,8 +229,11 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
                     if(bean.getIsvalid().booleanValue()==true) {
 
                         Toast.makeText(Billing.this,"Success",Toast.LENGTH_SHORT).show();
+                        showcashbackdialog();
                         tvdisPrice.setText("" + bean.getDiscountAmount());
                         tvtotalPrice.setText("" + bean.getFinalPrce());
+
+
                     }
 
                     else{
@@ -323,6 +335,14 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
 
     private void toast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void showcashbackdialog(){
+
+        dialog.setContentView(R.layout.cashback_layout);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        dialog.show();
     }
 
 }

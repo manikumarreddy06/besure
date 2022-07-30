@@ -3,10 +3,12 @@ package com.bsure;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -225,10 +227,9 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
                 @Override
                 public void onResponse(Call<userdiscountresponsebean> call, Response<userdiscountresponsebean> response) {
 
-                    userdiscountresponsebean bean=response.body();
+                          userdiscountresponsebean bean=response.body();
                     if(bean.getIsvalid().booleanValue()==true) {
 
-                        Toast.makeText(Billing.this,"Success",Toast.LENGTH_SHORT).show();
                         showcashbackdialog();
                         tvdisPrice.setText("" + bean.getDiscountAmount());
                         tvtotalPrice.setText("" + bean.getFinalPrce());
@@ -343,6 +344,24 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         dialog.show();
+        final Handler handler  = new Handler();
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                if (dialog.isShowing()) {
+                    dialog.dismiss();
+                }
+            }
+        };
+
+        dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                handler.removeCallbacks(runnable);
+            }
+        });
+
+        handler.postDelayed(runnable, 3000);
     }
 
 }

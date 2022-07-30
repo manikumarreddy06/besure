@@ -305,4 +305,8 @@ You agree and acknowledge that Bsure.live may assign or transfer its rights and 
     <string name="edit_profile">Edit Profile</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="refund_policy">Refund Policy</string>
+    <string name="encrypted_details_1">Your data is encrypted and stored in AWS server; So that no third party has the access to it</string>
+    <string name="encrypted_details_2">We don’t ask anything which should be a secret. No password, user name, OTP, CVV, amount of holding</string>
+    <string name="encrypted_details_3">We can’t check your financial data. So, we can’t share it with any third party</string>
+    <string name="encrypted_details_4">Still don’t trust us? Store the data safe somewhere else. Share the details with us. We will pass it on to your family</string>
 </resources>

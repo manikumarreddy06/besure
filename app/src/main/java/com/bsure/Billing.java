@@ -219,7 +219,7 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
                     userdiscountresponsebean bean=response.body();
                     if(bean.getIsvalid().booleanValue()==true) {
 
-                        Toast.makeText(Billing.this,"Sucsess",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Billing.this,"Success",Toast.LENGTH_SHORT).show();
                         tvdisPrice.setText("" + bean.getDiscountAmount());
                         tvtotalPrice.setText("" + bean.getFinalPrce());
                     }

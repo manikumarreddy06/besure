@@ -383,7 +383,7 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_img"/>
+                        android:src="@drawable/encrypted_1"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -400,7 +400,7 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_img2"/>
+                        android:src="@drawable/encrypted_2"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -418,7 +418,7 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_img3"/>
+                        android:src="@drawable/encrypted_3"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -435,7 +435,7 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_img4"/>
+                        android:src="@drawable/encrypted_4"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

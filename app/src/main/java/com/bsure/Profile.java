@@ -109,7 +109,7 @@ public class Profile extends AppCompatActivity {
                     shareIntent.setType("text/plain");
                     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
                     String shareMessage= "\nI have secured my family's future with Bsure. You can also do the same for your family. Download now. \n\n";
-                    String sharemsg2="\n Use my coupon code"+Couponcode+ " for extra benefits during payment";
+                    String sharemsg2="\n Use my coupon code"+" \n\n" +Couponcode +" \n\n"+ " for extra benefits during payment";
                     shareMessage = shareMessage + "http://surl.li/clkca"+   "\n\n "+sharemsg2;
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "Share via"));

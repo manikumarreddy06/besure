@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             style="@style/Description"
             android:paddingHorizontal="5dp"
-            android:text="Attach an ID proof"/>
+            android:text="Attachment"/>
         <Button
             android:id="@+id/btn_attachFile"
             android:layout_width="0dp"

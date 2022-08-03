@@ -33,8 +33,7 @@ class   ImageAttachmentAdapter(val context: Context, val mData: ArrayList<Catego
         Log.d("srini","onBindViewHolder"+bean.subCategoryName)
 
         Log.d("srini","onBindViewHolder"+bean.parameterValue)
-
-        holder.tvtitle.text=bean.parameterValue
+        //]\=holder.tvtitle.text=bean.parameterValue
         holder.btn_attachFile.setOnClickListener(){
             uploadInterFace.upload(bean,position)
         }

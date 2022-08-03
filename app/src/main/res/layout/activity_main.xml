@@ -369,7 +369,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:text=" Whyis it safe to store data in Bsure?"
+                    android:text=" Why is it safe to store data in Bsure?"
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />

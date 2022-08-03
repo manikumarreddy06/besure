@@ -34,6 +34,7 @@ class   ImageAttachmentAdapter(val context: Context, val mData: ArrayList<Catego
 
         Log.d("srini","onBindViewHolder"+bean.parameterValue)
 
+        holder.tvtitle.text=bean.parameterValue
         holder.btn_attachFile.setOnClickListener(){
             uploadInterFace.upload(bean,position)
         }
@@ -82,6 +83,7 @@ class   ImageAttachmentAdapter(val context: Context, val mData: ArrayList<Catego
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var btn_attachFile: Button = itemView.findViewById(R.id.btn_attachFile)
         var preview: TextView =itemView.findViewById(R.id.preview)
+        var tvtitle: TextView =itemView.findViewById(R.id.tvtitle)
 
     }
 

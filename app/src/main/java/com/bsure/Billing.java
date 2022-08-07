@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,11 +17,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bsure.models.CategoryResponseBean;
-import com.bsure.models.PlanDetailsResponseBean;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.bsure.models.PaymentRequestCF;
+import com.bsure.models.PaymentResponseBean;
+import com.bsure.models.PaymentResponseBeanCF;
 import com.bsure.models.userdiscountrequest;
 import com.bsure.models.userdiscountresponsebean;
 import com.bsure.retrofitUtil.RetrofitClient;
+import com.cashfree.pg.api.CFPaymentGatewayService;
+import com.cashfree.pg.core.api.CFSession;
+import com.cashfree.pg.core.api.CFTheme;
+import com.cashfree.pg.core.api.callback.CFCheckoutResponseCallback;
+import com.cashfree.pg.core.api.exception.CFException;
+import com.cashfree.pg.core.api.utils.CFErrorResponse;
+import com.cashfree.pg.ui.api.CFDropCheckoutPayment;
+import com.cashfree.pg.ui.api.CFPaymentComponent;
 import com.razorpay.Checkout;
 import com.razorpay.ExternalWalletListener;
 import com.razorpay.PaymentData;
@@ -28,15 +40,11 @@ import com.razorpay.PaymentResultWithDataListener;
 
 import org.json.JSONObject;
 
-import dev.shreyaspatil.easyupipayment.EasyUpiPayment;
-import dev.shreyaspatil.easyupipayment.listener.PaymentStatusListener;
-import dev.shreyaspatil.easyupipayment.model.PaymentApp;
-import dev.shreyaspatil.easyupipayment.model.TransactionDetails;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Billing extends Activity implements PaymentResultWithDataListener, ExternalWalletListener, PaymentStatusListener {
+public class Billing extends AppCompatActivity implements PaymentResultWithDataListener, ExternalWalletListener, CFCheckoutResponseCallback {
     Button btn_proceed_payment, btn_apply;
     private static final String TAG = Billing.class.getSimpleName();
     private AlertDialog.Builder alertDialogBuilder;
@@ -71,6 +79,12 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
         setContentView(R.layout.activity_billing);
 
         Checkout.preload(getApplicationContext());
+        try {
+            // If you are using a fragment then you need to add this line inside onCreate() of your Fragment
+            CFPaymentGatewayService.getInstance().setCheckoutCallback(this);
+        } catch (CFException e) {
+            e.printStackTrace();
+        }
         tvPlanDetails = findViewById(R.id.tvPlanDetails);
         tvPlanPrice = findViewById(R.id.tvPlanPrice);
 
@@ -104,7 +118,8 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
         btn_proceed_payment.setOnClickListener(view -> {
 
             //startPayment();
-            payThroughSDK();
+            //payThroughSDK();
+            getPaymentDetailsForFC();
         });
         alertDialogBuilder = new AlertDialog.Builder(Billing.this);
         alertDialogBuilder.setCancelable(false);
@@ -186,10 +201,7 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
         try {
-            Intent i = new Intent(Billing.this, payment_success.class);
-            startActivity(i);
-           /* alertDialogBuilder.setMessage("Payment Successful :\nPayment ID: "+s+"\nPayment Data: "+paymentData.getData());
-            alertDialogBuilder.show();*/
+            redirectSuccessPage();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -233,6 +245,8 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
                         showcashbackdialog();
                         tvdisPrice.setText("" + bean.getDiscountAmount());
                         tvtotalPrice.setText("" + bean.getFinalPrce());
+                        totalAmount= bean.getFinalPrce();
+
 
 
                     }
@@ -254,89 +268,6 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
     }
 
 
-    private EasyUpiPayment easyUpiPayment;
-    private void payThroughSDK(){
-
-        String payeeVpa = "srinu532avula@icici";
-        String payeeName = "strinu";
-        String payeeMerchantCode = "sss";
-        String description = "Bsure Plan purchase";
-        String amount = finalAmountStringFormat;
-
-
-        String transactionId = "TID" + System.currentTimeMillis();
-        PaymentApp paymentApp;
-        paymentApp = PaymentApp.ALL;
-
-        // START PAYMENT INITIALIZATION
-        EasyUpiPayment.Builder builder = new EasyUpiPayment.Builder(this)
-                .with(paymentApp)
-                .setPayeeVpa(payeeVpa)
-                .setPayeeName(payeeName)
-                .setTransactionId(transactionId)
-                .setTransactionRefId(transactionId)
-                .setPayeeMerchantCode(payeeMerchantCode)
-                .setDescription(description)
-                .setAmount(amount);
-        // END INITIALIZATION
-
-        try {
-            // Build instance
-            easyUpiPayment = builder.build();
-
-            // Register Listener for Events
-            easyUpiPayment.setPaymentStatusListener(this);
-
-            // Start payment / transaction
-            easyUpiPayment.startPayment();
-        } catch (Exception exception) {
-            exception.printStackTrace();
-            toast("Error: " + exception.getMessage());
-        }
-    }
-
-    @Override
-    public void onTransactionCompleted(TransactionDetails transactionDetails) {
-        // Transaction Completed
-        Log.d("TransactionDetails", transactionDetails.toString());
-
-        switch (transactionDetails.getTransactionStatus()) {
-            case SUCCESS:
-                onTransactionSuccess();
-                break;
-            case FAILURE:
-                onTransactionFailed();
-                break;
-            case SUBMITTED:
-                onTransactionSubmitted();
-                break;
-        }
-    }
-
-    @Override
-    public void onTransactionCancelled() {
-        // Payment Cancelled by User
-        toast("Cancelled by user");
-    }
-
-    private void onTransactionSuccess() {
-        // Payment Success
-        toast("Success");
-    }
-
-    private void onTransactionSubmitted() {
-        // Payment Pending
-        toast("Pending | Submitted");
-    }
-
-    private void onTransactionFailed() {
-        // Payment Failed
-        toast("Failed");
-    }
-
-    private void toast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
 
     private void showcashbackdialog(){
 
@@ -363,6 +294,113 @@ public class Billing extends Activity implements PaymentResultWithDataListener, 
 
         handler.postDelayed(runnable, 3000);
     }
+
+
+    public void doDropCheckoutPayment(PaymentResponseBean bean) {
+
+        String token=bean.getOrderToken();
+        String orderID=bean.getOrderId();
+        CFSession.Environment cfEnvironment = CFSession.Environment.PRODUCTION;
+
+        if(TextUtils.isEmpty(orderID)){
+            Toast.makeText(this,"payment failure try again", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(TextUtils.isEmpty(token)){
+            Toast.makeText(this,"payment failure try again", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        try {
+            CFSession cfSession = new CFSession.CFSessionBuilder()
+                    .setEnvironment(cfEnvironment)
+                    .setOrderToken(token)
+                    .setOrderId(orderID)
+                    .build();
+            CFPaymentComponent cfPaymentComponent = new CFPaymentComponent.CFPaymentComponentBuilder()
+                    .add(CFPaymentComponent.CFPaymentModes.CARD)
+                    .add(CFPaymentComponent.CFPaymentModes.UPI)
+                    .build();
+            CFTheme cfTheme = new CFTheme.CFThemeBuilder()
+                    .setNavigationBarBackgroundColor("#006EE1")
+                    .setNavigationBarTextColor("#ffffff")
+                    .setButtonBackgroundColor("#006EE1")
+                    .setButtonTextColor("#ffffff")
+                    .setPrimaryTextColor("#000000")
+                    .setSecondaryTextColor("#000000")
+                    .build();
+            CFDropCheckoutPayment cfDropCheckoutPayment = new CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder()
+                    .setSession(cfSession)
+                    //By default all modes are enabled. If you want to restrict the payment modes uncomment the next line
+//                        .setCFUIPaymentModes(cfPaymentComponent)
+                    .setCFNativeCheckoutUITheme(cfTheme)
+                    .build();
+            CFPaymentGatewayService gatewayService = CFPaymentGatewayService.getInstance();
+            gatewayService.doPayment(Billing.this, cfDropCheckoutPayment);
+        } catch (CFException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onPaymentVerify(String orderID) {
+        Log.e("onPaymentVerify", "verifyPayment triggered");
+        Log.d("onPaymentVerify", "verifyPayment triggered");
+        // Start verifying your payment
+        redirectSuccessPage();
+    }
+
+    @Override
+    public void onPaymentFailure(CFErrorResponse cfErrorResponse, String orderID) {
+        Log.e("onPaymentFailure " + orderID, cfErrorResponse.getMessage());
+        Log.d("onPaymentFailure " + orderID, cfErrorResponse.getMessage());
+    }
+
+
+    private void getPaymentDetailsForFC(){
+
+        PaymentRequestCF paymentRequestCF=new PaymentRequestCF();
+        paymentRequestCF.setCustomerId(PreferenceManager.instance(this).get(PreferenceManager.USER_ID,null));
+        paymentRequestCF.setOrderAmount(planPrice);
+        paymentRequestCF.setCustomerPhone(PreferenceManager.instance(this).get(PreferenceManager.USER_MOBILE_NUMBER,null));
+
+        Call<PaymentResponseBeanCF> call=RetrofitClient.getInstance().apiinterface().getPaymentDetailsForCF(paymentRequestCF);
+        call.enqueue(new Callback<PaymentResponseBeanCF>() {
+            @Override
+            public void onResponse(Call<PaymentResponseBeanCF> call, Response<PaymentResponseBeanCF> response) {
+
+                PaymentResponseBeanCF bean=response.body();
+                if(bean.getIsvalid().booleanValue()==true && bean.getPaymentResponseBean()!=null) {
+                    doDropCheckoutPayment(bean.getPaymentResponseBean());
+                }
+
+                else{
+                    Toast.makeText(Billing.this,"failure",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PaymentResponseBeanCF> call, Throwable t) {
+                Toast.makeText(Billing.this,"failure",Toast.LENGTH_SHORT).show();
+
+                Utils.Companion.toast("Payment Failed:\nPayment Data: ", Billing.this);
+            }
+        });
+
+
+    }
+
+
+    private void redirectSuccessPage(){
+
+        Intent i = new Intent(Billing.this, payment_success.class);
+        i.putExtra("plan",planName);
+        i.putExtra("price",planPrice);
+        i.putExtra("coupon",discountcoupon);
+        startActivity(i);
+    }
+
 
 }
 

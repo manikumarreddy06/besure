@@ -92,6 +92,8 @@ class Signin_Activity : AppCompatActivity() {
                         if (bean!!.isvalid) {
                             openMainActvity()
                             PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.LOGIN_STATUS,true)
+                            val usernum = etmobile_signin.text.toString()
+                            PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_MOBILE_NUMBER,usernum)
 
                         }
                         else{

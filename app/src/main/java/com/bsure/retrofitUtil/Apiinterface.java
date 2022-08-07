@@ -5,6 +5,8 @@ import com.bsure.models.BaseResponse;
 import com.bsure.models.CategoryResponseBean;
 import com.bsure.models.NomineeListResponseBean;
 import com.bsure.models.NomineeRequest;
+import com.bsure.models.PaymentRequestCF;
+import com.bsure.models.PaymentResponseBeanCF;
 import com.bsure.models.PlanDetailsResponseBean;
 import com.bsure.models.RelationResponseBean;
 import com.bsure.models.SaveAssetRequest;
@@ -71,6 +73,12 @@ public interface Apiinterface {
     Call<userdiscountresponsebean>userdiscount(@Body userdiscountrequest discountrequest);
 
 
+    @POST("payment/paymentCF")
+    Call<PaymentResponseBeanCF>getPaymentDetailsForCF(@Body PaymentRequestCF request);
+
+
+    @POST("v1/user/update")
+    Call<BaseResponse>updateUserInfo(@Body userdiscountrequest discountrequest);
 
 
 

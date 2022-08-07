@@ -400,13 +400,14 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_2"/>
+                        android:src="@drawable/encrypted_2"
+                        android:layout_marginTop="15dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/encrypted_details_2"
                         android:textSize="20dp"
-                        android:layout_marginLeft="10dp"/>
+                        android:layout_marginLeft="5dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -416,9 +417,10 @@
                     android:orientation="horizontal"
                     >
                     <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/encrypted_3"/>
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/encrypted_3"
+                        android:layout_marginTop="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -435,13 +437,14 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_4"/>
+                        android:src="@drawable/encrypted_4"
+                        android:layout_marginTop="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/encrypted_details_4"
                         android:textSize="20dp"
-                        android:layout_marginLeft="10dp"/>
+                        android:layout_marginLeft="15dp"/>
                 </LinearLayout>
             </LinearLayout>
 

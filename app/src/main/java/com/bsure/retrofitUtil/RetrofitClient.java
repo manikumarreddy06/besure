@@ -1,6 +1,7 @@
 package com.bsure.retrofitUtil;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,6 +10,7 @@ import com.bsure.PreferenceManager;
 import com.bsure.retrofitUtil.Apiinterface;
 
 import java.io.IOException;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
@@ -39,7 +41,8 @@ public class RetrofitClient {
                     public Response intercept(@NonNull Chain chain) throws IOException {
                         Request Originalrequest= chain.request();
                         Request newrequest=Originalrequest.newBuilder()
-                                .header("usertoken","123")
+                                .addHeader("x-device-type", Build.DEVICE)
+                                .addHeader("langaue", Locale.getDefault().getCountry())
                                 .build();
                         return chain.proceed(newrequest);
                     }

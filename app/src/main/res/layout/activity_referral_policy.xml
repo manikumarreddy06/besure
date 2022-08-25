@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".referral_policy">
+    <LinearLayout
+        android:id="@+id/faq_title"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="15dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:text="Referral Policy"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:layout_weight="0.55"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/referral_policy" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        android:scrollbarSize="6dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_tnc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/subTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="Refer an Insurance Agent: Name, Phone No, IRDA Number" />
+            <TextView
+                style="@style/subTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="₹100/Successful referral. Referral to be paid only after 5 successful conversion of
+    agent" />
+
+
+            <TextView
+                style="@style/subTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refer a customer: ₹25/successful referral for yearly plan; ₹100/successful referral for lifetime
+    plan" />
+
+            <TextView
+                style="@style/TnC_TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Referral policy for insurance agents:"/>
+
+            <TextView
+                style="@style/subTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yearly Plan: ₹40 for first year/successful referral; ₹20/year for next 4
+    years" />
+
+            <TextView
+                style="@style/subTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Life time plan: 10% of paid amount (₹ 270/successful referral)" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -77,6 +77,8 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
     implementation('com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.7')
+    implementation"com.squareup.okhttp3:logging-interceptor:4.5.0"
+
 
     //For Razorpay checkout SDK
     implementation 'com.razorpay:checkout:1.6.20'

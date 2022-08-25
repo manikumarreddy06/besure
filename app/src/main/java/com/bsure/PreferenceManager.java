@@ -22,6 +22,8 @@ public class PreferenceManager {
 
 
 
+
+
     private PreferenceManager(Context c) {
         mPreference = c.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
     }

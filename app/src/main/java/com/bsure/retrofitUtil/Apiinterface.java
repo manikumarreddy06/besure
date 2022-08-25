@@ -22,16 +22,23 @@ import com.bsure.models.userdiscountresponsebean;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface Apiinterface {
 
+
+
+
+
      @POST("v1/signup")
      Call<signup>usersignin(@Body signup data );
 
+
     @POST("v1/user/verifyOtp")
     Call<BaseResponse>verifyOtp(@Body signup data );
+
 
     @POST("v1/categories")
     Call<CategoryResponseBean>getAssetCategories();

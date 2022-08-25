@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Livwell"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".referral_policy"
+            android:exported="false" />
+        <activity
             android:name=".Nudgesuccess_Activity"
             android:exported="false" />
         <activity

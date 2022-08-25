@@ -166,6 +166,18 @@
                     android:textColor="@color/primary_text_color"
                     app:drawableEndCompat="@drawable/ic_right_arrow"
                     app:drawableStartCompat="@drawable/ic_refund_policy_icon" />
+                <TextView
+                    android:id="@+id/tv_referralPolicy"
+                    style="@style/Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginVertical="7dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/referral_policy"
+                    android:textColor="@color/primary_text_color"
+                    app:drawableEndCompat="@drawable/ic_right_arrow"
+                    app:drawableStartCompat="@drawable/ic_baseline_question_answer_24" />
 
                 <TextView
                     android:id="@+id/tv_faq"
@@ -218,6 +230,7 @@
                     app:drawableEndCompat="@drawable/ic_right_arrow"
                     app:drawableStartCompat="@drawable/ic_baseline_share_24" />
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
     </ScrollView>
 

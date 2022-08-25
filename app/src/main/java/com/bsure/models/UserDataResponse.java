@@ -21,6 +21,7 @@ public class UserDataResponse {
 
     private String refralCode;
 
+
     private String paidFlag;
     private String planDetails;
 

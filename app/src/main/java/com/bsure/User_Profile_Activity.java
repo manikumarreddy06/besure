@@ -19,6 +19,7 @@ public class User_Profile_Activity extends AppCompatActivity {
     CardView btn_editProfileDetails;
     TextView userName,userGender,userWhatsappNo,userSecondaryNo,userMailId,userAddress;
     String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +66,10 @@ public class User_Profile_Activity extends AppCompatActivity {
                     userMailId.setText(response.body().getUserDataResponses().getEmail());
                     userAddress.setText(response.body().getUserDataResponses().getAddess());
 //                    Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
+
+
+
+
                 }
             }
             @Override

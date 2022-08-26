@@ -28,13 +28,7 @@ public class UserDataResponse {
     private String planDetails;
 
 
-    public String getToken() {
-        return token;
-    }
 
-    public void setToken(String token) {
-        this.token = token;
-    }
 
     public UserDataResponse(String userId, String userName, String email, String gender, String addess, String alternateNumber, String whatsUpNumber, String refralCode, String token) {
         this.userId = userId;
@@ -126,5 +120,13 @@ public class UserDataResponse {
 
     public void setRefralCode(String refralCode) {
         this.refralCode = refralCode;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

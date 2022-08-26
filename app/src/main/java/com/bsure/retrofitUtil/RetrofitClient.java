@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bsure.PreferenceManager;
+import com.bsure.Profile;
 import com.bsure.retrofitUtil.Apiinterface;
 
 import java.io.IOException;
@@ -41,8 +42,8 @@ public class RetrofitClient {
                     public Response intercept(@NonNull Chain chain) throws IOException {
                         Request Originalrequest= chain.request();
                         Request newrequest=Originalrequest.newBuilder()
-                                .addHeader("x-device-type", Build.DEVICE)
-                                .addHeader("langaue", Locale.getDefault().getCountry())
+                                .addHeader("Uset_token",PreferenceManager.USER_TOKEN)
+
                                 .build();
                         return chain.proceed(newrequest);
                     }

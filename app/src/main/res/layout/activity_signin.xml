@@ -169,7 +169,7 @@
                 android:id="@+id/terms"
                 android:fontFamily="@font/allerta"
                 android:layout_width="wrap_content"
-                android:text=" terms and Conditions"
+                android:text=" Terms and Conditions"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
                 android:layout_height="wrap_content"/>
@@ -247,16 +247,16 @@
 
     </LinearLayout>
 
-    <com.airbnb.lottie.LottieAnimationView
+<!--    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="0.5"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        android:layout_marginTop="15dp"
-        app:lottie_rawRes="@raw/signin_family_animation" />
+        app:lottie_rawRes="@raw/signin_family_animation" />-->
 
 </RelativeLayout>

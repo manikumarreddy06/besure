@@ -23,10 +23,9 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onResume() {
         super.onResume();
-        paidFlag=PreferenceManager.instance(this).get(PreferenceManager.PLAN_PAID_FLAG,null);
-        if(paidFlag==null) {
-            getUserProfileData();
-        }
+
+        getUserProfileData();
+
     }
 
     @Override

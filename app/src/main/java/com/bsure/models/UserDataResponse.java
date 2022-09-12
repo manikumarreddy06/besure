@@ -21,13 +21,16 @@ public class UserDataResponse {
 
     private String refralCode;
 
+    private String token;
+
+
     private String paidFlag;
     private String planDetails;
 
 
 
 
-    public UserDataResponse(String userId, String userName, String email, String gender, String addess, String alternateNumber, String whatsUpNumber, String refralCode) {
+    public UserDataResponse(String userId, String userName, String email, String gender, String addess, String alternateNumber, String whatsUpNumber, String refralCode, String token) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
@@ -36,6 +39,8 @@ public class UserDataResponse {
         this.alternateNumber = alternateNumber;
         this.whatsUpNumber = whatsUpNumber;
         this.refralCode=refralCode;
+        this.token=token;
+
     }
 
     public String getUserId() {
@@ -115,5 +120,13 @@ public class UserDataResponse {
 
     public void setRefralCode(String refralCode) {
         this.refralCode = refralCode;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

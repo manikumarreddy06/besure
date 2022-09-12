@@ -3,6 +3,8 @@ package com.bsure;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.util.List;
+
 
 public class PreferenceManager {
 
@@ -20,6 +22,10 @@ public class PreferenceManager {
 
     public static final String USER_NAME = "USER_NAME";
 
+    public static final String USER_TOKEN="TOKEN";
+
+
+
 
 
     private PreferenceManager(Context c) {
@@ -33,6 +39,8 @@ public class PreferenceManager {
 
         return mInstance;
     }
+
+
 
 
     public void set(String key, long value) {
@@ -81,6 +89,7 @@ public class PreferenceManager {
 
         return mPreference.getLong(key, defaultValue);
     }
+
 
 
     /**

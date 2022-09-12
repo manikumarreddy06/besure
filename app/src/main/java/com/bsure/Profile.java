@@ -24,9 +24,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Profile extends AppCompatActivity {
-    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_user_name,tv_user_credential,tvshare;
+    TextView tv_aboutUs, tv_tnc, tv_faq, tv_contactUs, tv_logout, tv_privacypolicy, tv_refundPolicy,tv_referralpolicy,tv_user_name,tv_user_credential,tvshare;
     CardView btn_editProfile; String userId;
     String Couponcode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +41,10 @@ public class Profile extends AppCompatActivity {
         tv_logout = findViewById(R.id.tv_logout);
         tv_privacypolicy = findViewById(R.id.tv_privacypolicy);
         tv_refundPolicy = findViewById(R.id.tv_refundPolicy);
+        tv_referralpolicy=findViewById(R.id.tv_referralPolicy);
         btn_editProfile = findViewById(R.id.cv_editProfile);
         tvshare=findViewById(R.id.tv_share);
+
 
         // get user data
         getUserProfileData();
@@ -72,6 +75,10 @@ public class Profile extends AppCompatActivity {
             Intent i=new Intent(Profile.this, refundPolicy_Activity.class);
             startActivity(i);
         });
+       tv_referralpolicy.setOnClickListener(view -> {
+           Intent i=new Intent(Profile.this, referral_policy.class);
+           startActivity(i);
+       });
         tv_privacypolicy.setOnClickListener(view -> {
             Intent i=new Intent(Profile.this, privacy_Policy.class);
             startActivity(i);
@@ -143,6 +150,7 @@ public class Profile extends AppCompatActivity {
                     if(!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
                         PreferenceManager.instance(Profile.this).set(PreferenceManager.PLAN_PAID_FLAG, bean.getUserDataResponses().getPaidFlag());
                         PreferenceManager.instance(Profile.this).set(PreferenceManager.PLAN_DETAILS, bean.getUserDataResponses().getPlanDetails());
+                       PreferenceManager.instance(Profile.this).set(PreferenceManager.USER_TOKEN,bean.getUserDataResponses().getToken());
                     }
 //                    Toast.makeText(User_Profile.this, "response is valid",Toast.LENGTH_LONG).show();
                 }

@@ -372,6 +372,8 @@
                     android:text="Why is it safe to store data in Bsure?"
                     android:textColor="@color/black"
                     android:textSize="25sp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/sakkalmajalla"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -383,12 +385,13 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_1"/>
+                        android:src="@drawable/done_2_img"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/encrypted_details_1"
                         android:textSize="20dp"
+                        android:fontFamily="@font/sakkalmajalla"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -400,13 +403,15 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_2"/>
+                        android:src="@drawable/done_2_img"
+                        android:layout_marginTop="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/encrypted_details_2"
                         android:textSize="20dp"
-                        android:layout_marginLeft="10dp"/>
+                        android:fontFamily="@font/sakkalmajalla"
+                        android:layout_marginLeft="5dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -418,12 +423,15 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_3"/>
+                        android:src="@drawable/done_2_img"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/encrypted_details_3"
                         android:textSize="20dp"
+                        android:layout_marginTop="@dimen/margin_10dp"
+                        android:fontFamily="@font/sakkalmajalla"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -435,13 +443,15 @@
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/encrypted_4"/>
+                        android:src="@drawable/done_2_img"
+                        android:layout_marginTop="6dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/encrypted_details_4"
                         android:textSize="20dp"
-                        android:layout_marginLeft="10dp"/>
+                        android:fontFamily="@font/sakkalmajalla"
+                        android:layout_marginLeft="15dp"/>
                 </LinearLayout>
             </LinearLayout>
 

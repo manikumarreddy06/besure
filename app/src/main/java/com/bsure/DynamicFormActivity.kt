@@ -48,7 +48,7 @@ public class DynamicFormActivity : AppCompatActivity(){
                 var bean: AssetsConfigResponse? =response.body()
                 if(bean!=null && bean.isvalid) {
 
-                    prepareListView(bean?.categoryDetailsBean)
+                    prepareListView(bean.categoryDetailsBean)
                 }
                 else{
                     Toast.makeText(this@DynamicFormActivity, "failure", Toast.LENGTH_SHORT).show()

@@ -1,8 +1,24 @@
 package com.bsure.retrofitUtil;
 
+import android.content.SharedPreferences;
+import android.os.Build;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.bsure.PreferenceManager;
+import com.bsure.Profile;
 import com.bsure.retrofitUtil.Apiinterface;
 
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -14,10 +30,24 @@ public class RetrofitClient {
     private static Retrofit retrofit;
 
 
+
+
     private RetrofitClient(){
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(new Interceptor() {
+                    @NonNull
+                    @Override
+                    public Response intercept(@NonNull Chain chain) throws IOException {
+                        Request Originalrequest= chain.request();
+                        Request newrequest=Originalrequest.newBuilder()
+                                .addHeader("User_token",PreferenceManager.USER_TOKEN)
+
+                                .build();
+                        return chain.proceed(newrequest);
+                    }
+                })
                 .addInterceptor(logging)
                 .build();
         retrofit=new Retrofit.Builder()
@@ -26,6 +56,7 @@ public class RetrofitClient {
                 .client(client)
                 .build();
     }
+
     public static synchronized RetrofitClient getInstance(){
         if (retrofitClient ==null){
             retrofitClient=new RetrofitClient();
@@ -36,5 +67,9 @@ public class RetrofitClient {
     public com.bsure.retrofitUtil.Apiinterface apiinterface(){
         return retrofit.create(Apiinterface.class);
     }
+
+
+
+
 
 }

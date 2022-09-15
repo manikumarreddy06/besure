@@ -119,6 +119,13 @@
             android:name=".NomineeListActivity"
             android:exported="true" />
         <activity android:name=".WebViewActivity" />
+        <service
+            android:exported="true"
+            android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="com.razorpay.ApiKey"

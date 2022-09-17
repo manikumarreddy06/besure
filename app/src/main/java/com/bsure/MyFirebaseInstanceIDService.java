@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -54,6 +55,12 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
         }
 
         notificationManager.notify(NOTIFICATION_ID++,notificationBuilder.build());
+
+    }
+    @Override
+    public void onNewToken(String token) {
+        super.onNewToken(token);
+        Log.e("newToken", token);
     }
 
 }

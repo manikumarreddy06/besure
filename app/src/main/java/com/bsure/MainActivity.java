@@ -24,6 +24,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity  {
+    String devicetoken;
 
     String paidFlag=null;
     @Override
@@ -164,7 +165,9 @@ public class MainActivity extends AppCompatActivity  {
                         // Log and toast
 
                         Log.d("Token",token);
-                      /*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*/
+                        PreferenceManager mInstance = PreferenceManager.instance(getApplicationContext());
+                        devicetoken= mInstance.get(PreferenceManager.DEVICE_TOKEN,null);
+                        /*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*/
 
                     }
                 });

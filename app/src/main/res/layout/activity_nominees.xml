@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/sakkalmajalla"
+        android:fontFamily="@font/robotoregular"
         android:gravity="center"
         android:text="@string/nominee_details"
         android:textColor="@color/colorPrimary"
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginEnd="16dp"
         app:boxStrokeColor="@color/colorPrimary"
         app:hintTextColor="@color/colorPrimary"
@@ -34,7 +35,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_nomineename"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
@@ -42,6 +44,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginRight="@dimen/activity_vertical_margin"
         android:background="@drawable/shape_outline_rect_gray">
 
@@ -50,12 +53,14 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_toLeftOf="@+id/pbStatus"
+            android:fontFamily="@font/robotoregular"
             android:minHeight="38dp" />
 
         <ProgressBar
             android:id="@+id/pbStatus"
             style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/robotoregular"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -70,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginEnd="16dp"
         app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_nominee_s_mobile_number">
@@ -77,7 +83,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nomineePhoneNo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -86,6 +93,7 @@
         app:boxStrokeColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -96,6 +104,7 @@
             android:id="@+id/etNomAge"
             android:layout_width="match_parent"
             android:maxLength="3"
+            android:fontFamily="@font/robotoregular"
             android:inputType="number"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginEnd="16dp"
         android:visibility="gone"
         app:hintTextColor="@color/colorPrimary"
@@ -116,7 +126,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etGuardianName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -125,6 +136,7 @@
         app:boxStrokeColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -137,6 +149,7 @@
             android:layout_width="match_parent"
             android:maxLength="10"
             android:inputType="number"
+            android:fontFamily="@font/robotoregular"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -147,13 +160,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
         app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_nominee_s_mail_id">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_emailid"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -163,12 +178,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
         app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_nominee_s_address">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nomineeaddress"
             android:layout_width="match_parent"
+            android:fontFamily="@font/robotoregular"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -183,6 +200,7 @@
             android:layout_width="0dp"
             android:layout_weight="0.6"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
             style="@style/Description"
             android:paddingHorizontal="5dp"
             android:text="Attach an ID proof"/>
@@ -192,6 +210,7 @@
             android:layout_weight="0.40"
             android:layout_marginHorizontal="10dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
             android:text="Attach file"
             app:backgroundTint="@color/colorPrimary" />
     </LinearLayout>
@@ -202,6 +221,7 @@
         android:text="@string/preview"
         android:textSize="12sp"
         android:visibility="gone"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginHorizontal="25dp"
         android:gravity="right"/>
 <!--    <com.google.android.material.textfield.TextInputLayout-->
@@ -233,6 +253,7 @@
         android:foreground="?attr/selectableItemBackground"
         android:gravity="center"
         android:paddingTop="@dimen/btn_paddingTopBottom"
+        android:fontFamily="@font/robotoregular"
         android:paddingBottom="@dimen/btn_paddingTopBottom"
         android:text="@string/save_data"
         android:textColor="@android:color/white"

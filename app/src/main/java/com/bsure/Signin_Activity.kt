@@ -3,6 +3,7 @@ package com.bsure
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,8 @@ import com.bsure.TnC.TnC_Activity
 import com.bsure.models.BaseResponse
 import com.bsure.models.signup
 import com.bsure.retrofitUtil.RetrofitClient
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import kotlinx.android.synthetic.main.activity_signin.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -66,6 +69,7 @@ class Signin_Activity : AppCompatActivity() {
                     if (response.isSuccessful) {
                         enableOtpUI()
                         PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,response.body()!!.userId)
+
                     }
                 }
 
@@ -93,7 +97,10 @@ class Signin_Activity : AppCompatActivity() {
                             openMainActvity()
                             PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.LOGIN_STATUS,true)
                             val usernum = etmobile_signin.text.toString()
+
                             PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_MOBILE_NUMBER,usernum)
+
+
 
                         }
                         else{

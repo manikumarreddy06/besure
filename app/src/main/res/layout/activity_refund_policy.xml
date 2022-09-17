@@ -50,6 +50,7 @@
                 android:layout_marginVertical="10dp"
                 android:gravity="right"
                 android:text="Refund Policy"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -97,6 +98,7 @@
             android:layout_marginTop="5dp"
             android:gravity="center"
             android:text="Still stuck? Help is a mail away"
+            android:fontFamily="@font/robotoregular"
             android:textColor="@color/colorPrimary"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -107,6 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Send a message"
+            android:fontFamily="@font/robotoregular"
             app:backgroundTint="@color/colorPrimary" />
     </LinearLayout>
 

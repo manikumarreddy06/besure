@@ -62,7 +62,7 @@
                 <TextView
                     android:id="@+id/nm"
                     android:textSize="18sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_width="0dp"
                     android:layout_weight="0.40"
                     android:textColor="@color/primary_text_color"
@@ -72,7 +72,7 @@
                     android:id="@+id/userName"
                     android:layout_width="0dp"
                     android:textSize="16sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_weight="0.60"
                     android:textAlignment="textStart"
                     android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:textSize="18sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_width="0dp"
                     android:layout_weight="0.40"
                     android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                     android:id="@+id/userGender"
                     android:layout_width="0dp"
                     android:textSize="16sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_weight="0.60"
                     android:textAlignment="textStart"
                     android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:textSize="18sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_width="0dp"
                     android:layout_weight="0.40"
                     android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                     android:id="@+id/userWhatsappNo"
                     android:layout_width="0dp"
                     android:textSize="16sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_weight="0.60"
                     android:textAlignment="textStart"
                     android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:textSize="18sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_width="0dp"
                     android:layout_weight="0.40"
                     android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                     android:id="@+id/userSecondaryNo"
                     android:layout_width="0dp"
                     android:textSize="16sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_weight="0.60"
                     android:textAlignment="textStart"
                     android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:textSize="18sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_width="0dp"
                     android:layout_weight="0.40"
                     android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
                     android:id="@+id/userMailId"
                     android:layout_width="0dp"
                     android:textSize="16sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_weight="0.60"
                     android:textAlignment="textStart"
                     android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:textSize="18sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_width="0dp"
                     android:layout_weight="0.40"
                     android:textColor="@color/primary_text_color"
@@ -187,7 +187,7 @@
                     android:id="@+id/userAddress"
                     android:layout_width="0dp"
                     android:textSize="16sp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_weight="0.60"
                     android:textAlignment="textStart"
                     android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="5dp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:gravity="center_horizontal"
                     android:text="Edit Details"
                     android:textColor="@color/white"

@@ -54,6 +54,7 @@
             android:layout_marginVertical="15dp"
             android:textColor="@color/colorPrimary"
             android:padding="10dp"
+            android:fontFamily="@font/robotoregular"
             android:text="@string/change_number"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -77,6 +78,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/otpwithboxes"
                 android:gravity="center"
+                android:fontFamily="@font/robotoregular"
                 android:inputType="number"
                 android:maxLength="1"
                 android:textSize="30sp" />
@@ -87,6 +89,7 @@
                 android:layout_height="60dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/robotoregular"
                 android:background="@drawable/otpwithboxes"
                 android:gravity="center"
                 android:inputType="number"
@@ -102,6 +105,7 @@
                 android:background="@drawable/otpwithboxes"
                 android:gravity="center"
                 android:inputType="number"
+                android:fontFamily="@font/robotoregular"
                 android:maxLength="1"
                 android:textSize="30sp" />
 
@@ -113,6 +117,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/otpwithboxes"
                 android:gravity="center"
+                android:fontFamily="@font/robotoregular"
                 android:inputType="number"
                 android:maxLength="1"
                 android:textSize="30sp" />
@@ -124,6 +129,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/otpwithboxes"
                 android:gravity="center"
+                android:fontFamily="@font/robotoregular"
                 android:inputType="number"
                 android:maxLength="1"
                 android:textSize="30sp" />
@@ -162,16 +168,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/colorPrimary"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:text="Agree to "
                 android:textSize="14sp" />
             <TextView
                 android:id="@+id/terms"
-                android:fontFamily="@font/allerta"
                 android:layout_width="wrap_content"
                 android:text=" Terms and Conditions"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
+                android:fontFamily="@font/robotoregular"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
@@ -185,10 +191,10 @@
             android:background="@drawable/shape_button_rounded"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
+            android:fontFamily="@font/robotoregular"
             android:paddingVertical="@dimen/btn_paddingTopBottom"
             android:text="@string/sign_in"
             android:textColor="@android:color/white"
-            android:fontFamily="@font/allerta"
             android:textSize="@dimen/btn_text_size"
             app:backgroundTint="@color/colorPrimary" />
     </LinearLayout>
@@ -206,7 +212,7 @@
             android:layout_gravity="bottom"
             android:layout_marginHorizontal="35dp"
             android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/robotoregular"
             android:gravity="center"
             android:text="@string/forgot_password"
             android:textColor="@color/colorPrimary"
@@ -223,7 +229,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/robotoregular"
                 android:text="@string/don_t_have_an_account"
                 android:textAlignment="textEnd"
                 android:textColor="@color/dummy_color"
@@ -235,7 +241,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/robotoregular"
                 android:padding="6dp"
                 android:text="@string/register_here"
                 android:textAlignment="textStart"

@@ -24,6 +24,7 @@ public class PreferenceManager {
 
     public static final String USER_TOKEN="TOKEN";
 
+    public static final String DEVICE_TOKEN="DEVICE_TOKEN";
 
 
 

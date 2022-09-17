@@ -27,6 +27,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="right"
                     android:text="Privacy Policy"
+                    android:fontFamily="@font/robotoregular"
                     android:textColor="@color/colorPrimary"
                     android:textSize="30sp"
                     android:textStyle="bold" />

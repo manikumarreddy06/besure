@@ -81,7 +81,7 @@ public class EditProfileDetails extends AppCompatActivity {
         String address = etAddress.getText().toString().trim();
         if(userName.isEmpty()){etUsername.setError("Please enter User name"); etUsername.requestFocus(); return false;}
         if(email.isEmpty()){etEmail.setError("Please enter Email address"); etEmail.requestFocus(); return false;}
-        /*if(secondaryNo.isEmpty()){etSecondaryNo.setError("Please enter Phone no"); etSecondaryNo.requestFocus(); return false;}*/
+        if(secondaryNo.isEmpty()){etSecondaryNo.setError("Please enter Phone no"); etSecondaryNo.requestFocus(); return false;}
         if(whatsappNo.isEmpty()){etWhatsappNo.setError("Please enter Whatsapp no"); etWhatsappNo.requestFocus(); return false;}
         if(address.isEmpty()){etAddress.setError("Please enter Address"); etAddress.requestFocus(); return false;}
 

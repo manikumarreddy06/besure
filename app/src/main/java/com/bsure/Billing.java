@@ -319,8 +319,8 @@ public class Billing extends AppCompatActivity implements PaymentResultWithDataL
                     .setOrderId(orderID)
                     .build();
             CFPaymentComponent cfPaymentComponent = new CFPaymentComponent.CFPaymentComponentBuilder()
-                    .add(CFPaymentComponent.CFPaymentModes.CARD)
                     .add(CFPaymentComponent.CFPaymentModes.UPI)
+                    .add(CFPaymentComponent.CFPaymentModes.NB)
                     .build();
             CFTheme cfTheme = new CFTheme.CFThemeBuilder()
                     .setNavigationBarBackgroundColor("#006EE1")
@@ -333,7 +333,7 @@ public class Billing extends AppCompatActivity implements PaymentResultWithDataL
             CFDropCheckoutPayment cfDropCheckoutPayment = new CFDropCheckoutPayment.CFDropCheckoutPaymentBuilder()
                     .setSession(cfSession)
                     //By default all modes are enabled. If you want to restrict the payment modes uncomment the next line
-//                        .setCFUIPaymentModes(cfPaymentComponent)
+                        .setCFUIPaymentModes(cfPaymentComponent)
                     .setCFNativeCheckoutUITheme(cfTheme)
                     .build();
             CFPaymentGatewayService gatewayService = CFPaymentGatewayService.getInstance();

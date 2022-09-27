@@ -34,7 +34,7 @@
                 android:text="@string/it_s_empty_here_click_here_to_add"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/black"
                 android:layout_marginTop="20dp"
                 />
@@ -49,6 +49,7 @@
                 android:background="@drawable/shape_button_rounded"
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
+                android:fontFamily="@font/robotoregular"
                 android:paddingTop="@dimen/btn_paddingTopBottom"
                 android:paddingBottom="@dimen/btn_paddingTopBottom"
                 android:text="@string/add_details"
@@ -63,6 +64,7 @@
                 android:text="@string/don_t_add"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginTop="10dp"
                 />

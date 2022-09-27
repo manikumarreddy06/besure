@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/sakkalmajalla"
         android:gravity="center"
         android:text="@string/account_details"
+        android:fontFamily="@font/robotoregular"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:textSize="45sp" />
@@ -28,6 +28,7 @@
         android:layout_marginEnd="16dp"
         app:boxStrokeColor="@color/colorPrimary"
         app:hintTextColor="@color/colorPrimary"
+        android:fontFamily="@font/robotoregular"
         android:hint="@string/enter_bank_name">
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -41,6 +42,7 @@
         app:boxStrokeColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -64,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginEnd="16dp"
         app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_your_bank_ifsc_code_optional">
@@ -79,6 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         app:hintTextColor="@color/colorPrimary"
@@ -97,6 +101,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
         app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_bank_description">
         <!--this is the actual edit text which takes the input-->
@@ -114,6 +119,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         app:hintTextColor="@color/colorPrimary"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginEnd="16dp"
         android:hint="@string/add_bank_proof_optional"
         app:endIconCheckable="true"
@@ -134,6 +140,7 @@
         android:layout_gravity="center"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginEnd="30dp"
         android:background="@drawable/shape_button_rounded"
         android:foreground="?attr/selectableItemBackground"

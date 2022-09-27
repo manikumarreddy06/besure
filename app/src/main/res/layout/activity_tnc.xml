@@ -28,6 +28,7 @@
                 android:layout_gravity="bottom"
                 android:gravity="right"
                 android:text="Terms and Conditions"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold" />

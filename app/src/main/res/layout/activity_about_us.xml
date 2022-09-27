@@ -37,6 +37,7 @@
                     android:gravity="right"
                     android:text="About Us"
                     android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_marginBottom="20dp"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -82,6 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="5dp"
                         android:gravity="center"
+                        android:fontFamily="@font/robotoregular"
                         android:text="What we do ?"
                         android:textSize="20sp" />
 
@@ -111,6 +113,7 @@
                                 android:layout_marginVertical="3dp"
                                 android:text="Stores Asset Information"
                                 android:textSize="19sp"
+                                android:fontFamily="@font/robotoregular"
                                 android:textStyle="bold" />
 
                             <View
@@ -126,6 +129,7 @@
                                 android:layout_marginVertical="3dp"
                                 android:text="Stores asset details in encrypted format"
                                 android:textSize="16sp"
+                                android:fontFamily="@font/robotoregular"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -149,6 +153,7 @@
                                 android:layout_marginVertical="3dp"
                                 android:text="Shares information"
                                 android:textSize="19sp"
+                                android:fontFamily="@font/robotoregular"
                                 android:textStyle="bold" />
 
                             <View
@@ -164,6 +169,7 @@
                                 android:layout_marginVertical="3dp"
                                 android:text="Shares asset information with nominees in exigency"
                                 android:textSize="16sp"
+                                android:fontFamily="@font/robotoregular"
                                 android:textStyle="bold" />
                         </LinearLayout>
 
@@ -198,7 +204,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:fontFamily="@font/robotoregular"
                                 android:layout_marginVertical="3dp"
                                 android:text="Tracks well being"
                                 android:textSize="19sp"
@@ -209,6 +215,7 @@
                                 android:layout_height="8dp"
                                 android:layout_marginVertical="2dp"
                                 android:layout_marginEnd="40dp"
+                                android:fontFamily="@font/robotoregular"
                                 android:background="#2AA964" />
 
                             <TextView
@@ -217,6 +224,7 @@
                                 android:layout_marginVertical="3dp"
                                 android:text="Tracks your wellbeing time to time"
                                 android:textSize="16sp"
+                                android:fontFamily="@font/robotoregular"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -240,6 +248,7 @@
                                 android:layout_marginVertical="3dp"
                                 android:text="Helps in claim"
                                 android:textSize="19sp"
+                                android:fontFamily="@font/robotoregular"
                                 android:textStyle="bold" />
 
                             <View
@@ -247,6 +256,7 @@
                                 android:layout_height="8dp"
                                 android:layout_marginVertical="2dp"
                                 android:layout_marginEnd="40dp"
+                                android:fontFamily="@font/robotoregular"
                                 android:background="#FFE641" />
 
                             <TextView
@@ -255,6 +265,7 @@
                                 android:layout_marginVertical="3dp"
                                 android:text="Helps family in transferring the assets to their name"
                                 android:textSize="16sp"
+                                android:fontFamily="@font/robotoregular"
                                 android:textStyle="bold" />
                         </LinearLayout>
 
@@ -276,6 +287,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="10dp"
             android:gravity="center"
+            android:fontFamily="@font/robotoregular"
             android:text="Contact us"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
@@ -292,6 +304,7 @@
             android:layout_marginHorizontal="40dp"
             android:layout_marginVertical="15dp"
             app:cardCornerRadius="15dp"
+            android:fontFamily="@font/robotoregular"
             app:cardElevation="2dp"
             app:layout_constraintBottom_toTopOf="@+id/copyright"
             app:layout_constraintEnd_toEndOf="parent"
@@ -361,6 +374,7 @@
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="30dp"
             android:gravity="center"
+            android:fontFamily="@font/robotoregular"
             android:text="@string/copyright"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

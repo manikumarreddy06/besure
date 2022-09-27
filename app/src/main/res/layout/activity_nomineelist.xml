@@ -29,6 +29,7 @@
                 android:layout_gravity="bottom"
                 android:gravity="end"
                 android:text="Assets"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/colorPrimary"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -40,6 +41,7 @@
             android:layout_marginHorizontal="5dp"
             android:layout_weight="0.55"
             app:lottie_autoPlay="true"
+            android:fontFamily="@font/robotoregular"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/nominee_animation" />
     </LinearLayout>
@@ -59,6 +61,7 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/headAnimation"
         android:layout_centerInParent="true"
+        android:fontFamily="@font/robotoregular"
         android:visibility="gone"
         android:background="@drawable/white_border_shape_button_rounded">
         <LinearLayout
@@ -74,6 +77,7 @@
                 android:layout_height="250dp"
                 android:layout_gravity="center"
                 android:src="@drawable/find"
+                android:fontFamily="@font/robotoregular"
                 android:contentDescription="@string/finding_account" />
             <TextView
                 android:layout_width="wrap_content"
@@ -81,6 +85,7 @@
                 android:text="@string/it_s_empty_here_click_here_to_add"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/black"
                 android:layout_marginTop="20dp"
                 />
@@ -95,6 +100,7 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
                 android:paddingTop="@dimen/btn_paddingTopBottom"
+                android:fontFamily="@font/robotoregular"
                 android:paddingBottom="@dimen/btn_paddingTopBottom"
                 android:text="@string/add_details"
                 android:textColor="@android:color/white"
@@ -106,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/don_t_add"
                 android:textSize="20sp"
+                android:fontFamily="@font/robotoregular"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginTop="10dp" />
@@ -121,6 +128,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentRight="true"
         android:elevation="20dp"
+        android:fontFamily="@font/robotoregular"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="20dp">
 
@@ -134,6 +142,7 @@
             android:gravity="center_vertical"
             android:text="Add New"
             android:drawablePadding="5dp"
+            android:fontFamily="@font/robotoregular"
             android:textColor="@color/white"
             android:textSize="22sp"
             app:drawableLeftCompat="@drawable/ic_add_icon" />

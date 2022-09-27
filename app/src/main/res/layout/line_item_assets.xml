@@ -26,7 +26,7 @@
             android:orientation="horizontal">
             <TextView
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:id="@+id/bankname"
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:layout_weight="0.55"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             <TextView
                 android:id="@+id/bankAccNum"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:text="@string/account_number"
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
@@ -58,7 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.55"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
                 android:text="12xxxxxxxx"/>
@@ -73,14 +73,14 @@
                 android:text="@string/ifsc_code"
                 android:layout_width="0dp"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.55"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
                 android:text="ABCN0xxxx"/>
@@ -95,14 +95,14 @@
                 android:text="@string/branch_name"
                 android:layout_width="0dp"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="0.55"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
                 android:text="XYZ"/>
@@ -118,7 +118,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
                 android:textSize="15sp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -127,6 +127,7 @@
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
                 android:text="+Add Details"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/colorPrimary"
                 android:textSize="14sp"/>
         </LinearLayout>
@@ -143,6 +144,7 @@
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/robotoregular"
                 android:textColor="@color/colorPrimary"
                 style="?android:attr/buttonBarButtonStyle" />
             <Button
@@ -153,6 +155,7 @@
                 android:layout_weight="0.45"
                 android:textColor="@color/colorPrimary"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
                 android:layout_marginTop="10dp"
                 style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>

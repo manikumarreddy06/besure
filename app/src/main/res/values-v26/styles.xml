@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TnC_Description" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/robotoregular</item>
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginVertical">2dp</item>
+    </style>
+
+
+
+
+</resources>

@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/sakkalmajalla"
+            android:fontFamily="@font/robotoregular"
             android:gravity="center"
             android:text="@string/mutual_funds"
             android:textColor="@color/colorPrimary"
@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/robotoregular"
             android:layout_marginEnd="16dp"
             app:boxStrokeColor="@color/colorPrimary"
             app:hintTextColor="@color/colorPrimary"
@@ -52,6 +53,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
+            android:fontFamily="@font/robotoregular"
             app:hintTextColor="@color/colorPrimary"
             android:hint="@string/enter_your_folio_name_optional">
             <!--this is the actual edit text which takes the input-->
@@ -67,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:fontFamily="@font/robotoregular"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             app:hintTextColor="@color/colorPrimary"
@@ -85,6 +88,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
+            android:fontFamily="@font/robotoregular"
             app:hintTextColor="@color/colorPrimary"
             android:hint="@string/enter_your_fund_type_optional">
             <!--this is the actual edit text which takes the input-->
@@ -100,6 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
             android:layout_marginEnd="16dp"
             app:hintTextColor="@color/colorPrimary"
             android:hint="@string/enter_descripton_about_mutual_funds_optional">
@@ -117,6 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
             android:layout_marginEnd="16dp"
             android:hint="@string/add_any_attachment"
             app:endIconCheckable="true"
@@ -138,6 +144,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="30dp"
             android:layout_marginTop="40dp"
+            android:fontFamily="@font/robotoregular"
             android:layout_marginEnd="30dp"
             android:background="@drawable/shape_button_rounded"
             android:foreground="?attr/selectableItemBackground"

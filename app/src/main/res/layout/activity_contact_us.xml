@@ -23,6 +23,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:gravity="center"
+            android:fontFamily="@font/robotoregular"
             android:text="Get In Touch"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
@@ -35,6 +36,7 @@
             android:gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:fontFamily="@font/robotoregular"
             android:text="We are here for you! How can we help ?"
             android:textSize="15sp" />
 
@@ -52,12 +54,14 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginTop="8dp"
                 android:hint="Full Name"
+                android:fontFamily="@font/robotoregular"
                 app:boxStrokeColor="@color/colorPrimary"
                 app:hintTextColor="@color/colorPrimary">
                 <!--this is the actual edit text which takes the input-->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
+                    android:fontFamily="@font/robotoregular"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:fontFamily="@font/robotoregular"
                 android:layout_marginTop="5dp"
                 android:hint="Email ID"
                 app:boxStrokeColor="@color/colorPrimary"
@@ -75,7 +80,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_mailId"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotoregular"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -86,13 +92,15 @@
                 android:layout_marginHorizontal="5dp"
                 android:layout_marginVertical="5dp"
                 android:hint="Suggestions"
+                android:fontFamily="@font/robotoregular"
                 app:boxStrokeColor="@color/colorPrimary"
                 app:hintTextColor="@color/colorPrimary">
                 <!--this is the actual edit text which takes the input-->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_suggestion"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotoregular"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -113,6 +121,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
             android:gravity="center"
+            android:fontFamily="@font/robotoregular"
             android:text="Reach out to us at"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
@@ -129,8 +138,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="2dp"
                 android:drawablePadding="15dp"
-                android:fontFamily="@font/allerta"
                 android:gravity="center_vertical"
+                android:fontFamily="@font/robotoregular"
                 android:text="VRR Nest, Electronics City, Bangalore -560100"
                 android:textSize="15sp"
                 app:drawableLeftCompat="@drawable/ic_location" />
@@ -140,9 +149,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="2dp"
                 android:drawablePadding="15dp"
-                android:fontFamily="@font/allerta"
                 android:gravity="center_vertical"
                 android:text="+91  8861565525"
+                android:fontFamily="@font/robotoregular"
                 android:textSize="15sp"
                 app:drawableLeftCompat="@drawable/ic_contactus_dial" />
 
@@ -152,7 +161,7 @@
                 android:layout_gravity="center"
                 android:layout_marginVertical="2dp"
                 android:drawablePadding="15dp"
-                android:fontFamily="@font/allerta"
+                android:fontFamily="@font/robotoregular"
                 android:gravity="center_vertical"
                 android:text="care@bsure.live, \nsuggestions@bsure.live"
                 android:textSize="15sp"
@@ -167,6 +176,7 @@
             android:layout_marginVertical="15dp"
             android:background="@color/bg_primary"
             app:cardCornerRadius="20dp"
+            android:fontFamily="@font/robotoregular"
             app:cardElevation="2dp">
 
             <LinearLayout
@@ -234,6 +244,7 @@
             android:layout_marginHorizontal="15dp"
             android:layout_gravity="center"
             android:gravity="center"
+            android:fontFamily="@font/robotoregular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/copyright" />

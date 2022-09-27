@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Bsure"
+        android:fontFamily="@font/robotoregular"
         android:textSize="75sp"
         android:textColor="@color/white"
         android:gravity="center"/>

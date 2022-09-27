@@ -3,21 +3,28 @@ package com.bsure;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.bsure.models.UserProfileDataResponse;
 import com.bsure.retrofitUtil.RetrofitClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity  {
+    String devicetoken;
 
     String paidFlag=null;
     @Override
@@ -43,6 +50,7 @@ public class MainActivity extends AppCompatActivity  {
         CardView step2 = findViewById(R.id.step2);
         CardView step3 = findViewById(R.id.step3);
         CardView step4 = findViewById(R.id.step4);
+
 
 
 
@@ -139,5 +147,29 @@ public class MainActivity extends AppCompatActivity  {
                 //Toast.makeText(MainActivity.this, "Not getting response",Toast.LENGTH_LONG).show();
             }
         });
+
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            System.out.println( "Fetching FCM registration token failed");
+
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        String token = task.getResult();
+
+
+                        // Log and toast
+
+                        Log.d("Token",token);
+                        PreferenceManager mInstance = PreferenceManager.instance(getApplicationContext());
+                        devicetoken= mInstance.get(PreferenceManager.DEVICE_TOKEN,null);
+                        /*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*/
+
+                    }
+                });
     }
 }

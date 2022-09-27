@@ -15,6 +15,7 @@
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
                 android:text="@string/bank_name"
+                android:fontFamily="@font/robotoregular"
                 android:layout_marginLeft="@dimen/margin_8dp"
                 android:layout_marginTop="10dp" />
             <TextView
@@ -24,6 +25,7 @@
                 android:textAlignment="textStart"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/robotoregular"
                 android:text="State bank of India"/>
 
             <TextView
@@ -34,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:visibility="gone"
+                android:fontFamily="@font/robotoregular"
                 android:text="@string/preview"/>
         </LinearLayout>
 

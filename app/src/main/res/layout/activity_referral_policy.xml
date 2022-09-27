@@ -26,6 +26,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="center_vertical"
                 android:gravity="right"
+                android:fontFamily="@font/robotoregular"
                 android:text="Referral Policy"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
@@ -61,6 +62,7 @@
                 style="@style/subTitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
                 android:layout_marginVertical="5dp"
                 android:text="Refer an Insurance Agent: Name, Phone No, IRDA Number" />
             <TextView
@@ -68,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
+                android:fontFamily="@font/robotoregular"
                 android:text="₹100/Successful referral. Referral to be paid only after 5 successful conversion of
     agent" />
 
@@ -76,6 +79,7 @@
                 style="@style/subTitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
                 android:text="Refer a customer: ₹25/successful referral for yearly plan; ₹100/successful referral for lifetime
     plan" />
 
@@ -83,12 +87,14 @@
                 style="@style/TnC_TitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
                 android:text="Referral policy for insurance agents:"/>
 
             <TextView
                 style="@style/subTitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
                 android:text="Yearly Plan: ₹40 for first year/successful referral; ₹20/year for next 4
     years" />
 
@@ -96,6 +102,7 @@
                 style="@style/subTitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
                 android:text="Life time plan: 10% of paid amount (₹ 270/successful referral)" />
 
         </LinearLayout>

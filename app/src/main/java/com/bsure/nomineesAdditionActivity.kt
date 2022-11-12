@@ -212,6 +212,7 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
                 android.R.layout.simple_spinner_dropdown_item,
                 outlet
             )
+            adapter.setDropDownViewResource(R.layout.spinner_list)
             spStatus.adapter = adapter
             Utils.Companion.setHeightForSpinner(spStatus, outlet)
             spStatus.onItemSelectedListener = this

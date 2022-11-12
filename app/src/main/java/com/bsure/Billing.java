@@ -362,7 +362,7 @@ public class Billing extends AppCompatActivity implements PaymentResultWithDataL
 
         PaymentRequestCF paymentRequestCF=new PaymentRequestCF();
         paymentRequestCF.setCustomerId(PreferenceManager.instance(this).get(PreferenceManager.USER_ID,null));
-        paymentRequestCF.setOrderAmount(planPrice);
+        paymentRequestCF.setOrderAmount(totalAmount);
         paymentRequestCF.setCustomerPhone(PreferenceManager.instance(this).get(PreferenceManager.USER_MOBILE_NUMBER,null));
 
         Call<PaymentResponseBeanCF> call=RetrofitClient.getInstance().apiinterface().getPaymentDetailsForCF(paymentRequestCF);

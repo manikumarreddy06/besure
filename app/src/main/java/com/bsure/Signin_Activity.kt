@@ -1,25 +1,34 @@
 package com.bsure
 
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import com.bsure.TnC.TnC_Activity
 import com.bsure.models.BaseResponse
 import com.bsure.models.signup
 import com.bsure.retrofitUtil.RetrofitClient
+import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import kotlinx.android.synthetic.main.activity_signin.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 class Signin_Activity : AppCompatActivity() {
 
+
+
+    private val REQ_USER_CONSENT = 200
+    var smsBroadcastReceiver: SmsBroadcastReceiver? = null
     var verifyOtpFlag:Boolean=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -169,6 +178,75 @@ class Signin_Activity : AppCompatActivity() {
     fun enableSignInButton(){
         btn_sign_in.isEnabled=true
         btn_sign_in.alpha=1f
+    }
+
+
+    private fun startSmsUserConsent() {
+        val client = SmsRetriever.getClient(this)
+        //We can add sender phone number or leave it blank
+        // I'm adding null here
+        client.startSmsUserConsent(null).addOnSuccessListener {
+
+        }.addOnFailureListener {
+            //Toast.makeText(applicationContext, "On OnFailure", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun registerBroadcastReceiver() {
+        smsBroadcastReceiver = SmsBroadcastReceiver()
+        smsBroadcastReceiver!!.smsBroadcastReceiverListener = object :
+            SmsBroadcastReceiver.SmsBroadcastReceiverListener {
+            override fun onSuccess(intent: Intent) {
+                startActivityForResult(intent, REQ_USER_CONSENT)
+            }
+
+            override fun onFailure() {}
+        }
+        val intentFilter = IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION)
+        registerReceiver(smsBroadcastReceiver, intentFilter)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        registerBroadcastReceiver()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(smsBroadcastReceiver)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, @Nullable data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQ_USER_CONSENT) {
+            if (resultCode == RESULT_OK && data != null) {
+                //That gives all message to us.
+                // We need to get the code from inside with regex
+                val message = data.getStringExtra(SmsRetriever.EXTRA_SMS_MESSAGE)
+                if (message != null) {
+                    getOtpFromMessage(message)
+                }
+            }
+        }
+    }
+    private fun getOtpFromMessage(message: String) {
+        // This will match any 6 digit number in the message
+        val pattern: Pattern = Pattern.compile("(|^)\\d{5}")
+        val matcher: Matcher = pattern.matcher(message)
+        if (matcher.find()) {
+            // otpText.setText(matcher.group(0))
+            var otp=matcher.group(0)
+
+            if(otp!=null &&otp.length==6)
+                otp_edit_box1.setText(""+otp.get(0))
+            otp_edit_box2.setText(""+otp.get(1))
+            otp_edit_box3.setText(""+otp.get(2))
+            otp_edit_box4.setText(""+otp.get(3))
+            otp_edit_box5.setText(""+otp.get(4))
+
+
+
+        }
     }
 
 

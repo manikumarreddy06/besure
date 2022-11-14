@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fontFamily="@font/robotoregular"
     tools:context=".nomineesAdditionActivity">
 
     <TextView
@@ -48,20 +49,22 @@
         android:layout_marginRight="@dimen/activity_vertical_margin"
         android:background="@drawable/shape_outline_rect_gray">
 
-        <Spinner
+        <com.bsure.models.CustomSpinner
             android:id="@+id/spStatus"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_toLeftOf="@+id/pbStatus"
+            android:background="@drawable/bg_spinner_relations"
+            android:minHeight="38dp"
             android:fontFamily="@font/robotoregular"
-            android:minHeight="38dp" />
+            />
 
         <ProgressBar
             android:id="@+id/pbStatus"
             style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
             android:layout_width="wrap_content"
-            android:fontFamily="@font/robotoregular"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:visibility="gone" />

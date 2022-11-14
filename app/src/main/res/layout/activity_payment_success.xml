@@ -44,19 +44,19 @@
         android:layout_marginLeft="80dp"
         android:textSize="30dp"
         />
+
     <TextView
         android:id="@+id/textview_nudge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/payment_succ"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="80dp"
+        android:fontFamily="@font/robotoregular"
         android:text="@string/your_nudge_plan_is_activated_successfully"
         android:textColor="#25E185"
-        android:layout_below="@id/payment_succ"
-        android:fontFamily="@font/robotoregular"
-        android:layout_gravity="center_vertical"
-        android:visibility="invisible"
-        android:layout_marginLeft="80dp"
         android:textSize="30dp"
-        />
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/btn_done"
@@ -64,8 +64,8 @@
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/teal_700"
-        android:text="Done"
         android:fontFamily="@font/robotoregular"
+        android:text="Done"
         android:textAlignment="center"
         android:textSize="20dp" />
 

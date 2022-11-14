@@ -15,7 +15,7 @@ import androidx.core.app.NotificationManagerCompat;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
-public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
+public class  MyFirebaseInstanceIDService extends FirebaseMessagingService {
 
     public static int NOTIFICATION_ID = 1;
 
@@ -61,6 +61,7 @@ public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
     public void onNewToken(String token) {
         super.onNewToken(token);
         Log.e("newToken", token);
+      String devicetoken=PreferenceManager.instance(this).get(PreferenceManager.DEVICE_TOKEN,"null");
     }
 
 }

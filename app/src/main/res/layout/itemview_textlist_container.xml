@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:layout_marginTop="4dp"
+    android:fontFamily="@font/robotoregular"
     android:orientation="vertical">
 
 
@@ -15,6 +16,7 @@
         android:background="#aaBEBEBE"
         android:textColor="@color/black"
         android:gravity="center_vertical"
+        android:fontFamily="@font/robotoregular"
         android:padding="8dp"
         android:textSize="16sp"
         android:visibility="gone"
@@ -25,6 +27,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
         android:orientation="vertical"/>
 
 
@@ -34,6 +37,7 @@
         android:id="@+id/rvTextBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
         android:nestedScrollingEnabled="false"
         android:visibility="gone"/>
 

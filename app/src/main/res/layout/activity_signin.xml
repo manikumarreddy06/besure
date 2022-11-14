@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:orientation="vertical"
+        android:fontFamily="@font/robotoregular"
         android:padding="@dimen/card_view_layout_content_padding">
 
         <ImageView
@@ -32,6 +33,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_mobile_number"
             android:textSize="16sp"
+            android:fontFamily="@font/robotoregular"
             android:layout_marginHorizontal="10dp"
             app:boxStrokeColor="@color/colorPrimary"
             app:boxStrokeErrorColor="@color/error_color"
@@ -43,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:fontFamily="@font/robotoregular"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -191,8 +194,8 @@
             android:background="@drawable/shape_button_rounded"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:fontFamily="@font/robotoregular"
             android:paddingVertical="@dimen/btn_paddingTopBottom"
+            android:fontFamily="@font/robotoregular"
             android:text="@string/sign_in"
             android:textColor="@android:color/white"
             android:textSize="@dimen/btn_text_size"

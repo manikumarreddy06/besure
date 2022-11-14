@@ -6,6 +6,19 @@ public class signup implements Serializable {
     private String mobileNumber;
     private String otp;
     private String userId;
+    private String usmToken;
+
+
+    public String getUsmToken() {
+        return usmToken;
+    }
+
+    public void setUsmToken(String usmToken) {
+        this.usmToken = usmToken;
+    }
+
+
+
 
     private final static long serialVersionUID = 4516047969515212918L;
 

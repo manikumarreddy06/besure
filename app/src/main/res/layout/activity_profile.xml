@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="3dp"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/robotoregular"
                     android:gravity="center_vertical"
                     android:text="@string/edit_profile"
                     android:textColor="@color/white"

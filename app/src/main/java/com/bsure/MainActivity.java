@@ -1,6 +1,7 @@
 package com.bsure;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onResume() {
         super.onResume();
 
-        getUserProfileData();
+
 
     }
 
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+
+
         llassets.setOnClickListener(view -> {
             Intent i=new Intent(MainActivity.this, Asset_Categories_Activity.class);
             startActivity(i);
@@ -72,8 +75,10 @@ public class MainActivity extends AppCompatActivity  {
                 Intent i = new Intent(MainActivity.this, NudgeActivity.class);
                 startActivity(i);
             }
-            //Utils.Companion.toast("coming soon",this);
+
+            //Utils.Companion.toast("coming soon",this);//
         });
+
         lldistribution.setOnClickListener(view -> {
 //            Intent i=new Intent(MainActivity.this,AssetDistribution.class);
 //            startActivity(i);
@@ -96,7 +101,6 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         step4.setOnClickListener(view -> {
-
             if(!TextUtils.isEmpty(paidFlag) && paidFlag.equalsIgnoreCase("true")){
                 Intent i = new Intent(MainActivity.this, Nudgesuccess_Activity.class);
                 startActivity(i);
@@ -105,6 +109,7 @@ public class MainActivity extends AppCompatActivity  {
                 Intent i = new Intent(MainActivity.this, NudgeActivity.class);
                 startActivity(i);
             }
+
         });
 
 
@@ -135,11 +140,12 @@ public class MainActivity extends AppCompatActivity  {
                     //Utils.Companion.toast("failed to update user data",MainActivity.this);
                 }
                 if (response.body().getIsvalid()) {
-                    if(!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
-                        paidFlag=bean.getUserDataResponses().getPaidFlag();
+                    if (!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
+                        paidFlag = bean.getUserDataResponses().getPaidFlag();
                         PreferenceManager.instance(MainActivity.this).set(PreferenceManager.PLAN_PAID_FLAG, bean.getUserDataResponses().getPaidFlag());
                         PreferenceManager.instance(MainActivity.this).set(PreferenceManager.PLAN_DETAILS, bean.getUserDataResponses().getPlanDetails());
                     }
+
                 }
             }
             @Override
@@ -148,7 +154,12 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
-        FirebaseMessaging.getInstance().getToken()
+    }
+
+
+
+
+     /* FirebaseMessaging.getInstance().getToken()
                 .addOnCompleteListener(new OnCompleteListener<String>() {
                     @Override
                     public void onComplete(@NonNull Task<String> task) {
@@ -167,9 +178,8 @@ public class MainActivity extends AppCompatActivity  {
                         Log.d("Token",token);
                         PreferenceManager mInstance = PreferenceManager.instance(getApplicationContext());
                         devicetoken= mInstance.get(PreferenceManager.DEVICE_TOKEN,null);
-                        /*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*/
+                        *//*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*//*
 
                     }
-                });
-    }
+                });*/
 }

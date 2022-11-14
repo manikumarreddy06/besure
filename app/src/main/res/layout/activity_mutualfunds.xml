@@ -2,6 +2,7 @@
 <ScrollView xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:fontFamily="@font/robotoregular"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Mutualfunds_Activity">
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:fontFamily="@font/robotoregular"
         tools:context=".Signin_Activity">
 
         <TextView

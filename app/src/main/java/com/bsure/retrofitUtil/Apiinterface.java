@@ -16,6 +16,7 @@ import com.bsure.models.UserAsset;
 import com.bsure.models.UserAssetResponseBean;
 import com.bsure.models.UserProfileDataResponse;
 import com.bsure.models.signup;
+import com.bsure.models.signupupdate;
 import com.bsure.models.userdiscountrequest;
 import com.bsure.models.userdiscountresponsebean;
 
@@ -27,10 +28,6 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface Apiinterface {
-
-
-
-
 
      @POST("v1/signup")
      Call<signup>usersignin(@Body signup data );
@@ -58,11 +55,14 @@ public interface Apiinterface {
     @GET("v1/getAssetConfig/{id}")
     Call<AssetsConfigResponse>getAssestsConfigurations(@Path("id") String id);
 
+
     @POST("v1/user/saveAssetInfo")
     Call<BaseResponse>saveAssetData(@Body SaveAssetRequest request);
 
+
     @POST("v1/getAssets")
     Call<UserAssetResponseBean>getUserLevelAssetsByCategory(@Body UserAsset request);
+
 
     @POST("v1/getPlanDetails")
     Call<PlanDetailsResponseBean>getPlanDetails();
@@ -79,13 +79,14 @@ public interface Apiinterface {
     @POST("v1/redeem/code")
     Call<userdiscountresponsebean>userdiscount(@Body userdiscountrequest discountrequest);
 
-
     @POST("payment/paymentCF")
     Call<PaymentResponseBeanCF>getPaymentDetailsForCF(@Body PaymentRequestCF request);
 
-
     @POST("v1/user/update")
     Call<BaseResponse>updateUserInfo(@Body userdiscountrequest discountrequest);
+
+    @POST("v1/token/update")
+    Call<signupupdate>updatesignup(@Body signupupdate signupupdate);
 
 
 

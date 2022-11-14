@@ -30,6 +30,7 @@
             android:text="Delete"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="30dp"
             android:layout_gravity="end"
@@ -47,6 +48,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
                 android:layout_marginTop="10dp"
                 style="?android:attr/buttonBarButtonStyle" />
             <Button
@@ -55,6 +57,7 @@
                 android:paddingHorizontal="20dp"
                 android:layout_width="0dp"
                 android:layout_weight="0.45"
+                android:fontFamily="@font/robotoregular"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 style="?android:attr/buttonBarButtonStyle" />

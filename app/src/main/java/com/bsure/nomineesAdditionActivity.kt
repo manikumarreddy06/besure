@@ -1,32 +1,30 @@
 package com.bsure
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.TextView
-import android.widget.Toast
+import android.view.ViewGroup
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.bsure.dialog.ImageViewDialog
-import com.bsure.models.BaseResponse
-import com.bsure.models.NomineeRequest
-import com.bsure.models.RelationResponseBean
-import com.bsure.models.RelationsResponse
+import com.bsure.models.*
 import com.bsure.retrofitUtil.RetrofitClient
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.google.firebase.storage.UploadTask
 import kotlinx.android.synthetic.main.activity_nominees.*
+import kotlinx.android.synthetic.main.activity_nominees.spStatus
+import kotlinx.android.synthetic.main.itemview_dropdown.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+
+class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener ,CustomSpinner.OnSpinnerEventsListener{
     var data:RelationResponseBean?=null
     lateinit var relationList:List<RelationsResponse>
     var selectedPosition:Int=-1
@@ -35,10 +33,13 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
     lateinit var mStorage: StorageReference
 
     var attachmentUrl: String?=null
+    lateinit var spinner: CustomSpinner;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nominees)
+        spinner=findViewById(R.id.spStatus)
+
 
         mStorage = FirebaseStorage.getInstance().getReference("Nominee ID Proofs")
 
@@ -49,6 +50,7 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
             startActivityForResult(Intent.createChooser(intent, "Select PDF"),PDF)
 
         })
+
 
         getNomineeRelations()
         btn_nomineesavedata.setOnClickListener(){
@@ -251,4 +253,14 @@ class nomineesAdditionActivity : AppCompatActivity(), AdapterView.OnItemSelected
     override fun onNothingSelected(parent: AdapterView<*>?) {
         TODO("Not yet implemented")
     }
+
+    override fun onPopupWindowOpened(spinner: Spinner?) {
+        spinner?.setBackground(resources.getDrawable(R.drawable.bg_spinner_relations_up))
+    }
+
+    override fun onPopupWindowClosed(spinner: Spinner?) {
+        spinner?.setBackground(resources.getDrawable(R.drawable.bg_spinner_relations))
+    }
+
+
 }

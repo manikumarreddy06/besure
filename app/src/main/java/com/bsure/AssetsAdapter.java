@@ -1,8 +1,10 @@
 package com.bsure;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bsure.dialog.ImageViewDialog;
@@ -52,6 +55,8 @@ public class AssetsAdapter extends RecyclerView.Adapter<AssetsAdapter.ViewHolder
             TextView previewTxt = (TextView) newView.findViewById(R.id.previewTxt);
             titleText.setText(data.getLabel());
             valueTxt.setText(data.getValue());
+
+
 
             if(!TextUtils.isEmpty(data.getType()) && data.getType().equalsIgnoreCase("IMAGE")){
                 previewTxt.setVisibility(View.VISIBLE);

@@ -28,6 +28,9 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/Livwell/app/src/main/res/layout/activity_usernominees_will.xml" value="0.25" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/Livwell/app/src/main/res/layout/bankslayout_one_item.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/Livwell/app/src/main/res/menu/mutualfunds_appbar.xml" value="0.22760416666666666" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/drawable/bg_spinner_relations.xml" value="0.162" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/drawable/bg_spinner_relations_up.xml" value="0.162" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/drawable/blue_ouytline.xml" value="0.162" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/drawable/card_edge.xml" value="0.1715" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/drawable/done_2_img.xml" value="0.139" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/drawable/done_img.xml" value="0.139" />
@@ -43,7 +46,7 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_about_us.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_asset_categories.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_asset_distribution.xml" value="0.22708333333333333" />
-        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_bankaccounts.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_bankaccounts.xml" value="0.136" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_billing.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_contact_us.xml" value="0.22708333333333333" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_display_relation_responses.xml" value="0.15520833333333334" />
@@ -68,6 +71,7 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_signin.xml" value="0.2" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_splashscreen.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_stocks.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_tnc.xml" value="0.264" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_update_user_account.xml" value="0.22708333333333333" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/activity_user_profile.xml" value="0.23229166666666667" />
@@ -88,6 +92,7 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/nominee_line_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/relations_item.xml" value="0.234375" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/webview.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/mani4/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.25" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/ic_add_icon_ColPrimary.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/ic_exclaimation.xml" value="0.1" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.187" />

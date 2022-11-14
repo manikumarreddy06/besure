@@ -10,6 +10,7 @@
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_vertical_margin"
     android:paddingTop="@dimen/margin_8dp"
+    android:fontFamily="@font/robotoregular"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
     android:paddingRight="@dimen/activity_vertical_margin"
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
+        android:fontFamily="@font/robotoregular"
         android:textSize="14sp"
         android:textStyle="bold"
         android:visibility="gone"
@@ -64,13 +66,13 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
         app:boxStrokeColor="@color/colorPrimary"
         app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_bank_name">
@@ -82,13 +84,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/verify_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
         app:boxStrokeColor="@color/colorPrimary"
         app:hintTextColor="@color/colorPrimary"
         android:hint="@string/enter_bank_name">
@@ -105,13 +107,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/robotoregular"
         android:layout_marginEnd="16dp"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="14sp"
         android:textStyle="bold"
         android:visibility="gone"
         android:text="both text are not same" />
-
 
 
 </LinearLayout>

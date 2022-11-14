@@ -77,6 +77,7 @@ class NomineeListActivity : AppCompatActivity() {
             val adapter = NomineesAdapter(this, categorysReponse)
             recyclerView.layoutManager = LinearLayoutManager(this)
             recyclerView.adapter = adapter
+
         }
         else{
             noDataVisible()

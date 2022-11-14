@@ -1,7 +1,6 @@
 package com.bsure;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,8 +31,6 @@ public class MainActivity extends AppCompatActivity  {
     protected void onResume() {
         super.onResume();
 
-
-
     }
 
     @Override
@@ -55,8 +52,6 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-
-
         llassets.setOnClickListener(view -> {
             Intent i=new Intent(MainActivity.this, Asset_Categories_Activity.class);
             startActivity(i);
@@ -66,19 +61,8 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         llnudge.setOnClickListener(view -> {
-
-            if(!TextUtils.isEmpty(paidFlag) && paidFlag.equalsIgnoreCase("true")){
-                Intent i = new Intent(MainActivity.this, Nudgesuccess_Activity.class);
-                startActivity(i);
-            }
-            else {
-                Intent i = new Intent(MainActivity.this, NudgeActivity.class);
-                startActivity(i);
-            }
-
-            //Utils.Companion.toast("coming soon",this);//
+            getUserProfileData();
         });
-
         lldistribution.setOnClickListener(view -> {
 //            Intent i=new Intent(MainActivity.this,AssetDistribution.class);
 //            startActivity(i);
@@ -101,14 +85,9 @@ public class MainActivity extends AppCompatActivity  {
             startActivity(i);
         });
         step4.setOnClickListener(view -> {
-            if(!TextUtils.isEmpty(paidFlag) && paidFlag.equalsIgnoreCase("true")){
-                Intent i = new Intent(MainActivity.this, Nudgesuccess_Activity.class);
-                startActivity(i);
-            }
-            else {
-                Intent i = new Intent(MainActivity.this, NudgeActivity.class);
-                startActivity(i);
-            }
+
+
+            getUserProfileData();
 
         });
 
@@ -128,6 +107,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private void getUserProfileData() {
         // Retrofit
+        Utils.Companion.showDialog(this,"loading");
         PreferenceManager mInstance = PreferenceManager.instance(this);
         String userId= mInstance.get(PreferenceManager.USER_ID,null);
         Call<UserProfileDataResponse> userProfileDataResponsebeanCall = RetrofitClient.getInstance().apiinterface().getUserProfileData(userId);
@@ -135,31 +115,36 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onResponse(Call<UserProfileDataResponse> call, Response<UserProfileDataResponse> response) {
                 // Checking for the Response
+                Utils.Companion.hideDialog();
                 UserProfileDataResponse bean=response.body();
                 if (!(response.body().getIsvalid())) {
                     //Utils.Companion.toast("failed to update user data",MainActivity.this);
                 }
                 if (response.body().getIsvalid()) {
-                    if (!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
-                        paidFlag = bean.getUserDataResponses().getPaidFlag();
+                    if(!TextUtils.isEmpty(bean.getUserDataResponses().getPlanDetails())) {
+                        paidFlag=bean.getUserDataResponses().getPaidFlag();
                         PreferenceManager.instance(MainActivity.this).set(PreferenceManager.PLAN_PAID_FLAG, bean.getUserDataResponses().getPaidFlag());
                         PreferenceManager.instance(MainActivity.this).set(PreferenceManager.PLAN_DETAILS, bean.getUserDataResponses().getPlanDetails());
-                    }
 
+                        if(!TextUtils.isEmpty(paidFlag) && paidFlag.equalsIgnoreCase("true")){
+                            Intent i = new Intent(MainActivity.this, Nudgesuccess_Activity.class);
+                            startActivity(i);
+                        }
+                        else {
+                            Intent i = new Intent(MainActivity.this, NudgeActivity.class);
+                            startActivity(i);
+                        }
+                    }
                 }
             }
             @Override
             public void onFailure(Call<UserProfileDataResponse> call, Throwable t) {
                 //Toast.makeText(MainActivity.this, "Not getting response",Toast.LENGTH_LONG).show();
+                Utils.Companion.hideDialog();
             }
         });
 
-    }
-
-
-
-
-     /* FirebaseMessaging.getInstance().getToken()
+        FirebaseMessaging.getInstance().getToken()
                 .addOnCompleteListener(new OnCompleteListener<String>() {
                     @Override
                     public void onComplete(@NonNull Task<String> task) {
@@ -178,8 +163,9 @@ public class MainActivity extends AppCompatActivity  {
                         Log.d("Token",token);
                         PreferenceManager mInstance = PreferenceManager.instance(getApplicationContext());
                         devicetoken= mInstance.get(PreferenceManager.DEVICE_TOKEN,null);
-                        *//*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*//*
+                        /*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*/
 
                     }
-                });*/
+                });
+    }
 }

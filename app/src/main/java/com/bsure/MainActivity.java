@@ -144,28 +144,8 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            System.out.println( "Fetching FCM registration token failed");
-
-                            return;
-                        }
-
-                        // Get new FCM registration token
-                        String token = task.getResult();
 
 
-                        // Log and toast
 
-                        Log.d("Token",token);
-                        PreferenceManager mInstance = PreferenceManager.instance(getApplicationContext());
-                        devicetoken= mInstance.get(PreferenceManager.DEVICE_TOKEN,null);
-                        /*  Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();*/
-
-                    }
-                });
     }
 }

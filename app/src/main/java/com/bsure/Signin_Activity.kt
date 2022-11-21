@@ -12,10 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bsure.TnC.TnC_Activity
 import com.bsure.models.BaseResponse
 import com.bsure.models.signup
+import com.bsure.models.signupupdate
 import com.bsure.retrofitUtil.RetrofitClient
 import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_signin.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -137,6 +138,31 @@ class Signin_Activity : AppCompatActivity() {
         }
     }
 
+
+    fun updateusertoken(){
+        val obj1=signupupdate()
+        val call =RetrofitClient.getInstance().apiinterface().updatesignup(obj1)
+        call.enqueue(object :Callback<signupupdate?>{
+            override fun onResponse(call: Call<signupupdate?>, response: Response<signupupdate?>) {
+               if (response.isSuccessful){
+                   obj1.userId= PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,null)
+                       .toString()
+
+
+               }
+            }
+
+            override fun onFailure(call: Call<signupupdate?>, t: Throwable) {
+                Toast.makeText(this@Signin_Activity,"failed",Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+
+    }
+
+
+
     fun openMainActvity(){
         val intent = Intent(this@Signin_Activity, MainActivity::class.java)
         startActivity(intent)
@@ -247,6 +273,22 @@ class Signin_Activity : AppCompatActivity() {
 
 
         }
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    println("Fetching FCM registration token failed")
+                    return@OnCompleteListener
+                }
+
+                // Get new FCM registration token
+                val token = task.result
+
+
+                // Log and toast
+                Log.d("Token", token!!)
+
+
+            })
     }
 
 

@@ -83,7 +83,7 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/image_dialog.xml" value="0.22708333333333333" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/item_asset_details.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/itemview_atachment.xml" value="0.15520833333333334" />
-        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/itemview_dropdown.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/itemview_dropdown.xml" value="0.264" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/itemview_textbox.xml" value="0.22708333333333333" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/itemview_textlist_container.xml" value="0.22708333333333333" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/layout_custom_toastview.xml" value="0.22708333333333333" />
@@ -91,6 +91,7 @@
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/line_item_assets.xml" value="0.22708333333333333" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/nominee_line_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/relations_item.xml" value="0.234375" />
+        <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/spinner_list.xml" value="0.25" />
         <entry key="..\:/Users/mani4/AndroidStudioProjects/besure/app/src/main/res/layout/webview.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/mani4/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.25" />
         <entry key="..\:/Users/sambi/Desktop/besure/app/src/main/res/drawable-v24/ic_add_icon_ColPrimary.xml" value="0.1" />

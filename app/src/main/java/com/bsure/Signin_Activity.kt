@@ -63,6 +63,8 @@ class Signin_Activity : AppCompatActivity() {
             startActivity(i)
         }
 
+        startSmsUserConsent();
+
     }
 
     fun signinAPICall() {
@@ -263,12 +265,13 @@ class Signin_Activity : AppCompatActivity() {
             // otpText.setText(matcher.group(0))
             var otp=matcher.group(0)
 
-            if(otp!=null &&otp.length==6)
-                otp_edit_box1.setText(""+otp.get(0))
-            otp_edit_box2.setText(""+otp.get(1))
-            otp_edit_box3.setText(""+otp.get(2))
-            otp_edit_box4.setText(""+otp.get(3))
-            otp_edit_box5.setText(""+otp.get(4))
+            if(otp!=null &&otp.length==5) {
+                otp_edit_box1.setText("" + otp.get(0))
+                otp_edit_box2.setText("" + otp.get(1))
+                otp_edit_box3.setText("" + otp.get(2))
+                otp_edit_box4.setText("" + otp.get(3))
+                otp_edit_box5.setText("" + otp.get(4))
+            }
 
 
 

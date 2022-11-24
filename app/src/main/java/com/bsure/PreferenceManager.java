@@ -101,4 +101,5 @@ public class PreferenceManager {
         mPreference.edit().clear().apply();
     }
 
+
 }

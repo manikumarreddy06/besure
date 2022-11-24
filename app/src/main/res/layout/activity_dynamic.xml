@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:fitsSystemWindows="true">
-
 
 
     <ScrollView
@@ -15,6 +15,7 @@
         android:layout_marginBottom="40dp"
         android:animateLayoutChanges="true"
         android:background="@color/white"
+        android:backgroundTint="@color/white"
         android:paddingTop="8dp">
 
 
@@ -42,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="80dp"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical" />
             </androidx.cardview.widget.CardView>
 
 

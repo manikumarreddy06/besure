@@ -75,12 +75,14 @@ class Signin_Activity : AppCompatActivity() {
         } else {
             val obj = signup()
             obj.mobileNumber = usernum
+            obj.usmToken= PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.DEVICE_TOKEN,null).toString()
             val call = RetrofitClient.getInstance().apiinterface().usersignin(obj)
             call.enqueue(object : Callback<signup?> {
                 override fun onResponse(call: Call<signup?>, response: Response<signup?>) {
                     if (response.isSuccessful) {
                         enableOtpUI()
                         PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,response.body()!!.userId)
+
 
                     }
                 }
@@ -140,31 +142,28 @@ class Signin_Activity : AppCompatActivity() {
         }
     }
 
-
-    fun updateusertoken(){
-        val obj1=signupupdate()
-        val call =RetrofitClient.getInstance().apiinterface().updatesignup(obj1)
+     fun updateusertoken() {
+        val obj1 = signupupdate()
+        PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.DEVICE_TOKEN, null).toString()
+        val call = RetrofitClient.getInstance().apiinterface().updatesignup(obj1)
         call.enqueue(object :Callback<signupupdate?>{
-            override fun onResponse(call: Call<signupupdate?>, response: Response<signupupdate?>) {
-               if (response.isSuccessful){
-                   obj1.userId= PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,null)
-                       .toString()
+            override fun onResponse(call:Call<signupupdate?>,response:
+            Response<signupupdate?>){
+                if (response.isSuccessful) {
+                    Toast.makeText(this@Signin_Activity,"successful", Toast.LENGTH_SHORT).show()
+                    obj1.userId =
+                        PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,response.body()!!.userId)
+                            .toString()
 
-
-               }
+                }
             }
-
-            override fun onFailure(call: Call<signupupdate?>, t: Throwable) {
-                Toast.makeText(this@Signin_Activity,"failed",Toast.LENGTH_SHORT).show()
+            override fun onFailure(call:Call<signupupdate?>,t:
+            Throwable){
+                Toast.makeText(this@Signin_Activity,"failed", Toast.LENGTH_SHORT).show()
             }
 
         })
-
-
     }
-
-
-
     fun openMainActvity(){
         val intent = Intent(this@Signin_Activity, MainActivity::class.java)
         startActivity(intent)
@@ -289,6 +288,10 @@ class Signin_Activity : AppCompatActivity() {
 
                 // Log and toast
                 Log.d("Token", token!!)
+                updateusertoken()
+                PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.DEVICE_TOKEN,token)
+
+
 
 
             })

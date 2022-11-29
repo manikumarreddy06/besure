@@ -10,7 +10,7 @@ public class PreferenceManager {
 
     public static final String APP_VERSION = "app_version";
     private static PreferenceManager mInstance = null;
-    private final String PREFERENCE_NAME = "bsure.live";
+    private final String PREFERENCE_NAME = "bsure.live1";
 
     private SharedPreferences mPreference;
     public static final String USER_ID = "USER_ID";
@@ -25,6 +25,9 @@ public class PreferenceManager {
     public static final String USER_TOKEN="TOKEN";
 
     public static final String DEVICE_TOKEN="DEVICE_TOKEN";
+
+
+    public static final String DEVICE_TOKEN_GENERATED_FLAG="DEVICE_TOKEN_GENERATED_FLAG";
 
 
 

@@ -15,6 +15,7 @@ import com.bsure.models.UpdateUserAccountResponse;
 import com.bsure.models.UserAsset;
 import com.bsure.models.UserAssetResponseBean;
 import com.bsure.models.UserProfileDataResponse;
+import com.bsure.models.VerifyResponseBean;
 import com.bsure.models.signup;
 import com.bsure.models.signupupdate;
 import com.bsure.models.userdiscountrequest;
@@ -34,7 +35,7 @@ public interface Apiinterface {
 
 
     @POST("v1/user/verifyOtp")
-    Call<BaseResponse>verifyOtp(@Body signup data );
+    Call<VerifyResponseBean>verifyOtp(@Body signup data );
 
 
     @POST("v1/categories")
@@ -86,7 +87,7 @@ public interface Apiinterface {
     Call<BaseResponse>updateUserInfo(@Body userdiscountrequest discountrequest);
 
     @POST("v1/token/update")
-    Call<signupupdate>updatesignup(@Body signupupdate signupupdate);
+    Call<BaseResponse>updateFCMToken(@Body signupupdate signupupdate);
 
 
 

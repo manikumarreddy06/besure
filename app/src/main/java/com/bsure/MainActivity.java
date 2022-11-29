@@ -12,7 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.bsure.models.BaseResponse;
 import com.bsure.models.UserProfileDataResponse;
+import com.bsure.models.signupupdate;
 import com.bsure.retrofitUtil.RetrofitClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,7 +26,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity  {
-    String devicetoken;
+    String TAG="MainActivity";
 
     String paidFlag=null;
     @Override
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity  {
         super.onResume();
 
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,10 +95,6 @@ public class MainActivity extends AppCompatActivity  {
 
         });
 
-
-//        topappbar.setNavigationOnClickListener(view -> {
-//
-//        });
         topappbar.setOnMenuItemClickListener(item -> {
             if (item.getItemId() == R.id.profile) {
                 Intent i = new Intent(MainActivity.this, Profile.class);
@@ -102,6 +102,32 @@ public class MainActivity extends AppCompatActivity  {
             }
             return false;
         });
+
+
+
+        if(com.bsure.PreferenceManager.instance(this).get(PreferenceManager.DEVICE_TOKEN_GENERATED_FLAG,false)) {
+            FirebaseMessaging.getInstance().getToken()
+                    .addOnCompleteListener(new OnCompleteListener<String>() {
+                        @Override
+                        public void onComplete(@NonNull Task<String> task) {
+                            if (!task.isSuccessful()) {
+                                Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                                return;
+                            }
+
+                            // Get new FCM registration token
+                            String token = task.getResult();
+                            updateUserToken(token);
+                            Log.d(TAG, token);
+
+                            PreferenceManager.instance(MainActivity.this).set(PreferenceManager.DEVICE_TOKEN_GENERATED_FLAG,false);
+                        }
+                    });
+        }
+        else{
+            Log.d(TAG, "Token already updated");
+        }
+
     }
 
 
@@ -139,6 +165,32 @@ public class MainActivity extends AppCompatActivity  {
             }
             @Override
             public void onFailure(Call<UserProfileDataResponse> call, Throwable t) {
+                //Toast.makeText(MainActivity.this, "Not getting response",Toast.LENGTH_LONG).show();
+                Utils.Companion.hideDialog();
+            }
+        });
+
+
+
+
+    }
+
+
+    private void updateUserToken(String token) {
+        // Retrofit
+        PreferenceManager mInstance = PreferenceManager.instance(this);
+        String userId= mInstance.get(PreferenceManager.USER_ID,null);
+        signupupdate obj=new signupupdate();
+        obj.setUsmToken(token);
+        obj.setUserId(userId);
+        Call<BaseResponse> userProfileDataResponsebeanCall = RetrofitClient.getInstance().apiinterface().updateFCMToken(obj);
+        userProfileDataResponsebeanCall.enqueue(new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+
+            }
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
                 //Toast.makeText(MainActivity.this, "Not getting response",Toast.LENGTH_LONG).show();
                 Utils.Companion.hideDialog();
             }

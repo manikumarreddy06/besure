@@ -60,8 +60,9 @@ public class  MyFirebaseInstanceIDService extends FirebaseMessagingService {
     @Override
     public void onNewToken(String token) {
         super.onNewToken(token);
-        Log.e("newToken", token);
-      String devicetoken=PreferenceManager.instance(this).get(PreferenceManager.DEVICE_TOKEN,"null");
+        Log.d("fcm", token);
+        PreferenceManager.instance(this).set(PreferenceManager.DEVICE_TOKEN_GENERATED_FLAG,true);
+        PreferenceManager.instance(this).set(PreferenceManager.DEVICE_TOKEN,token);
     }
 
 }

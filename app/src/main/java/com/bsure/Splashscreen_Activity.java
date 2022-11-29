@@ -21,6 +21,7 @@ public class Splashscreen_Activity extends AppCompatActivity {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+        PreferenceManager.instance(this).set(PreferenceManager.DEVICE_TOKEN_GENERATED_FLAG,true);
         h.postDelayed(new Runnable() {
             @Override
             public void run() {

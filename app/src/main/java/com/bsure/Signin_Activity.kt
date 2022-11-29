@@ -11,6 +11,7 @@ import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import com.bsure.TnC.TnC_Activity
 import com.bsure.models.BaseResponse
+import com.bsure.models.VerifyResponseBean
 import com.bsure.models.signup
 import com.bsure.models.signupupdate
 import com.bsure.retrofitUtil.RetrofitClient
@@ -102,17 +103,21 @@ class Signin_Activity : AppCompatActivity() {
             obj.otp=enterOtp
             obj.userId=PreferenceManager.instance(this@Signin_Activity).get(PreferenceManager.USER_ID,null)
             val call = RetrofitClient.getInstance().apiinterface().verifyOtp(obj)
-            call.enqueue(object : Callback<BaseResponse?> {
-                override fun onResponse(call: Call<BaseResponse?>, response: Response<BaseResponse?>) {
-                        var bean: BaseResponse? =response.body()
+            call.enqueue(object : Callback<VerifyResponseBean?> {
+                override fun onResponse(call: Call<VerifyResponseBean?>, response: Response<VerifyResponseBean?>) {
+                        var bean: VerifyResponseBean? =response.body()
                         if (bean!!.isvalid) {
                             openMainActvity()
                             PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.LOGIN_STATUS,true)
+
                             val usernum = etmobile_signin.text.toString()
 
                             PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_MOBILE_NUMBER,usernum)
 
-
+                            if(bean.userData!=null && bean.userData.token!=null) {
+                                PreferenceManager.instance(this@Signin_Activity)
+                                    .set(PreferenceManager.USER_TOKEN, bean.userData.token)
+                            }
 
                         }
                         else{
@@ -128,7 +133,7 @@ class Signin_Activity : AppCompatActivity() {
                         Utils.hideDialog()
                     }
 
-                    override fun onFailure(call: Call<BaseResponse?>, t: Throwable) {
+                    override fun onFailure(call: Call<VerifyResponseBean?>, t: Throwable) {
                         Toast.makeText(this@Signin_Activity, "failure", Toast.LENGTH_SHORT).show()
                         Utils.hideDialog()
                     }
@@ -141,27 +146,6 @@ class Signin_Activity : AppCompatActivity() {
     }
 
 
-    fun updateusertoken(){
-        val obj1=signupupdate()
-        val call =RetrofitClient.getInstance().apiinterface().updatesignup(obj1)
-        call.enqueue(object :Callback<signupupdate?>{
-            override fun onResponse(call: Call<signupupdate?>, response: Response<signupupdate?>) {
-               if (response.isSuccessful){
-                   obj1.userId= PreferenceManager.instance(this@Signin_Activity).set(PreferenceManager.USER_ID,null)
-                       .toString()
-
-
-               }
-            }
-
-            override fun onFailure(call: Call<signupupdate?>, t: Throwable) {
-                Toast.makeText(this@Signin_Activity,"failed",Toast.LENGTH_SHORT).show()
-            }
-
-        })
-
-
-    }
 
 
 
@@ -276,22 +260,6 @@ class Signin_Activity : AppCompatActivity() {
 
 
         }
-        FirebaseMessaging.getInstance().token
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    println("Fetching FCM registration token failed")
-                    return@OnCompleteListener
-                }
-
-                // Get new FCM registration token
-                val token = task.result
-
-
-                // Log and toast
-                Log.d("Token", token!!)
-
-
-            })
     }
 
 

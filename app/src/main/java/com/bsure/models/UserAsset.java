@@ -25,6 +25,10 @@ public class UserAsset {
     @Expose
     private List<com.bsure.models.Assets> assetsList = null;
 
+    @SerializedName("token")
+    @Expose
+    private String token;
+
     public Object getUserId() {
         return userId;
     }
@@ -66,5 +70,11 @@ public class UserAsset {
     }
 
 
+    public String getToken() {
+        return token;
+    }
 
+    public void setToken(String token) {
+        this.token = token;
+    }
 }

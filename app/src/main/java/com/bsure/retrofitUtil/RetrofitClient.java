@@ -6,6 +6,7 @@ import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bsure.BsureApp;
 import com.bsure.PreferenceManager;
 import com.bsure.Profile;
 import com.bsure.retrofitUtil.Apiinterface;
@@ -42,7 +43,7 @@ public class RetrofitClient {
                     public Response intercept(@NonNull Chain chain) throws IOException {
                         Request Originalrequest= chain.request();
                         Request newrequest=Originalrequest.newBuilder()
-                                .addHeader("User_token",PreferenceManager.USER_TOKEN)
+                                .addHeader("User_token",PreferenceManager.instance(BsureApp.Companion.getInstance()).get(PreferenceManager.USER_TOKEN,""))
 
                                 .build();
                         return chain.proceed(newrequest);

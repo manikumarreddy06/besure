@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity  {
         LinearLayout llassets = findViewById(R.id.assets);
         LinearLayout llnominee = findViewById(R.id.nominee);
         LinearLayout llnudge = findViewById(R.id.nudge);
-        LinearLayout lldistribution = findViewById(R.id.distribution);
+       /* LinearLayout lldistribution = findViewById(R.id.distribution);*/
         CardView step1 = findViewById(R.id.step1);
         CardView step2 = findViewById(R.id.step2);
         CardView step3 = findViewById(R.id.step3);
@@ -67,12 +67,12 @@ public class MainActivity extends AppCompatActivity  {
         llnudge.setOnClickListener(view -> {
             getUserProfileData();
         });
-        lldistribution.setOnClickListener(view -> {
+/*        lldistribution.setOnClickListener(view -> {
 //            Intent i=new Intent(MainActivity.this,AssetDistribution.class);
 //            startActivity(i);
 
             Utils.Companion.toast("coming soon",this);
-        });
+        });*/
 
 
         // steps to follow

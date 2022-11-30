@@ -31,18 +31,6 @@
         android:text="Comments" />
 
 
-    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
-        android:id="@+id/spStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:smsp_selectedItemListColor="@color/colorPrimary"
-        app:smsp_isSearchable="true"
-        android:fontFamily="@font/robotoregular"
-        app:smsp_enableFloatingLabel="true"
-        app:smsp_enableErrorLabel="false"/>
-
     <LinearLayout
         android:id="@+id/containerOthers"
         android:layout_width="match_parent"
@@ -72,7 +60,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_12dp"
-            android:background="@drawable/shape_outline_rect_gray"
             android:focusedByDefault="false"
             android:hint="Enter text here"
             android:imeOptions="actionGo"
@@ -84,6 +71,18 @@
             android:textColorHint="@color/primary_text_color"
             android:textSize="@dimen/size_14sp" />
     </LinearLayout>
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id="@+id/spStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
+        app:smsp_enableErrorLabel="false"
+        app:smsp_enableFloatingLabel="true"
+        app:smsp_isSearchable="true"
+        app:smsp_selectedItemListColor="@color/colorPrimary" />
 
 
 </LinearLayout>
